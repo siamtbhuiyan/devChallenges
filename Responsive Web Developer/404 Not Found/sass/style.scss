@@ -1,0 +1,93 @@
+$light-color: #fff;
+$secondary-dark-color: #4f4f4f;
+$dark-color: #333;
+$main-font: 'Space Mono', monospace;
+$nav-font: 'Inconsolata', monospace;
+$footer-color: #BDBDBD;
+$footer-font: 'Space Mono', monospace;
+
+
+* {
+    background-color: $light-color;
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+nav {
+    font-family: $nav-font;
+    font-size: 24px;
+    color: $dark-color;
+    line-height: 25.18px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 77px;
+    padding-right: 77px;
+    text-transform: uppercase;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.right {
+    font-family: $main-font;
+    padding-left: 20px;
+    padding: 70px;
+}
+
+h1 {
+    line-height: 95px;
+    letter-spacing: -0.035em;
+    font-size: 64px;
+    font-weight: 700;
+    color: $dark-color;
+}
+
+p {
+    line-height: 36px;
+    letter-spacing: -0.035em;
+    font-size: 24px;
+    font-weight: 400;
+    width: 381px;
+    color: $secondary-dark-color;
+    padding-bottom: 30px;
+}
+
+.scarecrow {
+    width: 539.22px;
+    height :447.43px;
+    top: 120px;
+    left: 77px;
+    position: relative;
+}
+
+button {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+    color: $light-color;
+    background-color: $dark-color;
+    padding: 24px 43px 24px 43px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 15px;
+    left: 200px;
+    width: 100%;
+    color: $footer-color;
+    font-family: $footer-font;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
