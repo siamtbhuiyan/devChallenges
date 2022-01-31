@@ -4,71 +4,81 @@ $dark-color: #333;
 $main-font: 'Space Mono', monospace;
 $nav-font: 'Inconsolata', monospace;
 $footer-color: #BDBDBD;
-$footer-font: 'Space Mono', monospace;
+$footer-font: 'Montserrat', monospace;
 
 
 * {
     background-color: $light-color;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    max-width: 1440px;
-    margin: auto;
-}
-
-nav {
-    font-family: $nav-font;
-    font-size: 24px;
-    color: $dark-color;
-    line-height: 25.18px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 77px;
-    padding-right: 77px;
-    text-transform: uppercase;
-}
-
-.flex {
+body {
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.flex-item {
-    flex: 1;
+#logo {
+    font-family: $nav-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-left: 77px;
+    color: $dark-color;
+    align-self: flex-start;
 }
 
-.right {
+#flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.image {
+    width: 539px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    width: 586px;
+    margin-left: 120px;
+}
+
+.content-heading {
     font-family: $main-font;
-    padding-left: 20px;
-    padding: 70px;
-}
-
-h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
     line-height: 95px;
     letter-spacing: -0.035em;
-    font-size: 64px;
-    font-weight: 700;
     color: $dark-color;
 }
 
-p {
+.content-p {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
     line-height: 36px;
     letter-spacing: -0.035em;
-    font-size: 24px;
-    font-weight: 400;
-    width: 381px;
     color: $secondary-dark-color;
-    padding-bottom: 30px;
+    padding: 36px 0 64px 0;
+    max-width: 381px;
 }
 
-.scarecrow {
-    width: 539.22px;
-    height :447.43px;
-    top: 120px;
-    left: 77px;
-    position: relative;
-}
-
-button {
+.btn {
+    font-family: $main-font;
+    font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 21px;
@@ -76,18 +86,22 @@ button {
     text-transform: uppercase;
     color: $light-color;
     background-color: $dark-color;
-    padding: 24px 43px 24px 43px;
+    padding: 1.6em 3em;
+    text-decoration: none;
+    width: max-content;
 }
 
-#footer {
-    position: fixed;
-    bottom: 0;
-    padding-bottom: 15px;
-    left: 200px;
-    width: 100%;
-    color: $footer-color;
+#footer-link {
     font-family: $footer-font;
+    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
+    text-align: center;
+    text-decoration: none;
+    color: $dark-color;
+}
+
+#footer {
+    padding-bottom: 24px;
 }
