@@ -1,107 +1,158 @@
 $light-color: #fff;
 $secondary-dark-color: #4f4f4f;
 $dark-color: #333;
-$main-font: 'Space Mono', monospace;
-$nav-font: 'Inconsolata', monospace;
-$footer-color: #BDBDBD;
-$footer-font: 'Montserrat', monospace;
-
+$main-font: "Space Mono", monospace;
+$nav-font: "Inconsolata", monospace;
+$footer-color: #bdbdbd;
+$footer-font: "Montserrat", monospace;
 
 * {
-    background-color: $light-color;
-    margin: 0;
-    padding: 0;
+  background-color: $light-color;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #logo {
-    font-family: $nav-font;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 25px;
-    letter-spacing: -0.08em;
-    text-transform: uppercase;
-    margin-top: 40px;
-    margin-left: 77px;
-    color: $dark-color;
-    align-self: flex-start;
+  font-family: $nav-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-left: 77px;
+  color: $dark-color;
+  align-self: flex-start;
 }
 
 #flex-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: auto;
-    margin-bottom: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .image {
-    width: 539px;
+  width: 539px;
 }
 
 #content {
-    display: flex;
-    flex-direction: column;
-    width: 586px;
-    margin-left: 120px;
+  display: flex;
+  flex-direction: column;
+  width: 586px;
+  margin-left: 120px;
 }
 
 .content-heading {
-    font-family: $main-font;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 64px;
-    line-height: 95px;
-    letter-spacing: -0.035em;
-    color: $dark-color;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 95px;
+  letter-spacing: -0.035em;
+  color: $dark-color;
 }
 
 .content-p {
-    font-family: $main-font;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 36px;
-    letter-spacing: -0.035em;
-    color: $secondary-dark-color;
-    padding: 36px 0 64px 0;
-    max-width: 381px;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.035em;
+  color: $secondary-dark-color;
+  padding: 36px 0 64px 0;
+  max-width: 381px;
 }
 
 .btn {
-    font-family: $main-font;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 21px;
-    letter-spacing: -0.035em;
-    text-transform: uppercase;
-    color: $light-color;
-    background-color: $dark-color;
-    padding: 1.6em 3em;
-    text-decoration: none;
-    width: max-content;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  color: $light-color;
+  background-color: $dark-color;
+  padding: 1.6em 3em;
+  text-decoration: none;
+  width: max-content;
 }
 
+.btn:hover {
+    background-color: $secondary-dark-color;
+} 
+
 #footer-link {
-    font-family: $footer-font;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: center;
-    text-decoration: none;
-    color: $dark-color;
+  font-family: $footer-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-decoration: none;
+  color: $dark-color;
 }
 
 #footer {
-    padding-bottom: 24px;
+  padding-bottom: 24px;
+}
+
+@media screen and (max-width: 1280px) {
+  #flex-container {
+    transform: scale(0.7);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #logo {
+    margin-top: 20px;
+    margin-left: 24px;
+  }
+
+  #flex-container {
+    flex-direction: column;
+    margin: auto;
+    margin-top: 3rem;
+    transform: scale(1);
+    padding: 0 20px;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+  }
+
+  .image {
+    width: 278px;
+    margin-bottom: 3rem;
+  }
+
+  #content {
+    margin-left: 0;
+    width: fit-content;
+  }
+
+  .content-heading {
+    font-size: 48px;
+    line-height: 71px;
+  }
+
+  .content-p {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  #footer {
+      margin-top: auto;
+
+  }
 }
