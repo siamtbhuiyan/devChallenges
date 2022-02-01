@@ -109,13 +109,13 @@ body {
   padding-bottom: 24px;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1200px) {
   #flex-container {
     transform: scale(0.7);
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   #logo {
     margin-top: 20px;
     margin-left: 24px;
