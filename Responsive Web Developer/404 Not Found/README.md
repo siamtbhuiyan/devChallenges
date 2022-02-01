@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://reverent-saha-19aa65.netlify.app">
+    <a href="https://cocky-aryabhata-dbe306.netlify.app">
       Demo
     </a>
     <span> | </span>
@@ -39,7 +39,7 @@
 ![screenshot](./screenshots/Screenshot-mobile.png)
 
 
-- The live version of this site is <a href="https://reverent-saha-19aa65.netlify.app/" target="_blank">here</a> 
+- The live version of this site is <a href="https://cocky-aryabhata-dbe306.netlify.app" target="_blank">here</a> 
 
 ### Built With
 
