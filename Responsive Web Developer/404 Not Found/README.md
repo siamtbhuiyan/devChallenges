@@ -35,8 +35,10 @@
 
 ## Overview
 
-![screenshots](./screenshots/Screenshot-desktop.png)
-![screenshot](./screenshots/Screenshot-mobile.png)
+![screenshots](./screenshots/Screenshot-desktop-lightmode.png)
+![screenshot](./screenshots/Screenshot-mobile-lightmode.png)
+![screenshot](./screenshots/Screenshot-desktop-darkmode.png)
+![screenshot](./screenshots/Screenshot-mobile-darkmode.png)
 
 
 - The live version of this site is <a href="https://nifty-chandrasekhar-32a397.netlify.app" target="_blank">here</a> 
@@ -54,6 +56,7 @@
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/wBunSb7FPrIepJZAg0sY) was to build an application to complete the given user stories.
+- You can also toggle between dark mode and light mode
 
 
 ## Contact
