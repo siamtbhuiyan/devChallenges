@@ -7,7 +7,7 @@ $footer-color: #bdbdbd;
 $footer-font: "Montserrat", monospace;
 
 * {
-  background-color: $light-color;
+  background-color: $dark-color;
   margin: 0;
   padding: 0;
 }
@@ -19,32 +19,35 @@ body {
   justify-content: center;
 }
 
+
 #nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  margin-top: 40px;
-  margin-left: 77px;
-  margin-right: 77px;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 40px;
+    margin-left: 77px;
+    margin-right: 77px;
+  }
+  
+  #logo {
+    font-family: $nav-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    color: $light-color;
+    padding-right: auto;
+  }
+  
+  #icon {
+    border: none;
+    font-size: 18px;
+    color: $light-color;
+    cursor: pointer;
+  }
 
-#logo {
-  font-family: $nav-font;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 25px;
-  letter-spacing: -0.08em;
-  text-transform: uppercase;
-  color: $dark-color;
-  padding-right: auto;
-}
-
-#icon {
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-}
 
 #flex-container {
   display: flex;
@@ -73,7 +76,7 @@ body {
   font-size: 64px;
   line-height: 95px;
   letter-spacing: -0.035em;
-  color: $dark-color;
+  color: $light-color;
 }
 
 .content-p {
@@ -83,7 +86,7 @@ body {
   font-size: 24px;
   line-height: 36px;
   letter-spacing: -0.035em;
-  color: $secondary-dark-color;
+  color: $light-color;
   padding: 36px 0 64px 0;
   max-width: 381px;
 }
@@ -96,16 +99,17 @@ body {
   line-height: 21px;
   letter-spacing: -0.035em;
   text-transform: uppercase;
-  color: $light-color;
-  background-color: $dark-color;
+  color: $dark-color;
+  background-color: $light-color;
   padding: 1.6em 3em;
   text-decoration: none;
   width: max-content;
 }
 
 .btn:hover {
-    background-color: $secondary-dark-color;
+    background-color: #ddd;
 } 
+
 
 #footer-link {
   font-family: $footer-font;
@@ -115,7 +119,7 @@ body {
   line-height: 17px;
   text-align: center;
   text-decoration: none;
-  color: $dark-color;
+  color: $light-color;
 }
 
 #footer {
