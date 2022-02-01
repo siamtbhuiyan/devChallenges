@@ -49,6 +49,7 @@
 
 - HTML
 - CSS
+- JavaScript
 - [Sass](https://sass-lang.com/)
 
 ## Features
