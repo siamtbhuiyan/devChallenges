@@ -4,7 +4,60 @@
 }
 
 body {
-  background-color: #333;
-  color: #ccc;
+  background-color: #fafafa;
+  color: #000;
+}
+
+#container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 110px;
+}
+
+#main-h1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#main-h1 h1 {
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: -0.045em;
+}
+
+#header-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#header-content h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+}
+
+#header-content p {
+  font-family: "Poppins", sans-serif;
+  max-width: 440px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  padding-top: 15px;
 }
 /*# sourceMappingURL=style.css.map */
