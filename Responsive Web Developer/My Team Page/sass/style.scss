@@ -59,3 +59,19 @@ body {
         padding-top: 15px;
     }
 }
+
+#footer-link {
+    font-family: $footer-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    text-decoration: none;
+    color: $dark-color;
+}
+  
+#footer {
+    padding-bottom: 24px;
+    text-align: center;
+}
