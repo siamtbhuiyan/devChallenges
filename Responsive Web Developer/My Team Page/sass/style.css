@@ -1,10 +1,10 @@
 * {
   padding: 0;
   margin: 0;
+  background-color: #fafafa;
 }
 
 body {
-  background-color: #fafafa;
   color: #000;
 }
 
@@ -21,6 +21,7 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding-top: 110px;
+  padding-bottom: 20px;
 }
 
 #main-h1 {
@@ -59,5 +60,122 @@ body {
   font-size: 18px;
   line-height: 27px;
   padding-top: 15px;
+}
+
+#main-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  height: 1090px;
+  padding-bottom: 50px;
+}
+
+#main-container > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+.img-1 {
+  max-width: 238px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.img-2 {
+  max-width: 238px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.img-3 {
+  max-width: 238px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.img-4 {
+  max-width: 238px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.img-5 {
+  max-width: 238px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.img-6 {
+  max-width: 238px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vertical {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-family: "PT Serif", serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 15.9px;
+  font-size: 12px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-left: 5px;
+}
+
+.horizontal {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+#footer-link {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-decoration: none;
+  color: #ccc;
+}
+
+#footer {
+  padding-bottom: 24px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

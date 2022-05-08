@@ -1,9 +1,11 @@
+// Variables
 $primary-font: 'Poppins', sans-serif;
 $secondary-font: 'PT Serif', serif;
 $footer-font: 'Montserrat', sans-serif;
 $light-color: #fafafa;
 $dark-color: #000;
 
+// universal 
 * {
     padding: 0;
     margin: 0;
@@ -19,10 +21,12 @@ body {
     margin: 0 auto;
 }
 
+// Header Section
 #header-container {
     display: flex;
     justify-content: flex-start;
     padding-top: 110px;
+    padding-bottom: 20px;
 }
 
 #main-h1 {
@@ -60,6 +64,83 @@ body {
     }
 }
 
+// Main Section
+#main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    height: 1090px;
+    padding-bottom: 50px;
+}
+
+#main-container > div {
+    display: flex;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.img-1 {
+    max-width: 238px;
+    align-self: center;
+    display: flex;
+}
+
+.img-2 {
+    max-width: 238px;
+    align-self: flex-end;
+    margin: 0 auto;
+    display: flex;
+}
+
+.img-3 {
+    max-width: 238px;
+    align-self: center;
+    margin-left: auto;
+    display: flex;
+}
+
+.img-4 {
+    max-width: 238px;
+    align-self: center;
+    display: flex;
+}
+
+.img-5 {
+    max-width: 238px;
+    align-self: flex-end;
+    margin: 0 auto;
+    display: flex;
+}
+
+.img-6 {
+    max-width: 238px;
+    align-self: center;
+    margin-left: auto;
+    display: flex;
+}
+
+.vertical {
+    writing-mode: vertical-rl;
+    font-family: $secondary-font;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 15.9px;
+    font-size: 12px;
+    align-self: flex-start;
+    padding-left: 5px;
+}
+.horizontal {
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+// Footer Section
 #footer-link {
     font-family: $footer-font;
     font-style: normal;
