@@ -68,8 +68,8 @@ body {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
-  height: 1090px;
-  padding-bottom: 50px;
+  height: 1000px;
+  padding-bottom: 110px;
 }
 
 #main-container > div {
@@ -177,5 +177,120 @@ img {
 #footer {
   padding-bottom: 24px;
   text-align: center;
+}
+
+@media screen and (max-width: 1080px) {
+  #header-container {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  #main-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    height: 1200px;
+  }
+  .img-1 {
+    max-width: 188px;
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .img-2 {
+    max-width: 188px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .img-3 {
+    max-width: 188px;
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .img-4 {
+    max-width: 188px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .img-5 {
+    max-width: 188px;
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .img-6 {
+    max-width: 188px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header-container {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  #main-h1 {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #header-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #main-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 1000px;
+  }
+  .img-1 {
+    max-width: 138px;
+  }
+  .img-2 {
+    max-width: 138px;
+  }
+  .img-3 {
+    max-width: 138px;
+  }
+  .img-4 {
+    max-width: 138px;
+  }
+  .img-5 {
+    max-width: 138px;
+  }
+  .img-6 {
+    max-width: 138px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
