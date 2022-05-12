@@ -11,8 +11,7 @@
 #container {
   max-width: 1080px;
   margin: 0 auto;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding: 0 70px;
 }
 
 #nav {
@@ -25,12 +24,11 @@
           justify-content: space-between;
 }
 
-#nav #nav-links {
+#nav .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  font-size: 18px;
 }
 
 #nav #logo {
@@ -39,6 +37,7 @@
   font-family: "Crimson Pro", serif;
   border: 1px solid #fff;
   padding: 8px;
+  font-size: 14px;
 }
 
 #nav #logo:hover {
@@ -57,16 +56,91 @@
 }
 
 #nav a:hover {
-  color: #828282;
-}
-
-#nav .current {
   border-bottom: 2px solid #fff;
   font-weight: 700;
   padding-bottom: 8px;
 }
 
-#nav .current:hover {
-  border-bottom: 2px solid #828282;
+#nav input[type=checkbox] {
+  display: none;
+}
+
+#nav .hamburger {
+  display: none;
+  font-size: 22px;
+}
+
+#nav .cross {
+  display: none;
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 992px) {
+  #container {
+    padding: 0 40px;
+  }
+  #nav .nav-link {
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #container {
+    padding: 0 20px;
+  }
+  #nav {
+    padding: 30px 0;
+  }
+  #nav .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    height: calc(100vh - 87px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    -webkit-transition: top 1s;
+    transition: top 1s;
+  }
+  #nav .nav-link {
+    padding: 10px 0;
+  }
+  #nav .current {
+    padding-bottom: 3px;
+  }
+  #nav input[type=checkbox]:checked ~ .menu {
+    top: 87px;
+  }
+  #nav .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+  #nav .hamburger:hover {
+    cursor: pointer;
+    color: #828282;
+  }
+  #nav .cross {
+    display: none;
+    margin-left: auto;
+    font-weight: bold;
+  }
+  #nav .cross:hover {
+    cursor: pointer;
+    color: #828282;
+  }
+  #nav input[type=checkbox]:checked + .hamburger {
+    display: none;
+  }
+  #nav input[type=checkbox]:checked ~ .cross {
+    display: block;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

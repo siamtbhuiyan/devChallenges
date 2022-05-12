@@ -1,0 +1,75 @@
+@media only screen and (max-width: 992px) {
+    #container {
+        padding: 0 40px;
+    }
+
+    #nav {
+        .nav-link {
+            padding: 0 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #container {
+        padding: 0 20px;
+    }
+
+    #nav {
+        padding: 30px 0;
+    
+        .menu {
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
+            height: calc(100vh - 87px);
+            justify-content: center;
+            position: absolute;
+            top: -100vh;
+            left: 0;
+            transition: top 1s;
+        }
+    
+        .nav-link {
+            padding: 10px 0;
+        }
+    
+        .current {
+            padding-bottom: 3px;
+        }
+
+    
+        input[type=checkbox]:checked ~ .menu {
+            top: 87px;
+        }
+    
+        .hamburger {
+            display: block;
+            margin-left: auto;
+        }
+    
+        .hamburger:hover {
+            cursor: pointer;
+            color: $faded-color;
+        }
+
+        .cross {
+            display: none;
+            margin-left: auto;
+            font-weight: bold;
+        }
+
+        .cross:hover {
+            cursor: pointer;
+            color: $faded-color;
+        }
+
+        input[type=checkbox]:checked + .hamburger {
+            display: none;
+        }
+
+        input[type=checkbox]:checked ~ .cross {
+            display: block;
+        }
+    }
+}

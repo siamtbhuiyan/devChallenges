@@ -1,10 +1,4 @@
-$primary-font: 'Montserrat', sans-serif;
-$secondary-font: 'Lora', serif;
-$logo-font: 'Crimson Pro', serif;
-$dark-color: #181719;
-$light-color: #fff;
-$footer-color: #A9A9A9;
-$faded-color: #828282;
+@import "config";
 
 * {
     margin: 0;
@@ -18,8 +12,7 @@ $faded-color: #828282;
 #container {
     max-width: 1080px;
     margin: 0 auto;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding: 0 70px;
 }
 
 // navbar
@@ -28,9 +21,9 @@ $faded-color: #828282;
     display: flex;
     justify-content: space-between;
 
-    #nav-links {
+    .menu {
         display: flex;
-        justify-content: space-around;
+        font-size: 18px;
     }
 
     #logo {
@@ -39,6 +32,7 @@ $faded-color: #828282;
         font-family: $logo-font;
         border: 1px solid $light-color;
         padding: 8px;
+        font-size: 14px;
     }
 
     #logo:hover {
@@ -57,16 +51,24 @@ $faded-color: #828282;
     }
 
     a:hover {
-        color: $faded-color;
-    }
-
-    .current {
         border-bottom: 2px solid $light-color;
         font-weight: 700;
         padding-bottom: 8px;
     }
 
-    .current:hover {
-        border-bottom: 2px solid $faded-color;
+    input[type=checkbox] {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+        font-size: 22px;
+    }
+
+    .cross {
+        display: none;
+        font-size: 22px;
     }
 }
+
+@import "media";
