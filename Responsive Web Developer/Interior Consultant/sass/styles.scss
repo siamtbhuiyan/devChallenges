@@ -13,6 +13,9 @@
     max-width: 1920px;
     margin: 0 auto;
     padding: 0 70px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 // navbar
@@ -75,6 +78,8 @@
 #hero-section {
     display: flex;
     align-items: center;
+    margin: auto 0;
+    padding-bottom: 150px;
 
     #writing {
         flex: 1;
@@ -119,7 +124,6 @@
             }
 
             #profile {
-                border: 1px solid white;
                 max-width: 500px;
                 position: absolute;
                 bottom: -100px;
@@ -167,5 +171,24 @@
         }
     }
 }
+
+// Footer section
+#footer-link {
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    text-decoration: none;
+    color: #ccc;
+}
+  
+#footer {
+    padding-bottom: 24px;
+    text-align: center;
+    margin-top: auto;
+}
+
 
 @import "media";

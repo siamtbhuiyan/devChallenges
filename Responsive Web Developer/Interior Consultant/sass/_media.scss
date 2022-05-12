@@ -26,6 +26,7 @@
         flex-direction: column;
 
         #writing {
+            padding-top: 30px;
             padding-bottom: 50px;
         }
     }
@@ -42,7 +43,7 @@
         .menu {
             flex-direction: column;
             align-items: center;
-            width: 100vw;
+            width: 95vw;
             height: calc(100vh - 87px);
             justify-content: center;
             position: absolute;
@@ -63,6 +64,7 @@
     
         input[type=checkbox]:checked ~ .menu {
             top: 87px;
+            overflow-y: hidden;
         }
     
         .hamburger {
@@ -98,7 +100,7 @@
     #hero-section {
         #images {
             #img {
-                width: 90%;
+                width: 95%;
             }
         }
     }
