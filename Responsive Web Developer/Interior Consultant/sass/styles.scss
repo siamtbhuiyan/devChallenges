@@ -1,3 +1,72 @@
-h1 {
-    color: rebeccapurple;
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Lora', serif;
+$logo-font: 'Crimson Pro', serif;
+$dark-color: #181719;
+$light-color: #fff;
+$footer-color: #A9A9A9;
+$faded-color: #828282;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $dark-color;
+    color: $light-color;
+    font-family: $primary-font;
+}
+
+#container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+// navbar
+#nav {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+
+    #nav-links {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #logo {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: $logo-font;
+        border: 1px solid $light-color;
+        padding: 8px;
+    }
+
+    #logo:hover {
+        color: $faded-color;
+        border: 1px solid $faded-color;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        padding: 0 25px;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $faded-color;
+    }
+
+    .current {
+        border-bottom: 2px solid $light-color;
+        font-weight: 700;
+        padding-bottom: 8px;
+    }
+
+    .current:hover {
+        border-bottom: 2px solid $faded-color;
+    }
 }
