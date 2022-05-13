@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#container {
+  max-width: 1440px;
+  margin: auto;
+  padding: 50px 50px 0 50px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#container #heading h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+}
+
+#container #heading #heading-sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 0;
+}
+
+#container #heading #heading-sub #svg {
+  padding-right: 20px;
+}
+
+#container #heading #heading-sub p {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 17px;
+  color: #4f4f4f;
+}
+
+#container #main-image {
+  padding: 25px 0;
+}
+
+#container #main-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#container #main-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 25px 0;
+}
+
+#container #main-section #recipe {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  margin-right: 150px;
+}
+
+#container #main-section #recipe #ingredients h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333;
+}
+
+#container #main-section #recipe #ingredients .ing-1 {
+  padding: 32px 0;
+}
+
+#container #main-section #recipe #ingredients .ing-1 h4 {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  padding-bottom: 32px;
+}
+
+#container #main-section #recipe #ingredients .ing-1 .crust-ings {
+  list-style: none;
+  padding-left: 35px;
+}
+
+#container #main-section #recipe #ingredients .ing-1 .crust-ings li:before {
+  content: "";
+  width: 19px;
+  height: 19px;
+  display: inline-block;
+  border: 1px solid #828282;
+  margin-right: 15px;
+  border-radius: 4px;
+  vertical-align: text-bottom;
+}
+
+#container #main-section #recipe #ingredients .ing-1 .crust-ings li {
+  padding: 5px 0;
+  text-indent: -35px;
+  line-height: 22px;
+  color: #333;
+}
+
+#container #main-section #recipe #ingredients .ing-2 {
+  padding: 32px 0;
+}
+
+#container #main-section #recipe #ingredients .ing-2 h4 {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  padding-bottom: 32px;
+}
+
+#container #main-section #recipe #ingredients .ing-2 .cake-ings {
+  list-style: none;
+  padding-left: 35px;
+}
+
+#container #main-section #recipe #ingredients .ing-2 .cake-ings li:before {
+  content: "";
+  width: 19px;
+  height: 19px;
+  display: inline-block;
+  border: 1px solid #828282;
+  margin-right: 15px;
+  border-radius: 4px;
+  vertical-align: text-bottom;
+}
+
+#container #main-section #recipe #ingredients .ing-2 .cake-ings li {
+  padding: 5px 0;
+  text-indent: -35px;
+  color: #333;
+  line-height: 22px;
+}
+
+#container #main-section #recipe #instructions {
+  padding-bottom: 50px;
+}
+
+#container #main-section #recipe #instructions h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333;
+  padding-bottom: 28px;
+}
+
+#container #main-section #recipe #instructions ol {
+  list-style: none;
+  counter-reset: instructions-counter;
+  margin-left: 50px;
+}
+
+#container #main-section #recipe #instructions ol li {
+  counter-increment: instructions-counter;
+  line-height: 30px;
+  text-indent: -50px;
+  padding: 10px 0;
+}
+
+#container #main-section #recipe #instructions ol li:before {
+  content: counter(instructions-counter);
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  background-color: #F2994A;
+  border-radius: 6px;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-right: 15px;
+  text-align: center;
+  text-indent: 0px;
+}
+
+#container #main-section #recipe a {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+#container #main-section #side-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 50px 10px;
+}
+
+#container #main-section #side-box .sub-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+#container #main-section #side-box .sub-box .svg-img {
+  width: 30px;
+  height: 30px;
+  margin: 7px;
+}
+
+#container #main-section #side-box .sub-box .svg-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#container #main-section #side-box .sub-box .sub-info {
+  margin: 7px;
+}
+
+#container #main-section #side-box .sub-box .sub-info .subbox-heading {
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #bdbdbd;
+  padding-bottom: 4px;
+}
+
+#container #main-section #side-box .sub-box .sub-info .subbox-content {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #333;
+}
+
+#container #main-section #side-box .sub-box .sub-info .orange {
+  color: #F2994A;
+}
+
+#container #footer-link {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-decoration: none;
+  color: #4f4f4f;
+}
+
+#container #footer {
+  padding: 50px 0 25px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  #container #main-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #container #main-section #recipe {
+    margin-right: 0;
+  }
+  #container #main-section #side-box {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0;
+    padding-bottom: 50px;
+  }
+  #container #main-section #side-box .gray-boxs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    padding: 50px 20px;
+  }
+  #container #main-section #side-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #container #main-section #side-box .sub-box {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #container {
+    padding-bottom: 5px;
+  }
+  #container #main-section {
+    padding-top: 0;
+  }
+  #container #main-section #side-box {
+    padding-bottom: 20px;
+  }
+  #container #main-section #side-box .sub-box .svg-img {
+    width: 15px;
+    height: 15px;
+  }
+  #container #main-section #side-box .sub-box .sub-info {
+    margin: 4px;
+  }
+  #container #main-section #side-box .sub-box .sub-info .subbox-heading {
+    font-size: 8px;
+    line-height: 10px;
+  }
+  #container #main-section #side-box .sub-box .sub-info .subbox-content {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  #container #footer {
+    padding-bottom: 10px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
