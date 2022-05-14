@@ -1,3 +1,81 @@
-h1 {
-    color: red;
+@import "config";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    padding: 60px;
+    max-width: 1440px;
+    font-family: $primary-font;
+    font-weight: 600;
+    margin: auto;
+
+    #profile-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #profile-heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 24px;
+
+            #profile-picture {
+                width: 156px;
+                padding-bottom: 8px;
+
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    border-radius: 16px;
+                }
+            }
+
+            #profile-name {
+                padding: 8px 0;
+                font-size: 24px;
+                line-height: 29px;
+                color: $heading-color;
+            }
+
+            #profile-location {
+                font-size: 14px;
+                line-height: 17px;
+                color: $gray1-color;
+            }
+        }
+
+        #profile-info {
+            display: flex;
+
+            .info-box {
+                padding: 15px 25px;
+                width: 150px;
+                margin: 0 24px;
+                background: $gray2-color;
+                border-radius: 12px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .info-number {
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: $heading-color;
+                    padding: 2px;
+                }
+
+                .info-name {
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: $gray3-color;
+                    padding: 2px;
+                }
+            }
+        }
+    }
 }
