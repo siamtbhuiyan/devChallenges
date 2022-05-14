@@ -6,7 +6,7 @@
 }
 
 #container {
-  padding: 60px;
+  padding: 60px 60px 0 60px;
   max-width: 1440px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -227,5 +227,19 @@
   border-radius: 12px;
   width: 100%;
   height: 100%;
+}
+
+#container #footer-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-decoration: none;
+  color: #B9BDCF;
+}
+
+#container #footer {
+  padding: 24px 0;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */
