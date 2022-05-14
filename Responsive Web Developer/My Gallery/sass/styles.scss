@@ -172,19 +172,21 @@
             }
         }
     }
-
-    // Footer Section
-    #footer-link {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 17px;
-        text-align: center;
-        text-decoration: none;
-        color: $footer-color;
-    }
-    
-    #footer {
-        padding: 24px 0;
-        text-align: center;
-    }
 }
+
+// Footer Section
+#footer-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    text-decoration: none;
+    color: $footer-color;
+}
+
+#footer {
+    padding: 24px 0;
+    text-align: center;
+}
+
+@import "media";

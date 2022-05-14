@@ -229,7 +229,7 @@
   height: 100%;
 }
 
-#container #footer-link {
+#footer-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
@@ -238,8 +238,71 @@
   color: #B9BDCF;
 }
 
-#container #footer {
+#footer {
   padding: 24px 0;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    padding: 60px 10px 0 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #container {
+    padding-top: 30px;
+    min-height: calc(100vh - 66px);
+  }
+  #container #profile-section #profile-heading {
+    padding-bottom: 12px;
+  }
+  #container #profile-section #profile-heading #profile-picture {
+    width: 100px;
+    padding-bottom: 5px;
+  }
+  #container #profile-section #profile-heading #picture-name {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 4px 0;
+  }
+  #container #profile-section #profile-heading #picture-location {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  #container #profile-section #profile-info .info-box {
+    width: 85px;
+    padding: 5px 12px;
+    margin: 0 6px;
+  }
+  #container #profile-section #profile-info .info-box .info-number {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  #container #profile-section #profile-info .info-box .info-name {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  #container #image-section {
+    padding: 30px 0;
+  }
+  #container #image-section .row1 .photo1 {
+    padding: 6px;
+  }
+  #container #image-section .row1 .photo2 {
+    padding: 6px;
+  }
+  #container #image-section .row2 .col1 .col1-row1 .photo3 {
+    padding: 6px;
+  }
+  #container #image-section .row2 .col1 .col1-row2 .photo6 {
+    padding: 6px;
+  }
+  #container #image-section .row2 .col1 .col1-row2 .photo5 {
+    padding: 6px;
+  }
+  #container #image-section .row2 .col2 .photo4 {
+    padding: 6px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

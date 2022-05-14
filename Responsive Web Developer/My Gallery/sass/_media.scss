@@ -1,0 +1,91 @@
+@media screen and (max-width: 768px) {
+    #container {
+        padding: 60px 10px 0 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        padding-top: 30px;
+        min-height: calc(100vh - 66px);
+
+        #profile-section {
+            #profile-heading {
+                padding-bottom: 12px;
+                #profile-picture {
+                    width: 100px;
+                    padding-bottom: 5px;
+                }
+
+                #picture-name {
+                    font-size: 14px;
+                    line-height: 17px;
+                    padding: 4px 0;
+                }
+
+                #picture-location {
+                    font-size: 10px;
+                    line-height: 12px;
+                }
+            }
+
+            #profile-info {
+                .info-box {
+                    width: 85px;
+                    padding: 5px 12px;
+                    margin: 0 6px;
+
+                    .info-number {
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+
+                    .info-name {
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+                }
+            }
+        }
+
+        #image-section {
+            padding: 30px 0;
+
+            .row1 {
+                .photo1 {
+                    padding: 6px;
+                }
+
+                .photo2 {
+                    padding: 6px;
+                }
+            }
+
+            .row2 {
+                .col1 {
+                    .col1-row1 {
+                        .photo3 {
+                            padding: 6px;
+                        }
+                    }
+
+                    .col1-row2 {
+                        .photo6 {
+                            padding: 6px;
+                        }
+
+                        .photo5 {
+                            padding: 6px;
+                        }
+                    }
+                }
+
+                .col2 {
+                    .photo4 {
+                        padding: 6px;
+                    }
+                }
+            }
+        }
+    }
+}
