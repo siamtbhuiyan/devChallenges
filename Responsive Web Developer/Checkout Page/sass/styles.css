@@ -1,4 +1,318 @@
-h1 {
-  color: orange;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#container {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  background-color: #FFF;
+  max-width: 1440px;
+  margin: auto;
+  padding: 60px 60px 0 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#container #form-side {
+  -webkit-box-flex: 1.2;
+      -ms-flex: 1.2;
+          flex: 1.2;
+  padding-right: 60px;
+}
+
+#container #form-side h1 {
+  font-size: 36px;
+  line-height: 44px;
+  color: #4E5150;
+  padding-bottom: 25px;
+}
+
+#container #form-side #contact-section {
+  padding: 25px 0;
+}
+
+#container #form-side #contact-section h3 {
+  font-size: 18px;
+  line-height: 22px;
+  padding-bottom: 15px;
+  color: #333;
+}
+
+#container #form-side #contact-section #email-input {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+#container #form-side #contact-section #email-input label {
+  display: block;
+  padding-bottom: 7px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4F4F4F;
+}
+
+#container #form-side #contact-section #email-input input {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+  padding: 18px 50px;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  width: 100%;
+}
+
+#container #form-side #contact-section #email-input i {
+  position: absolute;
+  font-size: 20px;
+  color: #828282;
+  left: 15px;
+  top: 40px;
+}
+
+#container #form-side #contact-section #phone-input {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+#container #form-side #contact-section #phone-input label {
+  display: block;
+  padding-bottom: 7px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4F4F4F;
+}
+
+#container #form-side #contact-section #phone-input input {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+  padding: 18px 50px;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  width: 100%;
+}
+
+#container #form-side #contact-section #phone-input i {
+  position: absolute;
+  font-size: 20px;
+  color: #828282;
+  left: 15px;
+  top: 40px;
+}
+
+#container #form-side #shipping-section {
+  padding: 25px 0;
+}
+
+#container #form-side #shipping-section h3 {
+  font-size: 18px;
+  line-height: 22px;
+  padding-bottom: 15px;
+  color: #333;
+}
+
+#container #form-side #shipping-section #name-input {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+#container #form-side #shipping-section #name-input label {
+  display: block;
+  padding-bottom: 7px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4F4F4F;
+}
+
+#container #form-side #shipping-section #name-input input {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+  padding: 18px 50px;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  width: 100%;
+}
+
+#container #form-side #shipping-section #name-input i {
+  position: absolute;
+  font-size: 20px;
+  color: #828282;
+  left: 15px;
+  top: 40px;
+}
+
+#container #form-side #shipping-section #address-input {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+#container #form-side #shipping-section #address-input label {
+  display: block;
+  padding-bottom: 7px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4F4F4F;
+}
+
+#container #form-side #shipping-section #address-input input {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+  padding: 18px 50px;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  width: 100%;
+}
+
+#container #form-side #shipping-section #address-input i {
+  position: absolute;
+  font-size: 20px;
+  color: #828282;
+  left: 15px;
+  top: 40px;
+}
+
+#container #form-side #shipping-section #city-input {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+#container #form-side #shipping-section #city-input label {
+  display: block;
+  padding-bottom: 7px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4F4F4F;
+}
+
+#container #form-side #shipping-section #city-input input {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+  padding: 18px 50px;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  width: 100%;
+}
+
+#container #form-side #shipping-section #city-input i {
+  position: absolute;
+  font-size: 20px;
+  color: #828282;
+  left: 15px;
+  top: 40px;
+}
+
+#container #form-side #shipping-section #country-post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #form-side #shipping-section #country-post #country-input {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+#container #form-side #shipping-section #country-post #country-input label {
+  display: block;
+  padding-bottom: 7px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4F4F4F;
+}
+
+#container #form-side #shipping-section #country-post #country-input select {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+  padding: 18px 50px;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  width: 100%;
+  background-color: #FFF;
+}
+
+#container #form-side #shipping-section #country-post #country-input i {
+  position: absolute;
+  font-size: 20px;
+  color: #828282;
+  left: 15px;
+  top: 40px;
+}
+
+#container #form-side #shipping-section #country-post #postal-input {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+#container #form-side #shipping-section #country-post #postal-input label {
+  display: block;
+  padding-bottom: 7px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4F4F4F;
+}
+
+#container #form-side #shipping-section #country-post #postal-input input {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+  padding: 18px 50px;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  width: 100%;
+}
+
+#container #form-side #shipping-section #country-post #postal-input i {
+  position: absolute;
+  font-size: 20px;
+  color: #828282;
+  left: 15px;
+  top: 40px;
+}
+
+#container #form-side #shipping-section #save-input {
+  padding: 20px 0;
+}
+
+#container #form-side #shipping-section #save-input input {
+  border: 1px solid #828282;
+  border-radius: 4px;
+  width: 21px;
+  height: 21px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+#container #form-side #shipping-section #save-input label {
+  font-size: 12px;
+  line-height: 15px;
+  color: #4F4F4F;
+}
+
+#container #form-side #shipping-section button {
+  padding: 17px 45px;
+  color: #FFF;
+  font-size: 16px;
+  line-height: 20px;
+  background: #F2994A;
+  border-radius: 12px;
+  float: right;
+  border: none;
+}
+
+#container #cart-side {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 /*# sourceMappingURL=styles.css.map */

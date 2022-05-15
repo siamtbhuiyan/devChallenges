@@ -1,3 +1,301 @@
-h1 {
-    color: orange;
+@import "config";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    font-family: $font;
+    font-weight: 600;
+    background-color: $while-color;
+    max-width: 1440px;
+    margin: auto;
+    padding: 60px 60px 0 60px;
+    display: flex;
+
+    #form-side {
+        flex: 1.2;
+        padding-right: 60px;
+
+        h1 {
+            font-size: 36px;
+            line-height: 44px;
+            color: $gray1-color;
+            padding-bottom: 25px;
+        }
+
+        #contact-section {
+            padding: 25px 0;
+
+            h3 {
+                font-size: 18px;
+                line-height: 22px;
+                padding-bottom: 15px;
+                color: $gray2-color;
+            }
+
+            #email-input {
+                padding-bottom: 20px;
+                position: relative;
+                label {
+                    display: block;
+                    padding-bottom: 7px;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: $gray3-color;
+                }
+
+                input {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $gray2-color;
+                    padding: 18px 50px;
+                    border: 1px solid $gray4-color;
+                    border-radius: 12px;
+                    width: 100%;
+                }
+
+                i {
+                    position: absolute;
+                    font-size: 20px;
+                    color: $gray4-color;
+                    left: 15px;
+                    top: 40px;
+                }
+            }
+
+            #phone-input {
+                padding-bottom: 20px;
+                position: relative;
+                label {
+                    display: block;
+                    padding-bottom: 7px;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: $gray3-color;
+                }
+
+                input {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $gray2-color;
+                    padding: 18px 50px;
+                    border: 1px solid $gray4-color;
+                    border-radius: 12px;
+                    width: 100%;
+                }
+
+                i {
+                    position: absolute;
+                    font-size: 20px;
+                    color: $gray4-color;
+                    left: 15px;
+                    top: 40px;
+                }
+            }
+        }
+
+        #shipping-section {
+            padding: 25px 0;
+
+            h3 {
+                font-size: 18px;
+                line-height: 22px;
+                padding-bottom: 15px;
+                color: $gray2-color;
+            }
+
+            #name-input {
+                padding-bottom: 20px;
+                position: relative;
+                label {
+                    display: block;
+                    padding-bottom: 7px;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: $gray3-color;
+                }
+
+                input {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $gray2-color;
+                    padding: 18px 50px;
+                    border: 1px solid $gray4-color;
+                    border-radius: 12px;
+                    width: 100%;
+                }
+
+                i {
+                    position: absolute;
+                    font-size: 20px;
+                    color: $gray4-color;
+                    left: 15px;
+                    top: 40px;
+                }
+            }
+
+            #address-input {
+                padding-bottom: 20px;
+                position: relative;
+                label {
+                    display: block;
+                    padding-bottom: 7px;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: $gray3-color;
+                }
+
+                input {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $gray2-color;
+                    padding: 18px 50px;
+                    border: 1px solid $gray4-color;
+                    border-radius: 12px;
+                    width: 100%;
+                }
+
+                i {
+                    position: absolute;
+                    font-size: 20px;
+                    color: $gray4-color;
+                    left: 15px;
+                    top: 40px;
+                }
+            }
+
+            #city-input {
+                padding-bottom: 20px;
+                position: relative;
+                label {
+                    display: block;
+                    padding-bottom: 7px;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: $gray3-color;
+                }
+
+                input {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $gray2-color;
+                    padding: 18px 50px;
+                    border: 1px solid $gray4-color;
+                    border-radius: 12px;
+                    width: 100%;
+                }
+
+                i {
+                    position: absolute;
+                    font-size: 20px;
+                    color: $gray4-color;
+                    left: 15px;
+                    top: 40px;
+                }
+            }
+
+            #country-post {
+                display: flex;
+                justify-content: space-between;
+                #country-input {
+                    padding-bottom: 20px;
+                    position: relative;
+                    label {
+                        display: block;
+                        padding-bottom: 7px;
+                        font-size: 12px;
+                        line-height: 15px;
+                        color: $gray3-color;
+                    }
+    
+                    select {
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: $gray2-color;
+                        padding: 18px 50px;
+                        border: 1px solid $gray4-color;
+                        border-radius: 12px;
+                        width: 100%;
+                        background-color: $while-color;
+                    }
+    
+                    i {
+                        position: absolute;
+                        font-size: 20px;
+                        color: $gray4-color;
+                        left: 15px;
+                        top: 40px;
+                    }
+                }
+
+                #postal-input {
+                    padding-bottom: 20px;
+                    position: relative;
+                    label {
+                        display: block;
+                        padding-bottom: 7px;
+                        font-size: 12px;
+                        line-height: 15px;
+                        color: $gray3-color;
+                    }
+    
+                    input {
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: $gray2-color;
+                        padding: 18px 50px;
+                        border: 1px solid $gray4-color;
+                        border-radius: 12px;
+                        width: 100%;
+                    }
+    
+                    i {
+                        position: absolute;
+                        font-size: 20px;
+                        color: $gray4-color;
+                        left: 15px;
+                        top: 40px;
+                    }
+                }
+            }
+
+            #save-input {
+                padding: 20px 0;
+
+                input {
+                    border: 1px solid $gray4-color;
+                    border-radius: 4px;
+                    width: 21px;
+                    height: 21px;
+                    margin-right: 8px;
+                    vertical-align: middle;
+                }
+
+                label {
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: $gray3-color;
+                }
+            }
+
+            button {
+                padding: 17px 45px;
+                color: $while-color;
+                font-size: 16px;
+                line-height: 20px;
+                background: $orange-color;
+                border-radius: 12px;
+                float: right;
+                border: none;
+            }
+        }
+
+    }
+
+    #cart-side {
+        flex: 1;
+    }
 }
