@@ -15,7 +15,8 @@
   <div id="container">
     <div id="form-side">
       <h1>Checkout</h1>
-      <form action="">
+      <p class="message"></p>
+      <form action="" id="form">
         <div id="contact-section">
           <h3>Contact Information</h3>
           <div id="email-input">
@@ -25,7 +26,7 @@
           </div>
           <div id="phone-input">
             <label for="phone">Phone</label>
-            <input type="number" name="phone" id="phone" placeholder="Enter your phone...">
+            <input type="text" name="phone" id="phone" placeholder="Enter your phone...">
             <i class="fa-solid fa-phone"></i>
           </div>
         </div>
@@ -310,11 +311,61 @@
             <input type="checkbox" id="save" name="save" value="Information">
             <label for="save">Save this information for next time</label>
           </div>
-          <button type="submit">Continue</button>
+          <input type="submit" value="Continue">
         </div>
       </form>
     </div>
-    <div id="cart-side"></div>
+    <div id="cart-side">
+      <div id="cart">
+        <div id="item1">
+          <div class="img"><img src="./images/photo1.png" alt=""></div>
+          <div class="item-info">
+            <div class="item-heading">
+              <p class="item-name">Vintage Backbag</p>
+              <p class="item-price">
+                <span class="current1-price">$54.99</span>
+                <span class="previous1-price">$94.99</span>
+              </p>
+            </div>
+            <div class="quantity">
+              <span class="item1-minus">-</span>
+              <span class="item1-num">01</span>
+              <span class="item1-plus">+</span>
+            </div>
+          </div>
+        </div>
+        <div id="item2">
+          <div class="img"><img src="./images/photo2.png" alt=""></div>
+          <div class="item-info">
+            <div class="item-heading">
+              <p class="item-name">Levi Shoes</p>
+              <p class="item-price">
+                <span class="current2-price">$74.99</span>
+                <span class="previous2-price">$124.99</span>
+              </p>
+            </div>
+            <div class="quantity">
+              <span class="item2-minus">-</span>
+              <span class="item2-num">01</span>
+              <span class="item2-plus">+</span>
+            </div>
+          </div>
+        </div>
+        <div id="info">
+          <hr>
+          <div id="shipping">
+            <span class="title">Shipping</span>
+            <span class="priceS">$19</span>
+          </div>
+          <hr>
+          <div id="total">
+            <span class="title">Total</span>
+            <span class="priceT">$148.98</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+<script src="./js/app.js"></script>
 </body>
 </html>

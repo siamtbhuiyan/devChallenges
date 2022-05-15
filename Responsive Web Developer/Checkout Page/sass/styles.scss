@@ -26,6 +26,10 @@
             padding-bottom: 25px;
         }
 
+        .message {
+            display: hidden;
+        }
+
         #contact-section {
             padding: 25px 0;
 
@@ -281,7 +285,7 @@
                 }
             }
 
-            button {
+            input[type=submit] {
                 padding: 17px 45px;
                 color: $while-color;
                 font-size: 16px;
@@ -290,12 +294,200 @@
                 border-radius: 12px;
                 float: right;
                 border: none;
+                cursor: pointer;
             }
         }
 
     }
 
     #cart-side {
-        flex: 1;
+        flex: 0.7;
+        padding-left: 60px;
+
+        #cart {
+            padding: 30px;
+            background-color: $gray6-color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 12px;
+
+            #item1 {
+                display: flex;
+                width: 100%;
+                padding-bottom: 20px;
+
+                .img {
+                    padding-right: 20px;
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        border-radius: 13px;
+                    }
+                }
+
+                .item-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 100%;
+                    .item-heading {
+                        .item-name {
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: $gray1-color;
+                            padding-bottom: 5px;
+                        }
+    
+                        .item-price {
+                            .current1-price {
+                                font-size: 16px;
+                                line-height: 20px;
+                                color: $orange-color;
+                                padding-right: 10px;
+                            }
+    
+                            .previous1-price {
+                                font-size: 12px;
+                                line-height: 15px;
+                                text-decoration-line: line-through;
+                                color: $gray1-color;
+                            }
+                        }
+                    }
+                    
+                    .quantity {
+                        width: 100%;
+                        border: 1px solid $gray4-color;
+                        border-radius: 12px;
+                        padding: 15px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .item1-num {
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: $gray2-color;
+                        }
+
+                        .item1-minus {
+                            color: $gray2-color;
+                            padding: 0 5px;
+                            background: #E0E0E0;
+                            border-radius: 4px;
+                            cursor: pointer;
+                        }
+
+                        .item1-plus {
+                            color: $gray2-color;
+                            padding: 0 5px;
+                            background: #E0E0E0;
+                            border-radius: 4px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            #item2 {
+                display: flex;
+                width: 100%;
+                padding-bottom: 20px;
+
+                .img {
+                    padding-right: 20px;
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        border-radius: 13px;
+                    }
+                }
+
+                .item-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 100%;
+                    .item-heading {
+                        .item-name {
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: $gray1-color;
+                            padding-bottom: 5px;
+                        }
+    
+                        .item-price {
+                            .current2-price {
+                                font-size: 16px;
+                                line-height: 20px;
+                                color: $orange-color;
+                                padding-right: 10px;
+                            }
+    
+                            .previous2-price {
+                                font-size: 12px;
+                                line-height: 15px;
+                                text-decoration-line: line-through;
+                                color: $gray1-color;
+                            }
+                        }
+                    }
+                    
+                    .quantity {
+                        width: 100%;
+                        border: 1px solid $gray4-color;
+                        border-radius: 12px;
+                        padding: 15px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .item2-num {
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: $gray2-color;
+                        }
+
+                        .item2-minus {
+                            color: $gray2-color;
+                            padding: 0 5px;
+                            background: #E0E0E0;
+                            border-radius: 4px;
+                            cursor: pointer;
+                        }
+
+                        .item2-plus {
+                            color: $gray2-color;
+                            padding: 0 5px;
+                            background: #E0E0E0;
+                            border-radius: 4px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            #info {
+                width: 100%;
+                padding-top: 100px;
+
+                hr {
+                    color: $gray4-color;
+                }
+
+                div {
+                    display: flex;
+                    justify-content: space-between;
+
+                    span {
+                        padding: 10px 0;
+                        font-size: 18px;
+                        line-height: 22px;
+                        color: $gray2-color;
+                    }
+                }
+            }
+        }
     }
 }
