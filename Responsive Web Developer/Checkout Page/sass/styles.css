@@ -11,7 +11,7 @@
   background-color: #FFF;
   max-width: 1440px;
   margin: auto;
-  padding: 60px 60px 0 60px;
+  padding: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -539,5 +539,19 @@
   font-size: 18px;
   line-height: 22px;
   color: #333;
+}
+
+#footer-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-decoration: none;
+  color: #828282;
+}
+
+#footer {
+  padding: 24px 0;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */
