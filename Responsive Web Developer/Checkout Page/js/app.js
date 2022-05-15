@@ -55,7 +55,6 @@ minus2.addEventListener("click", ()=>{
 
 const form = document.querySelector("#form");
 const message = document.querySelector(".message")
-console.log(form[5])
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (!form[0].value) {
