@@ -76,25 +76,21 @@
                     }
 
                     .crust-ings {
-                        list-style: none;
-                        padding-left: 35px;
-
-                        li:before {
-                            content: "";
-                            width: 19px;
-                            height: 19px;
-                            display: inline-block;
-                            border: 1px solid $gray4-color;
-                            margin-right: 15px;
-                            border-radius: 4px;
-                            vertical-align: text-bottom;
-                        }
-
-                        li {
+                        margin-left: 40px;
+                        .input-crust {
                             padding: 5px 0;
-                            text-indent: -35px;
-                            line-height: 22px;
-                            color: $gray1-color;
+                            input[type=checkbox] {
+                                width: 21px;
+                                height: 21px;
+                                vertical-align: text-bottom;
+                                margin-left: -40px;
+                            }
+    
+                            label {
+                                line-height: 22px;
+                                color: $gray1-color;
+                                margin-left: 15px;
+                            }
                         }
                     }
                 }
@@ -111,25 +107,21 @@
                     }
 
                     .cake-ings {
-                        list-style: none;
-                        padding-left: 35px;
-
-                        li:before {
-                            content: "";
-                            width: 19px;
-                            height: 19px;
-                            display: inline-block;
-                            border: 1px solid $gray4-color;
-                            margin-right: 15px;
-                            border-radius: 4px;
-                            vertical-align: text-bottom;
-                        }
-
-                        li {
+                        margin-left: 40px;
+                        .input-cake {
                             padding: 5px 0;
-                            text-indent: -35px;
-                            color: $gray1-color;
-                            line-height: 22px;
+                            input[type=checkbox] {
+                                width: 21px;
+                                height: 21px;
+                                vertical-align: text-bottom;
+                                margin-left: -40px;
+                            }
+
+                            label {
+                                line-height: 22px;
+                                color: $gray1-color;
+                                margin-left: 15px;
+                            }
                         }
                     }
                 }
