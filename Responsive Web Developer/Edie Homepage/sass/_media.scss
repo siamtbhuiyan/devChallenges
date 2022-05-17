@@ -1,0 +1,44 @@
+@media screen and (max-width: 1024px) {
+    #container {
+        padding: 30px 40px;
+
+        #navbar {
+            #nav-links {
+                .nav-link {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #container {
+        #navbar {
+            flex-direction: column;
+            position: relative;
+            #hamburger {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 24px;
+                text-decoration: none;
+                color: $black-color;
+            }
+
+            #hamburger:hover {
+                cursor: pointer;
+            }
+
+            #nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                .nav-link {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
