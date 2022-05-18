@@ -12,31 +12,130 @@
     padding: 40px 50px;
     font-family: $primary-font;
 
-    #navbar {
-        display: flex;
-        justify-content: space-between;
-
-        #nav-logo {
-            font-family: $logo-font;
-            font-weight: 800;
-            font-size: 36px;
-            line-height: 53px;
-        }
-
-        #hamburger {
-            display: none;
-        }
-
-        #nav-links {
+    #home {
+        #navbar {
             display: flex;
-            align-items: center;            
+            justify-content: space-between;
+    
+            #nav-logo {
+                font-family: $logo-font;
+                font-weight: 800;
+                font-size: 36px;
+                line-height: 53px;
+            }
+    
+            #hamburger {
+                display: none;
+            }
+    
+            #nav-links {
+                display: flex;
+                align-items: center;            
+    
+                .nav-link {
+                    padding: 0 20px;
+                    font-size: 24px;
+                    font-weight: 500;
+                    text-decoration: none;
+                    color: $black-color;
+                }
+            }
+        }
 
-            .nav-link {
-                padding: 0 20px;
-                font-size: 24px;
-                font-weight: 500;
-                text-decoration: none;
-                color: $black-color;
+        #home-hero {
+            padding: 100px 0;
+            
+            #home-top {
+                padding: 0 150px;
+
+                p {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: $blue-color;
+                    padding: 8px 0;
+                }
+
+                h1 {
+                    font-weight: 500;
+                    font-size: 48px;
+                    line-height: 72px;
+                    padding: 8px 0;
+                    color: $gray1-color;
+                }
+            }
+
+            #home-img {
+                padding: 34px 0;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    border-radius: 18px;
+                }
+            }
+
+            #home-bottom {
+                padding: 0 150px;
+
+                h1 {
+                    font-weight: 500;
+                    font-size: 48px;
+                    line-height: 72px;
+                    padding: 8px 0;
+                    color: $gray1-color;
+
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: $gray2-color;
+                    width: 350px;
+                    padding: 36px 0;
+                }
+
+                .email-heading {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: $gray3-color;
+                    padding: 8px 0;
+                }
+
+                #email-input {
+                    background: #F2F2F2;
+                    border-radius: 12px;
+                    display: inline-block;
+
+                    input {
+                        padding: 15px 21px;
+                        border: none;
+                        font-size: 18px;
+                        line-height: 27px;
+                        font-weight: 500;
+                    }
+
+                    input:focus {
+                        border: none;
+                        outline: none;
+                    }
+
+                    button {
+                        padding: 15px 32px;
+                        margin: 4px;
+                        background-color: $blue-color;
+                        color: $white-color;
+                        font-size: 18px;
+                        line-height: 27px;
+                        font-weight: 500;
+                        border-radius: 12px;
+                        border: none;
+                    }
+
+                    button:hover {
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }
