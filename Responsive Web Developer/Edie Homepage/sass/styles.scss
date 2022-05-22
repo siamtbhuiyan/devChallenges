@@ -157,7 +157,7 @@
                 padding: 46px 34px;
                 margin: 0 20px; 
                 border-radius: 24px;
-                #service-logo {
+                .service-logo {
                     display: inline-block;
                     padding: 14px 20px;
                     font-size: 27px;
@@ -178,7 +178,7 @@
                     background-color: #EB5757;
                 }
 
-                #service-title {
+                .service-title {
                     padding: 24px 0;
                     font-weight: 700;
                     font-size: 24px;
@@ -186,7 +186,7 @@
                     color: $gray1-color;
                 }
 
-                #service-details {
+                .service-details {
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 24px;
@@ -194,7 +194,7 @@
                     padding-bottom: 30px;
                 }
 
-                #service-button {
+                .service-button {
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 24px;
@@ -205,7 +205,7 @@
                     border: none;
                 }
 
-                #service-button:hover {
+                .service-button:hover {
                     cursor: pointer;
                 }
             }
@@ -214,11 +214,68 @@
                 box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
                 cursor: pointer;
 
-                #service-button {
+                .service-button {
                     background-color: $blue-color;
                     color: $white-color;
                 }
             }
+        }
+    }
+
+    #work {
+        margin: 100px 0;
+        padding: 0 30px;
+
+        #work-title {
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 54px;
+            color: $gray1-color;
+        }
+
+        #work-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .work-box {
+                padding: 0 10px;
+                .work-img {
+                    img {
+                        z-index: -1;
+                        border-radius: 24px;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+
+                .work-type {
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: $gray3-color;;
+                }
+
+                .work-heading {
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 36px;
+                    color: $gray1-color;
+                }
+            }
+
+            .left {
+                margin-top: 160px;
+            }
+            
+        }
+        
+        .more-link {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 36px;
+            float: right;
+            color: #2D9CDB;
+            text-decoration: none;
         }
     }
 }
