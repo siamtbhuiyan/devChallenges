@@ -22,7 +22,7 @@
             <a class="nav-link" href="#services">Services</a>
             <a class="nav-link" href="#work">Our Works</a>
             <a class="nav-link" href="#clients">Clients</a>
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
         </div>
       </div>
       <div id="home-hero">
@@ -124,17 +124,38 @@
       </div>
     </section>
    </div>
+   <section id="contact">
+    <div id="contact-section">
+      <div id="contact-nav">
+        <a class="contact-link" href="#home">Home</a>
+        <a class="contact-link" href="#services">Services</a>
+        <a class="contact-link" href="#work">Our Works</a>
+        <a class="contact-link" href="#clients">Clients</a>
+        <a class="contact-link" href="#contact">Contact</a>
+      </div>
+      <div id="contact-social">
+        <div id="contact-logo">Edie</div>
+        <div id="social-links">
+          <a href="#"><img src="./images/instagram.svg" alt=""></a>
+          <a href="#"><img src="./images/linkedin.svg" alt=""></a>
+          <a href="#"><img src="./images/twitter.svg" alt=""></a>
+        </div>
+      </div>
+      <div id="contact-form">
+        <p class="contact-formheading">Want us to contact you?</p>
+        <div id="contact-input">
+          <input type="email" name="contact-input" id="contact-input" placeholder="Email">
+          <button>Join</button>
+        </div>
+      </div>
+    </div>
+    <footer id="footer"><a href="https://devchallenges.io/portfolio/siamtbhuiyan" target="_blank" id="footer-link">Siam @devChallenges.io</a></footer>
+  </section>
 </body>
-<script>
-  function toggle() {
-    var x = document.getElementById("nav-links");
-    if (x.style.display === "flex") {
-      x.style.display = "none";
-      x.style.opacity = "0";
-    } else {
-      x.style.display = "flex";
-      x.style.opacity = "1";
-    }
-  }
-</script>
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- Local js file -->
+<script src="./js/app.js"></script>
 </html>

@@ -418,6 +418,110 @@
   color: #828282;
 }
 
+#contact {
+  background-color: #100E1D;
+  color: #fff;
+}
+
+#contact #contact-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px 50px;
+  font-family: "Poppins", sans-serif;
+  max-width: 1400px;
+  margin: auto;
+}
+
+#contact #contact-section #contact-nav a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 0;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+#contact #contact-section #contact-social #contact-logo {
+  font-family: "Heebo", sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 53px;
+  padding-bottom: 8px;
+}
+
+#contact #contact-section #contact-social #social-links a img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-right: 10px;
+}
+
+#contact #contact-section #contact-form .contact-formheading {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #fff;
+  padding: 8px 0;
+}
+
+#contact #contact-section #contact-form #contact-input {
+  background: #F2F2F2;
+  border-radius: 12px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: inline-block;
+}
+
+#contact #contact-section #contact-form #contact-input input {
+  padding: 15px 21px;
+  border: none;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  margin: 4px;
+}
+
+#contact #contact-section #contact-form #contact-input input:focus {
+  border: none;
+  outline: none;
+}
+
+#contact #contact-section #contact-form #contact-input button {
+  padding: 15px 32px;
+  margin: 4px;
+  background-color: #2D9CDB;
+  color: #fff;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  border-radius: 12px;
+  border: none;
+}
+
+#contact #contact-section #contact-form #contact-input button:hover {
+  cursor: pointer;
+}
+
+#contact #footer-link {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-decoration: none;
+  color: #ccc;
+}
+
+#contact #footer {
+  padding-bottom: 24px;
+  text-align: center;
+}
+
 @media screen and (max-width: 1024px) {
   #container {
     padding: 30px 40px;
@@ -573,6 +677,35 @@
     font-size: 24px;
     line-height: 36px;
   }
+  #contact #contact-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 40px 80px;
+  }
+  #contact #contact-section #contact-nav {
+    padding-bottom: 65px;
+  }
+  #contact #contact-section #contact-social {
+    padding-bottom: 65px;
+  }
+  #contact #contact-section #contact-form {
+    padding-bottom: 65px;
+  }
+  #contact #contact-section #contact-form .contact-formheading {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  #contact #contact-section #contact-form #contact-input input {
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0 4px;
+  }
+  #contact #contact-section #contact-form #contact-input button {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -586,6 +719,15 @@
     padding: 15px;
   }
   #container #home #home-hero #home-bottom #email-input button {
+    padding: 11px 15px;
+  }
+  #contact #contact-section {
+    padding: 20px 40px;
+  }
+  #contact #contact-section #contact-form #contact-input input {
+    padding: 15px;
+  }
+  #contact #contact-section #contact-form #contact-input button {
     padding: 11px 15px;
   }
 }

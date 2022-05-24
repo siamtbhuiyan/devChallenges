@@ -398,4 +398,112 @@
     }
 }
 
+#contact {
+    background-color: $black-color;
+    color: $white-color;
+    #contact-section {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 50px;
+        font-family: $primary-font;
+        max-width: 1400px;
+        margin: auto;
+
+        #contact-nav {
+            a {
+                display: block;
+                text-decoration: none;
+                color: $white-color;
+                padding: 5px 0;
+                font-weight: 400;
+                font-size: 18px;
+            }
+        }
+
+        #contact-social {
+            #contact-logo {
+                font-family: $logo-font;
+                font-weight: 800;
+                font-size: 36px;
+                line-height: 53px;
+                padding-bottom: 8px;
+            }
+
+            #social-links {
+                a {
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        #contact-form {
+            .contact-formheading {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                color: $white-color;
+                padding: 8px 0;
+            }
+
+            #contact-input {
+                background: #F2F2F2;
+                border-radius: 12px;
+                height: fit-content;
+                display: inline-block;
+
+                input {
+                    padding: 15px 21px;
+                    border: none;
+                    font-size: 18px;
+                    line-height: 27px;
+                    font-weight: 500;
+                    margin: 4px;
+                }
+
+                input:focus {
+                    border: none;
+                    outline: none;
+                }
+
+                button {
+                    padding: 15px 32px;
+                    margin: 4px;
+                    background-color: $blue-color;
+                    color: $white-color;
+                    font-size: 18px;
+                    line-height: 27px;
+                    font-weight: 500;
+                    border-radius: 12px;
+                    border: none;
+                }
+
+                button:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    // Footer Section
+    #footer-link {
+        font-family: $primary-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        text-decoration: none;
+        color: #ccc;
+    }
+    
+    #footer {
+        padding-bottom: 24px;
+        text-align: center;
+    }
+}
+
 @import "media";
