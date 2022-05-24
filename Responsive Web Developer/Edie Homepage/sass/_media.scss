@@ -140,6 +140,49 @@
                     margin: 0;
                 }
             }
+
+            .more-link {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 27px;
+                float: left;
+            }
+        }
+
+        #clients {
+            padding-top: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            #clients-top {
+                flex-direction: column;
+                padding-bottom: 0;
+
+                #clients-left {
+                    align-self: flex-start;
+                    padding-bottom: 36px;
+                }
+
+                #clients-right {
+                    #flex-1 {
+                        margin: 6px;
+                    }
+
+                    #flex-2 {
+                        #img-1 {
+                            margin: 6px;
+                        }
+
+                        #img-2 {
+                            margin: 6px;
+                        }
+                    }
+                }
+            }
+
+            #client-testimony {
+                font-size: 24px;
+                line-height: 36px;  
+            }
         }
     }
 }
