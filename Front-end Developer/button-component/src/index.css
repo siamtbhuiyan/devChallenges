@@ -1,3 +1,34 @@
+/* Global CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Font Families */
+@font-face {
+    font-family: "Poppins";
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+}
+
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+}
+
+/* Apply Classes */
+
+.btn-base {
+    @apply px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300 focus:bg-gray-300 font-medium text-sm;
+}
+
+.btn-outline {
+    @apply px-4 py-2 text-blue-600 rounded-md border-blue-600 border font-medium hover:bg-blue-100 focus:bg-blue-100 text-sm;
+}
+
+.btn-text {
+    @apply px-4 py-2 text-blue-600 rounded-md font-medium hover:bg-blue-100 focus:bg-blue-100 text-sm;
+}
