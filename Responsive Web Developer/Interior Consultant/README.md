@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://darling-cupcake-ae9b8a.netlify.app/">
+    <a href="https://interior-consultant-000.netlify.app/">
       Demo
     </a>
     <span> | </span>
@@ -39,7 +39,6 @@
 ![screenshot](./screenshots/Screenshot_2022-05-12_13-53-33.png)
 ![screenshot](./screenshots/Screenshot_2022-05-12_13-53-55.png)
 
-The live demo of this site is <a href="https://darling-cupcake-ae9b8a.netlify.app/" target="_blank">here</a>
 
 ### Built With
 

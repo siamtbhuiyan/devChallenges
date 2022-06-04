@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://radiant-bonbon-68165d.netlify.app/">
+    <a href="https://recipe-page-000.netlify.app/">
       Demo
     </a>
     <span> | </span>
@@ -40,7 +40,6 @@
 ![screenshot](./screenshots/Screenshot_2022-05-13_09-54-59.png)
 ![screenshot](./screenshots/Screenshot_2022-05-13_09-55-40.png)
 
-The live version of this site is <a href="https://radiant-bonbon-68165d.netlify.app/" target="_blank">here</a> 
 
 ### Built With
 

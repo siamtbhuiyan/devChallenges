@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://nifty-chandrasekhar-32a397.netlify.app">
+    <a href="https://404-not-found-000.netlify.app">
       Demo
     </a>
     <span> | </span>
@@ -41,7 +41,6 @@
 ![screenshot](./screenshots/Screenshot-mobile-darkmode.png)
 
 
-- The live version of this site is <a href="https://nifty-chandrasekhar-32a397.netlify.app" target="_blank">here</a> 
 
 ### Built With
 

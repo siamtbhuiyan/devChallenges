@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://dreamy-blini-46845c.netlify.app/">
+    <a href="https://my-team-page-000.netlify.app/">
       Demo
     </a>
     <span> | </span>
@@ -38,7 +38,6 @@
 ![screenshot](./screenshots/Screenshot_2022-05-11_06-53-10.png)
 ![screenshot](./screenshots/Screenshot_2022-05-11_07-04-35.png)
 
-The live version of this site is <a href="https://dreamy-blini-46845c.netlify.app/" target="_blank">here</a> 
 
 ### Built With
 

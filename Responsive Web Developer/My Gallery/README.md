@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://sparkling-tapioca-7b37f6.netlify.app/">
+    <a href="https://my-gallery-000.netlify.app/">
       Demo
     </a>
     <span> | </span>
@@ -38,7 +38,6 @@
 ![screenshot](./screenshots/Screenshot_2022-05-14_08-51-49.png)
 ![screenshot](./screenshots/Screenshot_2022-05-14_08-52-58.png)
 
-The live version of this site is <a href="https://sparkling-tapioca-7b37f6.netlify.app/" target="_blank">here</a> 
 
 ### Built With
 
