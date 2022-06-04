@@ -21,14 +21,54 @@
 
 /* Apply Classes */
 
-.btn-base {
-    @apply px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300 focus:bg-gray-300 font-medium text-sm;
+.btn-sm {
+    @apply px-3 py-1 rounded-md font-medium text-sm disabled:cursor-not-allowed disabled:text-gray-500;
 }
 
-.btn-outline {
-    @apply px-4 py-2 text-blue-600 rounded-md border-blue-600 border font-medium hover:bg-blue-100 focus:bg-blue-100 text-sm;
+.btn-md {
+    @apply px-4 py-2 rounded-md font-medium text-sm disabled:cursor-not-allowed disabled:text-gray-500;
 }
 
-.btn-text {
-    @apply px-4 py-2 text-blue-600 rounded-md font-medium hover:bg-blue-100 focus:bg-blue-100 text-sm;
+.btn-lg {
+    @apply px-6 py-3 rounded-md font-medium text-sm disabled:cursor-not-allowed disabled:text-gray-500;
+}
+
+.btn-default-default {
+    @apply bg-gray-200 hover:bg-gray-300 focus:bg-gray-300 disabled:bg-gray-200;
+}
+
+.btn-default-primary {
+    @apply bg-blue-600 hover:bg-blue-800 focus:bg-blue-800 text-white disabled:bg-gray-200;
+}
+
+.btn-default-danger {
+    @apply bg-red-600 hover:bg-red-800 focus:bg-red-800 text-white disabled:bg-gray-200;
+}
+
+.btn-default-secondary {
+    @apply bg-gray-600 hover:bg-gray-800 focus:bg-gray-800 text-white disabled:bg-gray-200;
+}
+
+.btn-text-default {
+    @apply text-blue-600 hover:bg-blue-100 focus:bg-blue-100 disabled:bg-inherit;
+}
+
+.btn-text-danger {
+    @apply text-red-600 hover:bg-red-100 focus:bg-red-100 disabled:bg-inherit;
+}
+
+.btn-text-secondary {
+    @apply text-gray-600 hover:bg-gray-100 focus:bg-gray-100 disabled:bg-inherit;
+}
+
+.btn-outline-default {
+    @apply text-blue-600 border border-blue-600 hover:bg-blue-100 focus:bg-blue-100 disabled:bg-inherit disabled:border-none;
+}
+
+.btn-outline-danger {
+    @apply text-red-600 border border-red-600 hover:bg-red-100 focus:bg-red-100 disabled:bg-inherit disabled:border-none;
+}
+
+.btn-outline-secondary {
+    @apply text-gray-600 border border-gray-600 hover:bg-gray-100 focus:bg-gray-100 disabled:bg-inherit disabled:border-none;
 }
