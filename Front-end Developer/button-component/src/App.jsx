@@ -3,7 +3,7 @@ import Button from "./components/Button";
 
 const App = () => {
   return (
-    <div className="container mx-auto py-14">
+    <div className="container mx-auto py-14 bg-red-600">
       <h1 className="font-poppins text-2xl font-medium text-gray-900">Buttons</h1>
       <div className="grid grid-cols-2 py-6">
         <Button title="<Button />" btnTitle="Default"/>
