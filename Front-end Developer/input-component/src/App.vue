@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import InputComp from './components/InputComp.vue'
+import InputComp from "./components/InputComp.vue";
 export default {
   components: {
-    InputComp
-  }
-}
+    InputComp,
+  },
+};
 </script>
