@@ -28,11 +28,11 @@
 /* Apply Classes */
 
 .input-default {
-  @apply border-2 border-gray-400 rounded-lg outline-none w-52 hover:border-gray-800 focus:border-blue-500;
+  @apply border-2 border-gray-400 rounded-lg outline-none hover:border-gray-800 focus:border-blue-500;
 }
 
 .input-error {
-  @apply border-2 border-red-500 rounded-lg outline-none w-52 hover:border-gray-800 focus:border-red-500;
+  @apply border-2 border-red-500 rounded-lg outline-none hover:border-gray-800 focus:border-red-500;
 }
 
 .label-default {

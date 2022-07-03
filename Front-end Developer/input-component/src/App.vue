@@ -19,4 +19,5 @@ export default {
   <InputComp size="sm" />
   <InputComp size="sm" startIcon="lock" />
   <InputComp size="sm" endIcon="call" />
+  <InputComp fullWidth />
 </template>

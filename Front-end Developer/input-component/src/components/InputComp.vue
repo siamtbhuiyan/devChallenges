@@ -30,6 +30,10 @@ export default {
       type: String,
       default: "md",
     },
+    fullWidth: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -55,6 +59,7 @@ export default {
           : "pr-10",
       sizeClass: this.size === "sm" ? "py-2" : "py-4",
       iconClass: this.size === "sm" ? "top-8" : "top-10",
+      fullWidthClass: this.fullWidth ? "w-full" : "w-52",
     };
   },
 };
@@ -62,7 +67,7 @@ export default {
 
 <template>
   <div>
-    <div class="input">
+    <div class="input" :class="fullWidthClass">
       <label :class="labelClass">Label</label>
       <span
         class="material-icons font-material start-icon"
@@ -78,6 +83,7 @@ export default {
           startIconClass,
           endIconClass,
           sizeClass,
+          fullWidthClass,
         ]"
         :disabled="disabled"
         :value="value"
