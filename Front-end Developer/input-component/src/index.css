@@ -35,3 +35,7 @@
 .label-error {
     @apply block capitalize;
 }
+
+.disable {
+    @apply border border-gray-300 bg-gray-200 hover:border-gray-300 cursor-not-allowed;
+}

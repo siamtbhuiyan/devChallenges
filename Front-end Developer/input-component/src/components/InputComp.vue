@@ -1,16 +1,20 @@
 <script>
 export default {
   props: {
-    state: {
-      type: String,
-      required: true,
-      default: "default" 
+    error: {
+      type: Boolean,
+      default: false, 
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
     return {
-      inputClass: `input-${this.state}`,
-      labelClass: `label-${this.state}`
+      inputClass: this.error ? "input-error" : "input-default",
+      labelClass: this.error ? "label-error" : "label-default",
+      disableClass: this.disabled ? "disable" : "",
     }
   }
 };
@@ -22,7 +26,8 @@ export default {
     <input
       type="text"
       placeholder="Placeholder"
-      :class="inputClass"
+      :class="[inputClass, disableClass]"
+      :disabled="disabled"
     />
     <label :class="labelClass">Label</label>
   </div>

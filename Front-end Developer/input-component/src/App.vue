@@ -9,6 +9,6 @@ export default {
 
 <template>
   <InputComp />
-  <InputComp />
-  <InputComp state="error" />
+  <InputComp error />
+  <InputComp disabled />
 </template>
