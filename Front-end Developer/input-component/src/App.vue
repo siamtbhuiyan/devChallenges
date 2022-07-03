@@ -11,4 +11,6 @@ export default {
   <InputComp />
   <InputComp error />
   <InputComp disabled />
+  <InputComp helperText="Some interesting text" />
+  <InputComp helperText="Some interesting text" error/>
 </template>
