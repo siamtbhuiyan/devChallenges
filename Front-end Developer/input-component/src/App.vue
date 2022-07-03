@@ -16,4 +16,7 @@ export default {
   <InputComp startIcon="phone" />
   <InputComp endIcon="lock" />
   <InputComp value="Text" />
+  <InputComp size="sm" />
+  <InputComp size="sm" startIcon="lock" />
+  <InputComp size="sm" endIcon="call" />
 </template>
