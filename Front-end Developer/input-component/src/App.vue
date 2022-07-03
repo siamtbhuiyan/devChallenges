@@ -15,4 +15,5 @@ export default {
   <InputComp helperText="Some interesting text" error />
   <InputComp startIcon="phone" />
   <InputComp endIcon="lock" />
+  <InputComp value="Text" />
 </template>

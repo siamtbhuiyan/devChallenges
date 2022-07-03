@@ -52,7 +52,7 @@ export default {
         placeholder="Placeholder"
         :class="[inputClass, disableClass, startIconClass, endIconClass]"
         :disabled="disabled"
-        :value="defaultValue"
+        :value="value"
       />
       <span class="material-icons font-material end-icon">{{ endIcon }}</span>
       <label :class="helperClass">{{ helperText }}</label>
