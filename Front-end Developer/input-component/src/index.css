@@ -1,49 +1,72 @@
+/* @import url("https://fonts.googleapis.com/icon?family=Material+Icons"); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Font Families */
 @font-face {
-    font-family: "Noto Sans";
-    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+  font-family: "Noto Sans";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 }
 
 @font-face {
-    font-family: "Ubuntu Mono";
-    src: url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+  font-family: "Ubuntu Mono";
+  src: url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+  font-family: "Montserrat";
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: url("https://fonts.googleapis.com/icon?family=Material+Icons");
 }
 
 /* Apply Classes */
 
 .input-default {
-    @apply border-2 border-gray-400 py-4 px-3 rounded-lg outline-none w-52 hover:border-gray-800 focus:border-blue-500;
+  @apply border-2 border-gray-400 py-4 rounded-lg outline-none w-52 hover:border-gray-800 focus:border-blue-500;
 }
 
 .input-error {
-    @apply border-2 border-red-500 py-4 px-3 rounded-lg outline-none w-52 hover:border-gray-800 focus:border-red-500;
+  @apply border-2 border-red-500 py-4 rounded-lg outline-none w-52 hover:border-gray-800 focus:border-red-500;
 }
 
 .label-default {
-    @apply block capitalize;
+  @apply block capitalize;
 }
 
 .label-error {
-    @apply block capitalize text-red-500;
+  @apply block capitalize text-red-500;
 }
 
 .disable {
-    @apply border border-gray-300 bg-gray-200 hover:border-gray-300 cursor-not-allowed;
+  @apply border border-gray-300 bg-gray-200 hover:border-gray-300 cursor-not-allowed;
 }
 
 .helper-default {
-    @apply text-sm py-1 text-gray-400;
+  @apply text-sm py-1 text-gray-400 block;
 }
 
 .helper-error {
-    @apply text-sm py-1 text-red-500;
+  @apply text-sm py-1 text-red-500 block;
+}
+
+.start-icon {
+  @apply absolute left-3 top-10 text-xl text-gray-500;
+}
+
+.end-icon {
+  @apply absolute right-3 top-10 text-xl text-gray-500;
+}
+
+.input {
+  @apply relative inline-block;
+}
+
+.input:focus-within > .label-default {
+  color: rgb(59 130 246);
 }
