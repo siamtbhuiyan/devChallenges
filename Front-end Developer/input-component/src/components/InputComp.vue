@@ -42,6 +42,10 @@ export default {
       type: Number,
       default: 1,
     },
+    title: {
+      type: String,
+      default: "",
+    },
   },
   data() {
     return {
@@ -76,6 +80,7 @@ export default {
 
 <template>
   <div>
+    <p class="py-3 text-gray-400">{{ title }}</p>
     <div class="input" :class="fullWidthClass">
       <label :class="labelClass">Label</label>
       <span

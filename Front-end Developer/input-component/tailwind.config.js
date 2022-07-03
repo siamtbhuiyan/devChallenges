@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["Noto Sans", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        notoSans: ["Noto Sans", "sans-serif"],
         ubuntuMono: ["Ubuntu Mono", "monospace"],
         montserrat: ["Montserrat", "sans-serif"],
         material: ["Material Icons"],
