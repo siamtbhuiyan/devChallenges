@@ -20,4 +20,5 @@ export default {
   <InputComp size="sm" startIcon="lock" />
   <InputComp size="sm" endIcon="call" />
   <InputComp fullWidth />
+  <InputComp multiline row="4" />
 </template>

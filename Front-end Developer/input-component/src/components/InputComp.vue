@@ -34,6 +34,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    multiline: {
+      type: Boolean,
+      default: false,
+    },
+    row: {
+      type: Number,
+      default: 1,
+    },
   },
   data() {
     return {
@@ -60,6 +68,7 @@ export default {
       sizeClass: this.size === "sm" ? "py-2" : "py-4",
       iconClass: this.size === "sm" ? "top-8" : "top-10",
       fullWidthClass: this.fullWidth ? "w-full" : "w-52",
+      rows: this.row,
     };
   },
 };
@@ -74,20 +83,40 @@ export default {
         :class="iconClass"
         >{{ startIcon }}</span
       >
-      <input
-        type="text"
-        placeholder="Placeholder"
-        :class="[
-          inputClass,
-          disableClass,
-          startIconClass,
-          endIconClass,
-          sizeClass,
-          fullWidthClass,
-        ]"
-        :disabled="disabled"
-        :value="value"
-      />
+      <span v-if="multiline">
+        <textarea
+          type="text"
+          placeholder="Placeholder"
+          :class="[
+            inputClass,
+            disableClass,
+            startIconClass,
+            endIconClass,
+            sizeClass,
+            fullWidthClass,
+          ]"
+          :disabled="disabled"
+          :value="value"
+          :rows="rows"
+          style="overflow: hidden; resize: none"
+        ></textarea>
+      </span>
+      <span v-else>
+        <input
+          type="text"
+          placeholder="Placeholder"
+          :class="[
+            inputClass,
+            disableClass,
+            startIconClass,
+            endIconClass,
+            sizeClass,
+            fullWidthClass,
+          ]"
+          :disabled="disabled"
+          :value="value"
+        />
+      </span>
       <span class="material-icons font-material end-icon" :class="iconClass">{{
         endIcon
       }}</span>
