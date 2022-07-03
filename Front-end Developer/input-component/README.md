@@ -33,8 +33,8 @@
 
 ## Overview
 
-![screenshot](./screenshots/screenshot-1.png)
-![screenshot](./screenshots/screenshot-2.png)
+![screenshot](./screenshots/screenshots-1.png)
+![screenshot](./screenshots/screenshots-2.png)
 
 ### Built With
 
@@ -73,7 +73,7 @@ $ cd 'Front-end Developer'/input-component
 $ npm install
 
 # Run the app
-$ npm start
+$ npm run dev
 ```
 
 ## Acknowledgements
