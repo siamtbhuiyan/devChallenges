@@ -1,9 +1,3 @@
-<template>
-  <InputComp />
-  <InputComp />
-  <InputComp />
-</template>
-
 <script>
 import InputComp from "./components/InputComp.vue";
 export default {
@@ -12,3 +6,9 @@ export default {
   },
 };
 </script>
+
+<template>
+  <InputComp />
+  <InputComp />
+  <InputComp state="error" />
+</template>
