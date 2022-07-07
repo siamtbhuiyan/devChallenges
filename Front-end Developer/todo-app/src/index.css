@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Raleway";
+  src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+}
+
+.empty {
+  @apply px-12 py-0;
+}
+
+.state-border {
+  @apply border-t-4 rounded-t border-blue-500;
+}
