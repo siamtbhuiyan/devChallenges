@@ -3,10 +3,12 @@ import NavBar from "./components/NavBar";
 import AddForm from "./components/AddForm";
 import Tasks from "./components/Tasks";
 import initialTasks from "./initialTasks";
+import { todo } from "./initialTasks";
 
 const App = () => {
   const [view, setView] = useState("all");
   const [tasks, setTasks] = useState(initialTasks);
+  const [formValue, setFormValue] = useState("");
   useEffect(() => {
     const currentDiv = document.getElementsByClassName(view);
     currentDiv[0].classList.add("state-border");
@@ -41,13 +43,30 @@ const App = () => {
     const currentTasks = tasks.filter((t) => t.active);
     setTasks(currentTasks);
   };
+  const handleAdd = (event: any) => {
+    event.preventDefault();
+    const newTask: todo = {
+      id: Date.now(),
+      title: formValue,
+      active: true,
+    };
+    const currentTasks = [...tasks, newTask];
+    setTasks(currentTasks);
+  };
+  const handleFormChange = (event: any) => {
+    setFormValue(event.target.value);
+  };
   return (
     <div className="container mx-auto flex flex-col my-9">
       <h1 className="font-raleway font-bold text-4xl mb-28 self-center">
         #todo
       </h1>
       <NavBar changeView={changeView} />
-      {view !== "completed" ? <AddForm /> : <></>}
+      {view !== "completed" ? (
+        <AddForm handleAdd={handleAdd} handleFormChange={handleFormChange} />
+      ) : (
+        <></>
+      )}
       <Tasks
         tasks={tasks}
         handleCheck={handleCheck}
