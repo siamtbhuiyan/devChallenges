@@ -19,3 +19,7 @@
 .state-border {
   @apply border-t-4 rounded-t border-blue-500;
 }
+
+input[type="checkbox"]:checked + label.strike-through {
+  text-decoration: line-through;
+}

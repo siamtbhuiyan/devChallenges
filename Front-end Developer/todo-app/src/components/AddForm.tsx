@@ -10,7 +10,7 @@ const AddForm = () => {
       />
       <button
         type="submit"
-        className="flex-1 m-4 py-5 px-10 text-white bg-blue-500 rounded-xl"
+        className="flex-1 m-4 py-5 px-10 text-white bg-blue-500 rounded-xl hover:bg-blue-400"
       >
         Add
       </button>
