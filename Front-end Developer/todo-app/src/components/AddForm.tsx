@@ -1,16 +1,10 @@
-const AddForm = ({
-  handleAdd,
-  handleFormChange,
-}: {
-  handleAdd: (event: any) => void;
-  handleFormChange: (event: any) => void;
-}) => {
+const AddForm = ({ handleAdd }: { handleAdd: (event: any) => void }) => {
   return (
     <form action="" className="w-full flex" onSubmit={handleAdd}>
       <input
+        id="form-input"
         type="text"
         placeholder="add details"
-        onChange={handleFormChange}
         className="flex-[6_6_0%] border rounded-xl border-gray-300 py-5 px-3 m-4 focus:outline-none focus:border-blue-500"
       />
       <input
