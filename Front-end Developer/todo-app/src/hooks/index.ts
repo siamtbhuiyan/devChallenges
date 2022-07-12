@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const usePersistedState = (defaultValue: any, localStorageKey: any) => {
+const usePersistedState = (defaultValue: any, localStorageKey: string) => {
   const [value, setValue] = useState(() => {
     const localStorageItem = localStorage.getItem(localStorageKey);
     if (localStorageItem === null) return defaultValue;

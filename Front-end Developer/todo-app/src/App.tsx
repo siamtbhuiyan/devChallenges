@@ -1,27 +1,19 @@
-import { useEffect } from "react";
 import NavBar from "./components/NavBar";
 import AddForm from "./components/AddForm";
 import Tasks from "./components/Tasks";
 import initialTasks from "./initialTasks";
 import { todo } from "./initialTasks";
 import usePersistedState from "./hooks";
+import React from "react";
+import Footer from "./components/Footer";
 
 const App = () => {
-  const [view, setView] = usePersistedState("all", "all");
+  const [view, setView] = usePersistedState("all", "view");
   const [tasks, setTasks] = usePersistedState(initialTasks, "tasks");
-  useEffect(() => {
-    const currentDiv = document.getElementsByClassName(view);
-    currentDiv[0].classList.add("state-border");
-  }, []);
+  const [formValue, setFormValue] = usePersistedState("", "formValue");
 
   const changeView = (event: React.MouseEvent<HTMLElement>) => {
     const value = event.currentTarget.innerText.toLowerCase();
-    const allDivs = Array.from(document.getElementsByClassName("empty"));
-    allDivs.forEach((a) => {
-      a.classList.remove("state-border");
-    });
-    const currentDiv = document.getElementsByClassName(value);
-    currentDiv[0].classList.add("state-border");
     setView(value);
   };
   const handleCheck = (event: React.MouseEvent<HTMLElement>) => {
@@ -43,26 +35,35 @@ const App = () => {
     const currentTasks = tasks.filter((t: todo) => t.active);
     setTasks(currentTasks);
   };
-  const handleAdd = (event: any) => {
+  const handleAdd = (event: React.FormEvent) => {
     event.preventDefault();
-    const formVal = (document.getElementById("form-input") as HTMLInputElement)
-      .value;
     const newTask: todo = {
       id: Date.now(),
-      title: formVal,
+      title: formValue,
       active: true,
     };
     const currentTasks = [...tasks, newTask];
     setTasks(currentTasks);
-    (document.getElementById("form-input") as HTMLInputElement).value = "";
+    setFormValue("");
+  };
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFormValue(event.currentTarget.value);
   };
   return (
-    <div className="container mx-auto flex flex-col my-9">
+    <div className="container mx-auto flex flex-col my-9 min-h-[calc(100vh-72px)]">
       <h1 className="font-raleway font-bold text-4xl mb-28 self-center">
         #todo
       </h1>
-      <NavBar changeView={changeView} />
-      {view !== "completed" ? <AddForm handleAdd={handleAdd} /> : <></>}
+      <NavBar view={view} changeView={changeView} />
+      {view !== "completed" ? (
+        <AddForm
+          handleAdd={handleAdd}
+          handleChange={handleChange}
+          formValue={formValue}
+        />
+      ) : (
+        <></>
+      )}
       <Tasks
         tasks={tasks}
         handleCheck={handleCheck}
@@ -70,6 +71,7 @@ const App = () => {
         handleDelete={handleDelete}
         handleDeleteAll={handleDeleteAll}
       />
+      <Footer />
     </div>
   );
 };

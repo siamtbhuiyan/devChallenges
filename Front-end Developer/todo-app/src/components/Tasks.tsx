@@ -16,8 +16,8 @@ const Tasks = ({
 }) => {
   if (view === "all") {
     return (
-      <div>
-        {tasks.map((t): any => {
+      <div className="flex-grow">
+        {tasks.map((t): React.ReactNode => {
           return (
             <form
               key={t.id}
@@ -45,10 +45,10 @@ const Tasks = ({
     );
   } else if (view === "active") {
     return (
-      <div>
+      <div className="flex-grow">
         {tasks
           .filter((t) => t.active)
-          .map((t): any => {
+          .map((t): React.ReactNode => {
             return (
               <form
                 key={t.id}
@@ -76,11 +76,11 @@ const Tasks = ({
     );
   } else {
     return (
-      <div>
+      <div className="flex-grow">
         <div>
           {tasks
             .filter((t) => !t.active)
-            .map((t): any => {
+            .map((t): React.ReactNode => {
               return (
                 <form
                   key={t.id}
