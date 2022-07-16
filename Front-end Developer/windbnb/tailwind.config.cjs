@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         material: ["Material Icons"],
         mulish: ["Mulish", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },
