@@ -1,8 +1,8 @@
 <script lang="ts">
+import { defineComponent } from "vue";
 import NavbarComp from "./components/Navbar.vue";
 import PropertyListComp from "./components/PropertyList.vue";
-import stays from "./data/stays.json";
-export default {
+export default defineComponent({
   components: {
     NavbarComp,
     PropertyListComp,
@@ -12,7 +12,7 @@ export default {
       message: "Hello World!",
     };
   },
-};
+});
 </script>
 <template>
   <div class="container mx-auto my-8">
