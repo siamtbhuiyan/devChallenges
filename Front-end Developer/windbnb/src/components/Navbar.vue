@@ -1,5 +1,18 @@
 <script lang="ts">
-export default {};
+export default {
+  props: {
+    filterVisible: {
+      type: Boolean,
+      required: true,
+    },
+  },
+  methods: {
+    toggleFilter() {
+      this.filterVisible = !this.filterVisible;
+      console.log(this.filterVisible);
+    },
+  },
+};
 </script>
 
 <template>
@@ -14,6 +27,7 @@ export default {};
       <span class="border-r px-4 py-5 text-sm font-mulish">Add guests</span>
       <span
         class="font-material text-red-500 align-middle px-4 text-2xl cursor-pointer"
+        @click="toggleFilter"
         >search</span
       >
     </div>

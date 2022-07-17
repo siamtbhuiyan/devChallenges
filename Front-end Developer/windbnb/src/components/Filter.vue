@@ -5,7 +5,7 @@ export default defineComponent({
     return {
       isLocationActive: true,
       isGuestActive: false,
-      location: "Helsinki, Finland",
+      location: "",
       adults: 0,
       children: 0,
     };
@@ -55,8 +55,8 @@ export default defineComponent({
 });
 </script>
 <template>
-  <div class="h-[50vh] w-full z-50 absolute top-0 left-0 bg-white">
-    <div class="container mx-auto mt-24">
+  <div class="w-full z-50 absolute top-0 left-0 bg-white">
+    <div class="container mx-auto mt-24 mb-8">
       <div class="flex shadow rounded-2xl">
         <div
           class="flex-1 py-3 px-7"
@@ -66,7 +66,8 @@ export default defineComponent({
           <div class="uppercase text-[9px] font-bold font-mulish pt-1">
             location
           </div>
-          <div class="text-sm">{{ location }}</div>
+          <div class="text-sm" v-if="location !== ''">{{ location }}</div>
+          <div class="text-sm text-gray-400" v-else>Add Location</div>
         </div>
         <div
           class="flex-1 py-3 px-7"
@@ -88,7 +89,7 @@ export default defineComponent({
         </button>
       </div>
       <div class="flex pt-10" v-if="isLocationActive || isGuestActive">
-        <div class="flex-1 px-7">
+        <div class="flex-1 px-7" :class="{ invisible: isGuestActive }">
           <div class="pb-9 hover:cursor-pointer" @click="changeLocation">
             <span class="font-material text-xl align-bottom text-gray-700"
               >place</span
@@ -114,7 +115,7 @@ export default defineComponent({
             <span class="align-text-bottom pl-2">Vaasa, Finland </span>
           </div>
         </div>
-        <div class="flex-1 px-7">
+        <div class="flex-1 px-7" :class="{ invisible: isLocationActive }">
           <div>
             <div class="font-mulish font-bold text-sm">Adults</div>
             <div class="text-sm text-mulish text-gray-400">

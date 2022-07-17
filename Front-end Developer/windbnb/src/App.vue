@@ -11,15 +11,15 @@ export default defineComponent({
   },
   data(): any {
     return {
-      message: "Hello World!",
+      filterVisible: false,
     };
   },
 });
 </script>
 <template>
   <div class="container mx-auto my-8 2xs:px-2 lg:px-10">
-    <FilterComp />
-    <NavbarComp />
+    <div v-if="filterVisible"><FilterComp /></div>
+    <NavbarComp :filterVisible="filterVisible" />
     <PropertyListComp />
   </div>
 </template>
