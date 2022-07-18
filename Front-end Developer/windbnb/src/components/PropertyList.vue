@@ -2,13 +2,15 @@
 import { defineComponent } from "vue";
 import stays from "../data/stays.json";
 import PropertyCardComp from "./PropertyCard.vue";
+import Stay from "../types/stay";
+
 export default defineComponent({
   components: {
     PropertyCardComp,
   },
   data() {
     return {
-      stays,
+      stays: stays as Stay[],
     };
   },
 });

@@ -1,55 +1,69 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 export default defineComponent({
+  emits: {
+    toggleFilter() {
+      return true;
+    },
+    setLocation(event: Event) {
+      return true;
+    },
+    setGuests(adults: number, children: number) {
+      return true;
+    },
+  },
+  props: {
+    location: {
+      type: String,
+      required: true,
+    },
+    guests: {
+      type: Number,
+      required: true,
+    },
+  },
   data() {
     return {
       isLocationActive: true,
       isGuestActive: false,
-      location: "",
       adults: 0,
       children: 0,
     };
   },
-  computed: {
-    guests() {
-      return this.adults + this.children;
-    },
-  },
   methods: {
-    filterLocation() {
+    toggleFilter(): void {
+      this.$emit("toggleFilter");
+    },
+    filterLocation(): void {
       this.isLocationActive = !this.isLocationActive;
       this.isGuestActive = false;
     },
-    filterGuest() {
+    filterGuest(): void {
       this.isLocationActive = false;
       this.isGuestActive = !this.isGuestActive;
     },
-    changeLocation(event) {
-      if (event.target.innerHTML.includes("Helsinki")) {
-        this.location = "Helsinki, Finland";
-      } else if (event.target.innerHTML.includes("Turku")) {
-        this.location = "Turku, Finland";
-      } else if (event.target.innerHTML.includes("Oulu")) {
-        this.location = "Oulu, Finland";
-      } else if (event.target.innerHTML.includes("Vaasa")) {
-        this.location = "Vaasa, Finland";
-      }
-    },
-    adultIncrement() {
+    adultIncrement(): void {
       this.adults++;
+      this.$emit("setGuests", this.adults, this.children);
     },
-    childrenIncrement() {
+    childrenIncrement(): void {
       this.children++;
+      this.$emit("setGuests", this.adults, this.children);
     },
-    adultDecrement() {
+    adultDecrement(): void {
       if (this.adults !== 0) {
         this.adults--;
       }
+      this.$emit("setGuests", this.adults, this.children);
     },
-    childrenDecrement() {
+    childrenDecrement(): void {
       if (this.children !== 0) {
         this.children--;
       }
+      this.$emit("setGuests", this.adults, this.children);
+    },
+    setLocation(event: Event): void {
+      this.$emit("setLocation", event);
     },
   },
 });
@@ -66,7 +80,9 @@ export default defineComponent({
           <div class="uppercase text-[9px] font-bold font-mulish pt-1">
             location
           </div>
-          <div class="text-sm" v-if="location !== ''">{{ location }}</div>
+          <div class="text-sm" v-if="location !== ''">
+            {{ location }}
+          </div>
           <div class="text-sm text-gray-400" v-else>Add Location</div>
         </div>
         <div
@@ -83,6 +99,7 @@ export default defineComponent({
         <button
           type="submit"
           class="flex-none bg-red-500 text-white text-sm px-6 py-4 rounded-2xl my-1 hover:bg-red-400"
+          @click="toggleFilter"
         >
           <span class="font-material text-xl align-bottom">search</span>
           <span class="align-text-bottom pl-2 text-base">Search</span>
@@ -90,25 +107,25 @@ export default defineComponent({
       </div>
       <div class="flex pt-10" v-if="isLocationActive || isGuestActive">
         <div class="flex-1 px-7" :class="{ invisible: isGuestActive }">
-          <div class="pb-9 hover:cursor-pointer" @click="changeLocation">
+          <div class="pb-9 hover:cursor-pointer" @click="setLocation($event)">
             <span class="font-material text-xl align-bottom text-gray-700"
               >place</span
             >
             <span class="align-text-bottom pl-2">Helsinki, Finland </span>
           </div>
-          <div class="pb-9 hover:cursor-pointer" @click="changeLocation">
+          <div class="pb-9 hover:cursor-pointer" @click="setLocation($event)">
             <span class="font-material text-xl align-bottom text-gray-700"
               >place</span
             >
             <span class="align-text-bottom pl-2">Turku, Finland </span>
           </div>
-          <div class="pb-9 hover:cursor-pointer" @click="changeLocation">
+          <div class="pb-9 hover:cursor-pointer" @click="setLocation($event)">
             <span class="font-material text-xl align-bottom text-gray-700"
               >place</span
             >
             <span class="align-text-bottom pl-2">Oulu, Finland </span>
           </div>
-          <div class="pb-9 hover:cursor-pointer" @click="changeLocation">
+          <div class="pb-9 hover:cursor-pointer" @click="setLocation($event)">
             <span class="font-material text-xl align-bottom text-gray-700"
               >place</span
             >
@@ -158,5 +175,3 @@ export default defineComponent({
     </div>
   </div>
 </template>
-
-border border-black rounded-2xl
