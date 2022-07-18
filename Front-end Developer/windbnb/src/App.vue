@@ -9,7 +9,7 @@ export default defineComponent({
     PropertyListComp,
     FilterComp,
   },
-  data(): any {
+  data(): { filterVisible: boolean; location: string; guests: number } {
     return {
       filterVisible: false,
       location: "",
@@ -53,6 +53,6 @@ export default defineComponent({
       :guests="guests"
       :location="location"
     />
-    <PropertyListComp />
+    <PropertyListComp :location="location" :guests="guests" />
   </div>
 </template>

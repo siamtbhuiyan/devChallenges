@@ -22,7 +22,12 @@ export default defineComponent({
       required: true,
     },
   },
-  data() {
+  data(): {
+    isLocationActive: boolean;
+    isGuestActive: boolean;
+    adults: number;
+    children: number;
+  } {
     return {
       isLocationActive: true,
       isGuestActive: false,

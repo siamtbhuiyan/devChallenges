@@ -8,10 +8,45 @@ export default defineComponent({
   components: {
     PropertyCardComp,
   },
-  data() {
+  data(): { stays: Stay[] } {
     return {
       stays: stays as Stay[],
     };
+  },
+  props: {
+    location: {
+      type: String,
+      required: true,
+    },
+    guests: {
+      type: Number,
+      required: true,
+    },
+  },
+  methods: {
+    filterStays(location: string, guests: number): Stay[] {
+      if (location === "" && guests === 0) {
+        return this.stays;
+      }
+      if (location === "") {
+        const temp = this.stays.filter((s: Stay) => {
+          if (s.maxGuests >= guests) {
+            return s;
+          }
+        });
+        return temp;
+      }
+      const filteredStays = this.stays.filter((s: Stay) => {
+        if (
+          s.maxGuests >= guests &&
+          location.includes(s.city) &&
+          location.includes(s.country)
+        ) {
+          return s;
+        }
+      });
+      return filteredStays;
+    },
   },
 });
 </script>
@@ -22,11 +57,13 @@ export default defineComponent({
       <h1 class="text-2xl font-bold font-montserrat inline-block">
         Stays in Finland
       </h1>
-      <span class="text-sm text-gray-700">12+ stays</span>
+      <span class="text-sm text-gray-700"
+        >{{ filterStays(location, guests).length }}+ stays</span
+      >
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:grid-cols-3">
-      <div v-for="(stay, index) in stays" :key="index">
+      <div v-for="(stay, index) in filterStays(location, guests)" :key="index">
         <PropertyCardComp :stay="stay" />
       </div>
     </div>

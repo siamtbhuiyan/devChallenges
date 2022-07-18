@@ -16,11 +16,6 @@ export default defineComponent({
       required: true,
     },
   },
-  // method: {
-  //   toggleFilter() {
-  //     this.$emit("toggleFilter");
-  //   },
-  // },
 });
 </script>
 
@@ -35,13 +30,13 @@ export default defineComponent({
         v-if="location !== ''"
         >{{ location }}</span
       >
-      <span class="border-r px-4 py-5 text-sm font-mulish" v-else
+      <span class="border-r px-4 py-5 text-sm font-mulish text-gray-400" v-else
         >Add Location</span
       >
       <span class="border-r px-4 py-5 text-sm font-mulish" v-if="guests !== 0"
         >{{ guests }} Guests</span
       >
-      <span class="border-r px-4 py-5 text-sm font-mulish" v-else
+      <span class="border-r px-4 py-5 text-sm font-mulish text-gray-400" v-else
         >Add Guests</span
       >
       <span
