@@ -71,7 +71,7 @@ export default defineComponent({
         Stays in Finland
       </h1>
       <span class="text-sm text-gray-700"
-        >{{ filterStays(location, guests).length }}+ stays</span
+        >{{ filterStays(location, guests).length }} stays</span
       >
     </div>
 

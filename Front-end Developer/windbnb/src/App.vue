@@ -3,11 +3,13 @@ import { defineComponent } from "vue";
 import NavbarComp from "./components/Navbar.vue";
 import PropertyListComp from "./components/PropertyList.vue";
 import FilterComp from "./components/Filter.vue";
+import FooterComp from "./components/Footer.vue";
 export default defineComponent({
   components: {
     NavbarComp,
     PropertyListComp,
     FilterComp,
+    FooterComp,
   },
   data(): { filterVisible: boolean; location: string; guests: number } {
     return {
@@ -46,27 +48,31 @@ export default defineComponent({
 });
 </script>
 <template>
-  <div class="container my-8 mx-auto lg:px-10 md:px-6 sm:p-2">
-    <div v-if="filterVisible">
-      <FilterComp
+  <div class="container my-8 mx-auto lg:px-10 md:px-6 sm:px-2">
+    <div class="min-h-[calc(100vh-136px)]">
+      <div v-if="filterVisible">
+        <FilterComp
+          @toggleFilter="toggleFilter"
+          :guests="guests"
+          :location="location"
+          @setLocation="setLocation"
+          @setGuests="setGuests"
+          @cancelFilter="cancelFilter"
+        />
+      </div>
+      <NavbarComp
         @toggleFilter="toggleFilter"
         :guests="guests"
         :location="location"
-        @setLocation="setLocation"
-        @setGuests="setGuests"
-        @cancelFilter="cancelFilter"
+      />
+      <PropertyListComp
+        :location="location"
+        :guests="guests"
+        :filterVisible="filterVisible"
+        @removeFilter="removeFilter"
       />
     </div>
-    <NavbarComp
-      @toggleFilter="toggleFilter"
-      :guests="guests"
-      :location="location"
-    />
-    <PropertyListComp
-      :location="location"
-      :guests="guests"
-      :filterVisible="filterVisible"
-      @removeFilter="removeFilter"
-    />
+
+    <FooterComp />
   </div>
 </template>
