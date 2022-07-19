@@ -34,11 +34,19 @@ export default defineComponent({
     setGuests(adults: number, children: number) {
       this.guests = adults + children;
     },
+    removeFilter() {
+      this.filterVisible = false;
+    },
+    cancelFilter() {
+      this.location = "";
+      this.guests = 0;
+      this.filterVisible = false;
+    },
   },
 });
 </script>
 <template>
-  <div class="container mx-auto my-8 2xs:px-2 lg:px-10">
+  <div class="container my-8 mx-auto lg:px-10 md:px-6 sm:p-2">
     <div v-if="filterVisible">
       <FilterComp
         @toggleFilter="toggleFilter"
@@ -46,6 +54,7 @@ export default defineComponent({
         :location="location"
         @setLocation="setLocation"
         @setGuests="setGuests"
+        @cancelFilter="cancelFilter"
       />
     </div>
     <NavbarComp
@@ -53,6 +62,11 @@ export default defineComponent({
       :guests="guests"
       :location="location"
     />
-    <PropertyListComp :location="location" :guests="guests" />
+    <PropertyListComp
+      :location="location"
+      :guests="guests"
+      :filterVisible="filterVisible"
+      @removeFilter="removeFilter"
+    />
   </div>
 </template>

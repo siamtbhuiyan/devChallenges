@@ -22,3 +22,7 @@
 .active {
   @apply border border-black rounded-2xl;
 }
+
+.invisiblity {
+  @apply hidden md:invisible;
+}

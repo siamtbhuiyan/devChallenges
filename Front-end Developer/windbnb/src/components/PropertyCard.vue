@@ -10,7 +10,7 @@ export default defineComponent({
 
 <template>
   <div>
-    <div class="h-64 sm:h-56 md:h-72">
+    <div class="h-56 xs:h-64 sm:h-96 md:h-72">
       <img :src="stay?.photo" alt="" class="h-full w-full rounded-3xl" />
     </div>
     <div class="mt-4 mb-2 flex justify-between">

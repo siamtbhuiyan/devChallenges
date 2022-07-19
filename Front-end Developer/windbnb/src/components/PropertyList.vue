@@ -22,6 +22,10 @@ export default defineComponent({
       type: Number,
       required: true,
     },
+    filterVisible: {
+      type: Boolean,
+      required: true,
+    },
   },
   methods: {
     filterStays(location: string, guests: number): Stay[] {
@@ -47,12 +51,21 @@ export default defineComponent({
       });
       return filteredStays;
     },
+    removeFilter() {
+      if (this.filterVisible) {
+        this.$emit("removeFilter");
+      }
+    },
   },
 });
 </script>
 
 <template>
-  <div class="my-16">
+  <div
+    class="my-16"
+    @click="removeFilter"
+    :class="{ 'opacity-50': filterVisible }"
+  >
     <div class="flex justify-between mb-8">
       <h1 class="text-2xl font-bold font-montserrat inline-block">
         Stays in Finland
@@ -62,7 +75,7 @@ export default defineComponent({
       >
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:grid-cols-3">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       <div v-for="(stay, index) in filterStays(location, guests)" :key="index">
         <PropertyCardComp :stay="stay" />
       </div>
