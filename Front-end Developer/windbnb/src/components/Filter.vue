@@ -11,6 +11,9 @@ export default defineComponent({
     setGuests(adults: number, children: number) {
       return true;
     },
+    cancelFilter() {
+      return true;
+    },
   },
   props: {
     location: {
@@ -185,7 +188,7 @@ export default defineComponent({
 
         <button
           type="submit"
-          class="flex-none bg-red-500 text-white text-sm px-6 py-4 rounded-2xl my-1 hover:bg-red-400 md:max-h-14"
+          class="flex-none bg-red-500 text-white text-sm px-6 py-4 rounded-2xl hover:bg-red-400 md:max-h-16"
           @click="toggleFilter"
         >
           <span class="font-material text-xl align-bottom">search</span>
