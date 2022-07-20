@@ -1,7 +1,13 @@
 import IQuote from "../types/quote";
-const AuthorBtn = ({ currentQuote }: { currentQuote: IQuote }) => {
+const AuthorBtn = ({
+  currentQuote,
+  handleViewChange,
+}: {
+  currentQuote: IQuote;
+  handleViewChange: () => void;
+}) => {
   return (
-    <div className="author-button">
+    <div className="author-button" onClick={handleViewChange}>
       <div>
         <p className="font-bold text-2xl pb-2">{currentQuote.quoteAuthor}</p>
         <p className="text-sm font-medium text-gray-500">
