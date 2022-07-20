@@ -4,6 +4,7 @@ import quoteService from "./services/quotes";
 import Quote from "./components/Quote";
 import Author from "./components/Author";
 import AuthorBtn from "./components/AuthorBtn";
+import RandomBtn from "./components/RandomBtn";
 
 const App = () => {
   const [currentQuote, setCurrentQuote] = usePersistedState("", "currentQuote");
@@ -12,11 +13,7 @@ const App = () => {
 
   useEffect(() => {
     setView("quote");
-    // const fetchRandomQuote = async () => {
-    //   const randomQuote = await quoteService.getRandom();
-    //   console.log(randomQuote);
-    //   setCurrentQuote(randomQuote);
-    // };
+    //
     // fetchRandomQuote();
   }, []);
   const handleViewChange = async () => {
@@ -27,9 +24,17 @@ const App = () => {
     setView("author");
     console.log(quotes);
   };
+  const getRandomQuote = async () => {
+    const randomQuote = await quoteService.getRandom();
+    setCurrentQuote(randomQuote);
+    setView("quote");
+  };
   if (view === "quote") {
     return (
       <div className="app">
+        <div className="absolute top-0 right-0">
+          <RandomBtn getRandomQuote={getRandomQuote} />
+        </div>
         <div className="mx-auto">
           <Quote quote={currentQuote.quoteText} />
           <AuthorBtn
@@ -42,6 +47,9 @@ const App = () => {
   } else {
     return (
       <div className="app">
+        <div className="absolute top-0 right-0">
+          <RandomBtn getRandomQuote={getRandomQuote} />
+        </div>
         <Author author={currentQuote.quoteAuthor} quotes={quotes} />
       </div>
     );
