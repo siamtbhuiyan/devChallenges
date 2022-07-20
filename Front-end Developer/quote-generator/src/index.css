@@ -23,7 +23,7 @@
 }
 
 .author-button {
-  @apply mr-10 py-12 px-8 self-start ml-14 transition ease-in-out hover:bg-slate-900 hover:text-white flex justify-between items-center hover:cursor-pointer;
+  @apply mr-10 py-12 px-8 self-start ml-14 md:ml-24 transition ease-in-out hover:bg-slate-900 hover:text-white flex justify-between items-center hover:cursor-pointer;
 }
 
 .hidden-child {
