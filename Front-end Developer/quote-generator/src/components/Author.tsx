@@ -1,4 +1,10 @@
-const Author = ({ author }: { author: string }) => {
+const Author = ({
+  author,
+  fetchQuotesFromAuthor,
+}: {
+  author: string;
+  fetchQuotesFromAuthor: () => void;
+}) => {
   return <div>{author}</div>;
 };
 

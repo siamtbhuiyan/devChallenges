@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         raleway: ["Raleway", "sans-serif"],
+        material: ["Material Icons"],
       },
     },
   },
