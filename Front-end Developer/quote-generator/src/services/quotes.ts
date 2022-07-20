@@ -3,7 +3,8 @@ const baseUrl = "https://quote-garden.herokuapp.com/api/v3";
 
 const getRandom = async (): Promise<any> => {
   const response = await axios.get(`${baseUrl}/quotes/random`);
-  return response.data;
+  console.log(response.data.data[0]);
+  return response.data.data[0];
 };
 
 const quoteService = {
