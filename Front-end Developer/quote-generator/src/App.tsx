@@ -5,6 +5,7 @@ import Quote from "./components/Quote";
 import Author from "./components/Author";
 import AuthorBtn from "./components/AuthorBtn";
 import RandomBtn from "./components/RandomBtn";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [currentQuote, setCurrentQuote] = usePersistedState("", "currentQuote");
@@ -12,9 +13,12 @@ const App = () => {
   const [quotes, setQuotes] = usePersistedState([], "quotes");
 
   useEffect(() => {
-    setView("quote");
-    //
-    // fetchRandomQuote();
+    const getRandomQuote = async () => {
+      const randomQuote = await quoteService.getRandom();
+      setCurrentQuote(randomQuote);
+      setView("quote");
+    };
+    getRandomQuote();
   }, []);
   const handleViewChange = async () => {
     const quotesFromAuthor = await quoteService.getQuotesFromAuthor(
@@ -22,7 +26,6 @@ const App = () => {
     );
     setQuotes(quotesFromAuthor);
     setView("author");
-    console.log(quotes);
   };
   const getRandomQuote = async () => {
     const randomQuote = await quoteService.getRandom();
@@ -31,26 +34,32 @@ const App = () => {
   };
   if (view === "quote") {
     return (
-      <div className="app">
-        <div className="absolute top-0 right-0">
-          <RandomBtn getRandomQuote={getRandomQuote} />
+      <div className="flex flex-col items-center">
+        <div className="app">
+          <div className="absolute top-0 right-0">
+            <RandomBtn getRandomQuote={getRandomQuote} />
+          </div>
+          <div className="mx-auto">
+            <Quote quote={currentQuote.quoteText} />
+            <AuthorBtn
+              currentQuote={currentQuote}
+              handleViewChange={handleViewChange}
+            />
+          </div>
         </div>
-        <div className="mx-auto">
-          <Quote quote={currentQuote.quoteText} />
-          <AuthorBtn
-            currentQuote={currentQuote}
-            handleViewChange={handleViewChange}
-          />
-        </div>
+        <Footer />
       </div>
     );
   } else {
     return (
-      <div className="app">
-        <div className="absolute top-0 right-0">
-          <RandomBtn getRandomQuote={getRandomQuote} />
+      <div className="flex flex-col items-center">
+        <div className="app">
+          <div className="absolute top-0 right-0">
+            <RandomBtn getRandomQuote={getRandomQuote} />
+          </div>
+          <Author author={currentQuote.quoteAuthor} quotes={quotes} />
         </div>
-        <Author author={currentQuote.quoteAuthor} quotes={quotes} />
+        <Footer />
       </div>
     );
   }

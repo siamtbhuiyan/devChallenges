@@ -15,15 +15,15 @@
 /* Custom Classes */
 
 .app {
-  @apply container mx-auto font-raleway min-h-screen flex justify-center items-center;
+  @apply container mx-auto font-raleway min-h-[calc(100vh-48px)] flex justify-center items-center;
 }
 
 .quote {
-  @apply max-w-xl text-4xl font-medium border-l-8 pl-20 border-yellow-400 mb-24;
+  @apply max-w-xl text-xl md:text-4xl font-medium border-l-8 pl-10 md:pl-20 border-yellow-400 mb-24 my-6 mx-10;
 }
 
 .author-button {
-  @apply py-12 px-8 self-start ml-14 transition ease-in-out hover:bg-slate-900 hover:text-white flex justify-between items-center hover:cursor-pointer;
+  @apply mr-10 py-12 px-8 self-start ml-14 transition ease-in-out hover:bg-slate-900 hover:text-white flex justify-between items-center hover:cursor-pointer;
 }
 
 .hidden-child {
