@@ -1,5 +1,6 @@
 <script setup>
-import questionService from "../services/questions";
+const props = defineProps(["currentQuestion"]);
+console.log(props);
 </script>
 
 <template>
@@ -12,7 +13,7 @@ import questionService from "../services/questions";
         class="mb-6 absolute right-0 top-[-74px]"
       />
       <div class="font-bold text-2xl text-[#2F527B]">
-        Kuala Lumpur is the capital of
+        {{ props.currentQuestion }}
       </div>
       <div
         class="text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 hover:bg-[#F9A826] hover:text-white hover:cursor-pointer hover:border-[#F9A826]"
@@ -39,6 +40,5 @@ import questionService from "../services/questions";
         <div class="text-lg py-[14px] inline-block px-8">Austria</div>
       </div>
     </div>
-    <button @click="questionService.getRandomQuestion">TEST</button>
   </div>
 </template>

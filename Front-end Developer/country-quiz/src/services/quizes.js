@@ -1,7 +1,7 @@
 import axios from "axios";
 const baseUrl = "https://restcountries.com/v3.1/all";
 
-const getRandomQuestion = async () => {
+const getQuiz = async () => {
   const response = await axios.get(baseUrl);
   const countries = response.data.map((r) => {
     return {
@@ -69,10 +69,9 @@ const getRandomQuestion = async () => {
   });
   const quiz = capitalQuiz.concat(flagQuiz);
   const randomQuiz = quiz.sort(() => 0.5 - Math.random());
-  console.log(randomQuiz);
   return randomQuiz;
 };
 
-const questionService = { getRandomQuestion };
+const quizService = { getQuiz };
 
-export default questionService;
+export default quizService;
