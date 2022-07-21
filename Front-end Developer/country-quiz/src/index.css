@@ -13,3 +13,9 @@
   font-family: "Material Icons";
   src: url("https://fonts.googleapis.com/icon?family=Material+Icons");
 }
+
+/* Custom Classes */
+
+.background {
+  @apply bg-[url('./assets/background.png')] h-screen w-screen bg-center bg-no-repeat bg-cover font-poppins;
+}
