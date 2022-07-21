@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import questionService from "../services/questions";
+</script>
 
 <template>
   <div class="w-[464px]">
@@ -13,55 +15,30 @@
         Kuala Lumpur is the capital of
       </div>
       <div
-        class="text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 hover:bg-[#F9A826] hover:text-white hover:cursor-pointer hover:border-0"
+        class="text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 hover:bg-[#F9A826] hover:text-white hover:cursor-pointer hover:border-[#F9A826]"
       >
-        <div
-          class="font-medium inline-block text-2xl py-[10px] px-5 align-text-top"
-        >
-          A
-        </div>
-        <div class="text-lg py-[14px] inline-block px-8 align-text-top">
-          Vietnam
-        </div>
+        <div class="font-medium inline-block text-2xl py-[10px] px-5">A</div>
+        <div class="text-lg py-[14px] inline-block px-8">Vietnam</div>
       </div>
       <div
-        class="text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 hover:bg-[#F9A826] hover:text-white hover:cursor-pointer hover:border-0"
+        class="text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 hover:bg-[#F9A826] hover:text-white hover:cursor-pointer hover:border-[#F9A826]"
       >
-        <div
-          class="font-medium inline-block text-2xl py-[10px] px-5 align-text-top"
-        >
-          B
-        </div>
-        <div class="text-lg py-[14px] inline-block px-8 align-text-top">
-          Malaysia
-        </div>
+        <div class="font-medium inline-block text-2xl py-[10px] px-5">B</div>
+        <div class="text-lg py-[14px] inline-block px-8">Malaysia</div>
       </div>
       <div
-        class="text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 hover:bg-[#F9A826] hover:text-white hover:cursor-pointer hover:border-0"
+        class="text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 hover:bg-[#F9A826] hover:text-white hover:cursor-pointer hover:border-[#F9A826]"
       >
-        <div
-          class="font-medium inline-block text-2xl py-[10px] px-5 align-text-top"
-        >
-          C
-        </div>
-        <div class="text-lg py-[14px] inline-block px-8 align-text-top">
-          Sweden
-        </div>
+        <div class="font-medium inline-block text-2xl py-[10px] px-5">C</div>
+        <div class="text-lg py-[14px] inline-block px-8">Sweden</div>
       </div>
       <div
-        class="text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 hover:bg-[#F9A826] hover:text-white hover:cursor-pointer hover:border-0"
+        class="text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 hover:bg-[#F9A826] hover:text-white hover:cursor-pointer hover:border-[#F9A826]"
       >
-        <div
-          class="font-medium inline-block text-2xl py-[10px] px-5 align-text-top"
-        >
-          D
-        </div>
-        <div class="text-lg py-[14px] inline-block px-8 align-text-top">
-          Austria
-        </div>
+        <div class="font-medium inline-block text-2xl py-[10px] px-5">D</div>
+        <div class="text-lg py-[14px] inline-block px-8">Austria</div>
       </div>
     </div>
+    <button @click="questionService.getRandomQuestion">TEST</button>
   </div>
 </template>
-
-<style></style>
