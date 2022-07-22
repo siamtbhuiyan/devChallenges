@@ -63,3 +63,10 @@
 .footer {
   @apply pt-12 pb-6 text-gray-400 flex justify-center text-xs md:text-base;
 }
+
+/* Media Queries */
+@media screen and (max-width: 525px) {
+  .card {
+    transform: scale(0.7);
+  }
+}

@@ -38,10 +38,10 @@ const startNewGame = async () => {
   <div class="background">
     <div class="app">
       <div v-if="loading"></div>
-      <div v-else-if="gameOver">
+      <div v-else-if="gameOver" class="card">
         <GameOverCard :score="score" @startNewGame="startNewGame" />
       </div>
-      <div v-else>
+      <div v-else class="card">
         <QuizCard
           :currentQuestion="currentQuestion"
           @increaseScore="increment"
