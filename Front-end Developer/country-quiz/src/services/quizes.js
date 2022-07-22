@@ -33,6 +33,7 @@ const getQuiz = async () => {
       return {
         question: getRandomQuestion,
         options: randomOptions,
+        flag: null,
       };
     }
   });

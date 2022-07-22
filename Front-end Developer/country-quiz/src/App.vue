@@ -2,6 +2,7 @@
 import "./assets/background.png";
 import QuizCard from "./components/QuizCard.vue";
 import Footer from "./components/Footer.vue";
+import GameOverCard from "./components/GameOverCard.vue";
 import quizService from "./services/quizes";
 import { onBeforeMount } from "vue";
 import { useQuizStore } from "./stores/quiz";
@@ -11,14 +12,25 @@ import { ref } from "vue";
 const quiz = useQuizStore();
 
 const { questions, score, currentQuestion } = storeToRefs(quiz);
-const { increment, initializeQuiz } = quiz;
+const { increment, initializeQuiz, changeQuestion, resetScore } = quiz;
 let loading = ref(true);
+let gameOver = ref(false);
 onBeforeMount(async () => {
   await initializeQuiz(quizService.getQuiz);
   loading.value = false;
 });
-const changeQuestion = () => {
-  console.log("CHANGED");
+const nextQuestion = () => {
+  changeQuestion();
+};
+const incorrectAnswer = () => {
+  gameOver.value = true;
+};
+const startNewGame = async () => {
+  loading.value = true;
+  resetScore();
+  await initializeQuiz(quizService.getQuiz);
+  gameOver.value = false;
+  loading.value = false;
 };
 </script>
 
@@ -26,10 +38,15 @@ const changeQuestion = () => {
   <div class="background">
     <div class="app">
       <div v-if="loading"></div>
+      <div v-else-if="gameOver">
+        <GameOverCard :score="score" @startNewGame="startNewGame" />
+      </div>
       <div v-else>
         <QuizCard
           :currentQuestion="currentQuestion"
           @increaseScore="increment"
+          @incorrectAnswer="incorrectAnswer"
+          @nextQuestion="nextQuestion"
         />
       </div>
     </div>

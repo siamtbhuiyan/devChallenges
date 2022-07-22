@@ -1,9 +1,9 @@
 <script setup>
 import { reactive, ref } from "vue";
 const props = defineProps(["currentQuestion"]);
-const emits = defineEmits(["increaseScore"]);
+const emits = defineEmits(["increaseScore", "incorrectAnswer", "nextQuestion"]);
 const list = ["A", "B", "C", "D"];
-const countryList = reactive([
+let countryList = reactive([
   props.currentQuestion.options[0].option,
   props.currentQuestion.options[1].option,
   props.currentQuestion.options[2].option,
@@ -12,6 +12,12 @@ const countryList = reactive([
 const countries = ref([]);
 const button = ref(null);
 const validateAnswer = (event) => {
+  countryList = [
+    props.currentQuestion.options[0].option,
+    props.currentQuestion.options[1].option,
+    props.currentQuestion.options[2].option,
+    props.currentQuestion.options[3].option,
+  ];
   let ans;
   props.currentQuestion.options.forEach((q) => {
     if (q.correct) {
@@ -25,10 +31,10 @@ const validateAnswer = (event) => {
       }
     });
     countryList.forEach((country) => {
-      countries.value[country].classList.add("pointer-events-none");
+      countries.value[country].classList.toggle("pointer-events-none");
     });
     button.value.classList.remove("hidden");
-    emit("increaseScore");
+    emits("increaseScore");
   } else {
     countryList.forEach((country) => {
       if (country === ans) {
@@ -38,9 +44,28 @@ const validateAnswer = (event) => {
       }
     });
     countryList.forEach((country) => {
-      countries.value[country].classList.add("pointer-events-none");
+      countries.value[country].classList.toggle("pointer-events-none");
     });
     button.value.classList.remove("hidden");
+  }
+};
+const handleNext = () => {
+  let correct = true;
+  countryList.forEach((country) => {
+    countries.value[country].classList.toggle("pointer-events-none");
+    if (countries.value[country].classList.contains("correct")) {
+      countries.value[country].classList.remove("correct");
+    }
+    if (countries.value[country].classList.contains("incorrect")) {
+      countries.value[country].classList.remove("incorrect");
+      correct = false;
+    }
+  });
+  button.value.classList.toggle("hidden");
+  if (correct) {
+    emits("nextQuestion");
+  } else {
+    emits("incorrectAnswer");
   }
 };
 </script>

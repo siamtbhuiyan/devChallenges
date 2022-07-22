@@ -56,6 +56,10 @@
   @apply text-white bg-[#EA8282] border-[#EA8282];
 }
 
+.try-again {
+  @apply text-[#1D355D] text-lg font-semibold py-5 px-16 border-2 border-[#1D355D] rounded-xl hover:bg-slate-100;
+}
+
 .footer {
   @apply pt-12 pb-6 text-gray-400 flex justify-center text-xs md:text-base;
 }
