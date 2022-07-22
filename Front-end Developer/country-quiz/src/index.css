@@ -45,7 +45,7 @@
 }
 
 .options {
-  @apply text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 hover:bg-[#F9A826] hover:text-white hover:cursor-pointer hover:border-[#F9A826] text-xl px-5 py-[14px];
+  @apply text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 media-hover:hover:bg-[#F9A826] media-hover:hover:text-white media-hover:hover:cursor-pointer media-hover:hover:border-[#F9A826] text-xl px-5 py-[14px];
 }
 
 .correct {
@@ -57,7 +57,7 @@
 }
 
 .try-again {
-  @apply text-[#1D355D] text-lg font-semibold py-5 px-16 border-2 border-[#1D355D] rounded-xl hover:bg-slate-100;
+  @apply text-[#1D355D] text-lg font-semibold py-5 px-16 border-2 border-[#1D355D] rounded-xl media-hover:hover:bg-slate-100;
 }
 
 .footer {

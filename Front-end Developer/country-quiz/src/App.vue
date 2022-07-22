@@ -3,6 +3,7 @@ import "./assets/background.png";
 import QuizCard from "./components/QuizCard.vue";
 import Footer from "./components/Footer.vue";
 import GameOverCard from "./components/GameOverCard.vue";
+import Spinner from "./components/Spinner.vue";
 import quizService from "./services/quizes";
 import { onBeforeMount } from "vue";
 import { useQuizStore } from "./stores/quiz";
@@ -37,7 +38,9 @@ const startNewGame = async () => {
 <template>
   <div class="background">
     <div class="app">
-      <div v-if="loading"></div>
+      <div v-if="loading">
+        <Spinner />
+      </div>
       <div v-else-if="gameOver" class="card">
         <GameOverCard :score="score" @startNewGame="startNewGame" />
       </div>

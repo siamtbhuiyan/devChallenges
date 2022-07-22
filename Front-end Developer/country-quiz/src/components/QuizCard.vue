@@ -74,7 +74,7 @@ const handleNext = () => {
   <div class="w-[464px]">
     <h1 class="country-quiz">Country Quiz</h1>
     <div class="quiz-card">
-      <img src="../assets/undraw_adventure_4hum 1.svg" alt="" class="svg-1" />
+      <img src="../assets/quiz.svg" alt="" class="svg-1" />
       <div v-if="props.currentQuestion.flag">
         <img :src="props.currentQuestion.flag" alt="" class="flag" />
       </div>
