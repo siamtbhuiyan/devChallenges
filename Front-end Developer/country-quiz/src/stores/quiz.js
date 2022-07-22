@@ -4,6 +4,7 @@ export const useQuizStore = defineStore("quiz", {
   state: () => ({
     questions: [],
     score: 0,
+    currentQuestion: {},
   }),
   actions: {
     increment() {
@@ -11,6 +12,7 @@ export const useQuizStore = defineStore("quiz", {
     },
     async initializeQuiz(quiz) {
       this.questions = await quiz();
+      this.currentQuestion = this.questions[0];
     },
   },
 });

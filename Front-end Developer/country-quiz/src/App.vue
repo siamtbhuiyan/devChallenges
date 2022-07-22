@@ -6,14 +6,16 @@ import quizService from "./services/quizes";
 import { onBeforeMount } from "vue";
 import { useQuizStore } from "./stores/quiz";
 import { storeToRefs } from "pinia";
+import { ref } from "vue";
 
 const quiz = useQuizStore();
 
-const { questions, score } = storeToRefs(quiz);
+const { questions, score, currentQuestion } = storeToRefs(quiz);
 const { increment, initializeQuiz } = quiz;
+let loading = ref(true);
 onBeforeMount(async () => {
   await initializeQuiz(quizService.getQuiz);
-  let currentQuestion = questions.value[0];
+  loading.value = false;
 });
 const changeQuestion = () => {
   console.log("CHANGED");
@@ -22,8 +24,14 @@ const changeQuestion = () => {
 
 <template>
   <div class="background">
-    <div class="h-[calc(100vh-96px)] grid place-content-center">
-      <QuizCard :currentQuestion="currentQuestion" />
+    <div class="app">
+      <div v-if="loading"></div>
+      <div v-else>
+        <QuizCard
+          :currentQuestion="currentQuestion"
+          @increaseScore="increment"
+        />
+      </div>
     </div>
     <Footer />
   </div>

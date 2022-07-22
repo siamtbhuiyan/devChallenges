@@ -1,43 +1,83 @@
 <script setup>
+import { reactive, ref } from "vue";
 const props = defineProps(["currentQuestion"]);
-console.log(props);
+const emits = defineEmits(["increaseScore"]);
+const list = ["A", "B", "C", "D"];
+const countryList = reactive([
+  props.currentQuestion.options[0].option,
+  props.currentQuestion.options[1].option,
+  props.currentQuestion.options[2].option,
+  props.currentQuestion.options[3].option,
+]);
+const countries = ref([]);
+const button = ref(null);
+const validateAnswer = (event) => {
+  let ans;
+  props.currentQuestion.options.forEach((q) => {
+    if (q.correct) {
+      ans = q.option;
+    }
+  });
+  if (event.target.innerText.includes(ans)) {
+    countryList.forEach((country) => {
+      if (country === ans) {
+        countries.value[country].classList.add("correct");
+      }
+    });
+    countryList.forEach((country) => {
+      countries.value[country].classList.add("pointer-events-none");
+    });
+    button.value.classList.remove("hidden");
+    emit("increaseScore");
+  } else {
+    countryList.forEach((country) => {
+      if (country === ans) {
+        countries.value[country].classList.add("correct");
+      } else if (event.target.innerText.includes(country)) {
+        countries.value[country].classList.add("incorrect");
+      }
+    });
+    countryList.forEach((country) => {
+      countries.value[country].classList.add("pointer-events-none");
+    });
+    button.value.classList.remove("hidden");
+  }
+};
 </script>
 
 <template>
   <div class="w-[464px]">
-    <h1 class="uppercase font-bold text-white text-4xl">Country Quiz</h1>
-    <div class="relative my-3 bg-white rounded-3xl px-8 pb-8 pt-[68px]">
-      <img
-        src="../assets/undraw_adventure_4hum 1.svg"
-        alt=""
-        class="mb-6 absolute right-0 top-[-74px]"
-      />
-      <div class="font-bold text-2xl text-[#2F527B]">
-        {{ props.currentQuestion }}
+    <h1 class="country-quiz">Country Quiz</h1>
+    <div class="quiz-card">
+      <img src="../assets/undraw_adventure_4hum 1.svg" alt="" class="svg-1" />
+      <div v-if="props.currentQuestion.flag">
+        <img :src="props.currentQuestion.flag" alt="" class="flag" />
+      </div>
+      <div class="question">
+        {{ props.currentQuestion.question }}
       </div>
       <div
-        class="text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 hover:bg-[#F9A826] hover:text-white hover:cursor-pointer hover:border-[#F9A826]"
+        class="options"
+        @click="validateAnswer"
+        :ref="
+          (el) => {
+            countries[option.option] = el;
+          }
+        "
+        v-for="(option, index) in props.currentQuestion.options"
+        :key="list[index]"
       >
-        <div class="font-medium inline-block text-2xl py-[10px] px-5">A</div>
-        <div class="text-lg py-[14px] inline-block px-8">Vietnam</div>
+        {{ list[index] }}
+        <span class="text-lg pl-12">{{ option.option }}</span>
       </div>
-      <div
-        class="text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 hover:bg-[#F9A826] hover:text-white hover:cursor-pointer hover:border-[#F9A826]"
-      >
-        <div class="font-medium inline-block text-2xl py-[10px] px-5">B</div>
-        <div class="text-lg py-[14px] inline-block px-8">Malaysia</div>
-      </div>
-      <div
-        class="text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 hover:bg-[#F9A826] hover:text-white hover:cursor-pointer hover:border-[#F9A826]"
-      >
-        <div class="font-medium inline-block text-2xl py-[10px] px-5">C</div>
-        <div class="text-lg py-[14px] inline-block px-8">Sweden</div>
-      </div>
-      <div
-        class="text-[#6066D0] rounded-xl border-2 border-[#6066D0] my-6 hover:bg-[#F9A826] hover:text-white hover:cursor-pointer hover:border-[#F9A826]"
-      >
-        <div class="font-medium inline-block text-2xl py-[10px] px-5">D</div>
-        <div class="text-lg py-[14px] inline-block px-8">Austria</div>
+      <div class="flex justify-end">
+        <button
+          class="font-bold text-lg text-white px-9 py-4 bg-[#F9A826] rounded-xl hidden"
+          ref="button"
+          @click="handleNext"
+        >
+          Next
+        </button>
       </div>
     </div>
   </div>

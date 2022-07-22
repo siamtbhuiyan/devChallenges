@@ -25,16 +25,14 @@ const getQuiz = async () => {
       const randomOrder = randomOrderArray.sort(() => 0.5 - Math.random());
       const randomOptions = randomOrder.map((r) => {
         return {
-          option: {
-            option: countries[r].name,
-            correct: correctAnswer === countries[r].name,
-          },
+          option: countries[r].name,
+          correct: correctAnswer === countries[r].name,
         };
       });
       const getRandomQuestion = `${country.capital} is the capital of`;
       return {
-        getRandomQuestion,
-        randomOptions,
+        question: getRandomQuestion,
+        options: randomOptions,
       };
     }
   });
@@ -52,17 +50,15 @@ const getQuiz = async () => {
       const randomOrder = randomOrderArray.sort(() => 0.5 - Math.random());
       const randomOptions = randomOrder.map((r) => {
         return {
-          option: {
-            option: countries[r].name,
-            correct: correctAnswer === countries[r].name,
-          },
+          option: countries[r].name,
+          correct: correctAnswer === countries[r].name,
         };
       });
       const flag = country.flag;
       const getRandomQuestion = "Which country does this flag belong to?";
       return {
-        getRandomQuestion,
-        randomOptions,
+        question: getRandomQuestion,
+        options: randomOptions,
         flag,
       };
     }
