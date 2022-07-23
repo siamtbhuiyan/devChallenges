@@ -35,6 +35,7 @@ const incorrectAnswer = () => {
   gameOver.value = true;
 };
 const startNewGame = async () => {
+  checkOnline();
   loading.value = true;
   resetScore();
   await initializeQuiz(quizService.getQuiz);
