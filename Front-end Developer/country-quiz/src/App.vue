@@ -4,6 +4,7 @@ import QuizCard from "./components/QuizCard.vue";
 import Footer from "./components/Footer.vue";
 import GameOverCard from "./components/GameOverCard.vue";
 import Spinner from "./components/Spinner.vue";
+import OfflineCard from "./components/OfflineCard.vue";
 import quizService from "./services/quizes";
 import { onBeforeMount } from "vue";
 import { useQuizStore } from "./stores/quiz";
@@ -16,7 +17,14 @@ const { questions, score, currentQuestion } = storeToRefs(quiz);
 const { increment, initializeQuiz, changeQuestion, resetScore } = quiz;
 let loading = ref(true);
 let gameOver = ref(false);
+let online = ref(false);
+
+const checkOnline = () => {
+  online.value = navigator.onLine;
+};
+
 onBeforeMount(async () => {
+  checkOnline();
   await initializeQuiz(quizService.getQuiz);
   loading.value = false;
 });
@@ -38,7 +46,10 @@ const startNewGame = async () => {
 <template>
   <div class="background">
     <div class="app">
-      <div v-if="loading">
+      <div v-if="!online" class="card">
+        <OfflineCard />
+      </div>
+      <div v-else-if="loading">
         <Spinner />
       </div>
       <div v-else-if="gameOver" class="card">
