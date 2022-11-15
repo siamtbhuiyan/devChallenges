@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Font import */
+@font-face {
+    font-family: "Montserrat";
+    src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+}
+
+/* Custom Classes */
+
+.background {
+    @apply bg-[#f2f2f2]
+}
+
+.profile {
+    @apply bg-white p-6 rounded-xl m-6 col-span-5;
+}
+
+.skills {
+    @apply bg-white p-6 rounded-xl m-6 col-span-2;
+}
+
+.blog {
+    @apply bg-white p-6 rounded-xl m-6 col-span-3;
+}
+
+.hobbies {
+    @apply bg-white p-6 rounded-xl m-6 col-span-2;
+}
+
+.learning {
+    @apply bg-white p-6 rounded-xl m-6 col-span-3;
+}
+
+.projects {
+    @apply bg-white p-6 rounded-xl m-6 col-span-5;
+}
