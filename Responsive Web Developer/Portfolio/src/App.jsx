@@ -3,25 +3,47 @@ import React from 'react'
 const App = () => {
   return (
     <div className="h-screen w-screen background p-6 font-montserrat">
-      <div className='container mx-auto grid grid-cols-5'>
+      <div className='container mx-auto'>
           <div className="profile">
-            PROFILE
+            <div className='col-span-1'>
+              <img src="images/pic.jpg" alt="" className='h-full rounded-xl'/>
+            </div>
+            <div className="col-span-3">
+              <div className="flex flex-col">
+                <div className='flex justify-between'>
+                  <div className='font-semibold text-2xl'>Bill Pearson</div>
+                  <div className='font-medium text-sm'>billy@example.com</div>
+                </div>
+                <div className='flex justify-between'>
+                  <div className='font-medium text-sm text-gray-500'>Front-end Developer</div>
+                  <div className='font-medium text-sm'>(+603) 546 624 342</div>
+                </div>
+                <div className='py-8 font-medium text-gray-500'>
+                    Self-motivated developer, who is willing to learn and create outstanding UI applications.
+                </div>
+              </div>
+            </div>
           </div>
-          <div className='skills'>
-            SKILLS
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit laudantium sequi commodi, eius cupiditate atque voluptate illum est voluptates quaerat ea officia, accusantium repellat possimus consequatur! Veritatis molestiae accusantium quidem?
-          </div>
-          <div className='blog'>
-            blog
-          </div>
-          <div className='hobbies'>
-            hobbies
-          </div>
-          <div className='learning'>
-            learning
-          </div>
-          <div className='projects'>
-            projects
+          <div className="grid grid-cols-3">
+            <div className="left">
+              <div className='skills'>
+                SKILLS
+              </div>
+              <div className='hobbies'>
+                hobbies
+              </div>
+              <div className='learning'>
+                learning
+              </div>
+            </div>
+            <div className="right">
+              <div className='projects'>
+                projects
+              </div>
+              <div className='blog'>
+                blog
+              </div>
+            </div>
           </div>
       </div>
     </div>
