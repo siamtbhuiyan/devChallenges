@@ -1,6 +1,9 @@
 import React from 'react'
+import useIcon from './hooks';
 
 const App = () => {
+  const EmailIcon = useIcon("Email")
+  const PhoneIcon = useIcon("Phone")
   return (
     <div className="h-screen w-screen background p-6 font-montserrat">
       <div className='container mx-auto'>
@@ -11,12 +14,18 @@ const App = () => {
             <div className="col-span-3">
               <div className="flex flex-col">
                 <div className='flex justify-between'>
-                  <div className='font-semibold text-2xl'>Bill Pearson</div>
-                  <div className='font-medium text-sm'>billy@example.com</div>
+                  <div className='font-semibold text-2xl text-gray-800'>Bill Pearson</div>
+                  <div className='flex flex-row'>
+                    <EmailIcon style={{ fontSize: 20 }}/>
+                    <div className='font-medium text-sm pl-4 text-gray-800'>billy@example.com</div>
+                  </div>
                 </div>
                 <div className='flex justify-between'>
                   <div className='font-medium text-sm text-gray-500'>Front-end Developer</div>
-                  <div className='font-medium text-sm'>(+603) 546 624 342</div>
+                  <div className='flex flex-row'>
+                    <PhoneIcon style={{ fontSize: 20 }}/>
+                    <div className='font-medium text-sm pl-4 text-gray-800'>(+603) 546 624 342</div>
+                  </div>
                 </div>
                 <div className='py-8 font-medium text-gray-500'>
                     Self-motivated developer, who is willing to learn and create outstanding UI applications.
