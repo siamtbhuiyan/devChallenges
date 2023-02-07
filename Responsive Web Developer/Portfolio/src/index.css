@@ -46,3 +46,7 @@
 .projects {
     @apply bg-white p-6 rounded-xl m-6;
 }
+
+.bar {
+    @apply flex py-2;
+}
