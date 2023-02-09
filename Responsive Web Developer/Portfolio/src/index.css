@@ -50,3 +50,7 @@
 .bar {
     @apply flex py-2;
 }
+
+.hobby {
+    @apply py-2;
+}
