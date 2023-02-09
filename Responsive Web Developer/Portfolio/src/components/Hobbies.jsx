@@ -10,7 +10,7 @@ const Hobbies = () => {
           </div>
           <div className='h-details my-3'>
             <div className='font-semibold text-lg text-gray-800'>Gaming</div>
-            <div className='text-gray-500 font-medium'>Quisque feugiat malesuada molestie.</div>
+            <div className='text-gray-500 font-medium pt-2'>Quisque feugiat malesuada molestie.</div>
           </div>
         </div>
         <div className='hobby'>
@@ -19,7 +19,7 @@ const Hobbies = () => {
           </div>
           <div className='h-details my-3'>
             <div className='font-semibold text-lg text-gray-800'>Cooking</div>
-            <div className='text-gray-500 font-medium'>Quisque feugiat malesuada molestie.</div>
+            <div className='text-gray-500 font-medium pt-2'>Quisque feugiat malesuada molestie.</div>
           </div>
         </div>
         <div className='hobby'>
@@ -28,7 +28,7 @@ const Hobbies = () => {
           </div>
           <div className='h-details my-3'>
             <div className='font-semibold text-lg text-gray-800'>Biking</div>
-            <div className='text-gray-500 font-medium'>Quisque feugiat malesuada molestie.</div>
+            <div className='text-gray-500 font-medium pt-2'>Quisque feugiat malesuada molestie.</div>
           </div>
         </div>
     </div>

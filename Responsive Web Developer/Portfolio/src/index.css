@@ -39,7 +39,7 @@
     @apply bg-white p-6 rounded-xl m-6;
 }
 
-.learning {
+.experiences {
     @apply bg-white p-6 rounded-xl m-6;
 }
 
@@ -53,4 +53,16 @@
 
 .hobby {
     @apply py-2;
+}
+
+.experience {
+    @apply flex py-5;
+}
+
+.e-logo {
+    @apply flex-1 pr-3;
+}
+
+.e-details {
+    @apply flex-[3] pl-2;
 }
