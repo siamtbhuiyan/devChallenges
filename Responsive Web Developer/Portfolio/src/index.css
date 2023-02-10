@@ -80,9 +80,17 @@
 }
 
 .p-thumbnail {
-    @apply flex-1;
+    @apply flex-1 max-h-48 max-w-[300px] mr-12;
 }
 
 .p-details {
     @apply flex-[1.5];
+}
+
+.btn-demo {
+    @apply transition mr-3 rounded-xl font-medium text-lg text-white bg-blue-600 border border-blue-600 border-solid py-3 px-11 hover:bg-blue-700;
+}
+
+.btn-code {
+    @apply transition rounded-xl font-medium text-lg text-blue-600 border border-blue-600 border-solid py-3 px-11 hover:bg-slate-100;
 }

@@ -8,7 +8,7 @@ import ProjectsToggle from './components/ProjectsToggle'
 import Projects from './components/Projects'
 
 const App = () => {
-  const [projects, setProjects] = useState("");
+  const [projects, setProjects] = useState("React");
   
   const handleChange = (currentProject) => {
     setProjects(currentProject);
@@ -26,7 +26,7 @@ const App = () => {
             </div>
             <div className="right">
               <ProjectsToggle handleClick={handleChange} project={projects}/>
-              <Projects />
+              <Projects project={projects}/>
               <Blog />
             </div>
           </div>
