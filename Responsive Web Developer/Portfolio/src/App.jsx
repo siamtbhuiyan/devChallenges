@@ -4,10 +4,11 @@ import Skills from './components/Skills'
 import Hobbies from './components/Hobbies'
 import Experiences from './components/Experiences'
 import Blog from './components/Blog'
+import ProjectsToggle from './components/ProjectsToggle'
 import Projects from './components/Projects'
 
 const App = () => {
-  const [projects, setProjects] = useState("React");
+  const [projects, setProjects] = useState("");
   
   const handleChange = (currentProject) => {
     setProjects(currentProject);
@@ -24,8 +25,8 @@ const App = () => {
               <Experiences />
             </div>
             <div className="right">
-              <Projects handleClick={handleChange} project={projects}/>
-              {/* <Projects handleClick={handleClick} /> */}
+              <ProjectsToggle handleClick={handleChange} project={projects}/>
+              <Projects />
               <Blog />
             </div>
           </div>

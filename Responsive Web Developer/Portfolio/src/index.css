@@ -43,8 +43,12 @@
     @apply bg-white p-6 rounded-xl m-6;
 }
 
-.projects {
+.projectsToggle {
     @apply bg-white p-6 rounded-xl m-6;
+}
+
+.project {
+    @apply bg-white p-6 rounded-xl m-6 flex;
 }
 
 .bar {
@@ -73,4 +77,12 @@
 
 .active {
     @apply bg-blue-600 text-white border-blue-600;
+}
+
+.p-thumbnail {
+    @apply flex-1;
+}
+
+.p-details {
+    @apply flex-[1.5];
 }
