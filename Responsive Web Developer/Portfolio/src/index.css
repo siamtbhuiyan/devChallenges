@@ -60,7 +60,7 @@
 }
 
 .experience {
-    @apply flex py-5;
+    @apply flex flex-1 pt-2;
 }
 
 .e-logo {

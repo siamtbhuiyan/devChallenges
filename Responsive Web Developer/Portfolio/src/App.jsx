@@ -3,7 +3,6 @@ import Profile from './components/Profile'
 import Skills from './components/Skills'
 import Hobbies from './components/Hobbies'
 import Experiences from './components/Experiences'
-import Blog from './components/Blog'
 import ProjectsToggle from './components/ProjectsToggle'
 import Projects from './components/Projects'
 
@@ -22,12 +21,11 @@ const App = () => {
             <div className="left">
               <Skills />
               <Hobbies />
-              <Experiences />
             </div>
             <div className="right">
               <ProjectsToggle handleClick={handleChange} project={projects}/>
               <Projects project={projects}/>
-              <Blog />
+              <Experiences />
             </div>
           </div>
       </div>

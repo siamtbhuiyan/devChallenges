@@ -26,7 +26,9 @@ const Profile = () => {
                 </div>
             </div>
             <div className='py-8 font-medium text-gray-500'>
-                Self-motivated developer, who is willing to learn and create outstanding UI applications.
+                Self-motivated developer, who is willing to learn and create outstanding UI applications. <br /><br /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eius deserunt labore quo adipisci ipsam nulla sed cupiditate odio itaque provident debitis, magnam tempora voluptate illum mollitia exercitationem saepe rem.
+                <br /><br />
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, illo officia! Mollitia maxime corrupti corporis earum nobis reiciendis cumque eius perspiciatis perferendis, blanditiis eos ad eaque placeat consectetur voluptates expedita?
             </div>
             </div>
         </div>
