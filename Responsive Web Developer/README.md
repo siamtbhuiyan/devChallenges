@@ -20,5 +20,9 @@
 
 [Certificate](https://devchallenges.io/certificates/hA3n9Qza0g5M8XEhSyxw)
 
+<<<<<<< HEAD
 ![certificate](/Certificate - Siam T. Bhuiyan.png)
+=======
+![certificate](/certificate.png)
+>>>>>>> eafe780 (Responsive Web Developer Path Complete)
 
