@@ -17,15 +17,15 @@ const App = () => {
     <div className="w-screen background p-6 font-montserrat">
       <div className='container mx-auto'>
           <Profile />
-          <div className="grid grid-cols-3">
+          <div className="lg:grid lg:grid-cols-3">
             <div className="left">
               <Skills />
               <Hobbies />
             </div>
             <div className="right">
+              <Experiences /> 
               <ProjectsToggle handleClick={handleChange} project={projects}/>
               <Projects project={projects}/>
-              <Experiences />
             </div>
           </div>
       </div>

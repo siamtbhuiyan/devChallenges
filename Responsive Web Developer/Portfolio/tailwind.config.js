@@ -5,6 +5,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      "2xs": "300px",
+      xs: "475px",
+      ...defaultTheme.screens,
+    },
     extend: {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],

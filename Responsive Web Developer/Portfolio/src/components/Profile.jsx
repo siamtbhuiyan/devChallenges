@@ -6,12 +6,13 @@ const Profile = () => {
     const PhoneIcon = useIcon("Phone")
     return (
     <div className="profile">
-        <div className='col-span-1'>
-            <img src="images/pic.jpg" alt="" className='h-full rounded-xl'/>
+
+        <div className='lg:col-span-1 lg:pr-4'>
+            <img src="images/pic.jpg" alt="" className='h-full rounded-xl m-auto'/>
         </div>
-        <div className="col-span-3">
+        <div className="lg:col-span-2 xl:col-span-3">
             <div className="flex flex-col">
-            <div className='flex justify-between'>
+            <div className='flex justify-between pt-6'>
                 <div className='font-semibold text-2xl text-gray-800'>Bill Pearson</div>
                 <div className='flex flex-row'>
                 <EmailIcon style={{ fontSize: 20 }}/>

@@ -11,11 +11,11 @@
 /* Custom Classes */
 
 .background {
-    @apply bg-[#f2f2f2]
+    @apply bg-[#f2f2f2];
 }
 
 .profile {
-    @apply bg-white p-6 rounded-xl m-6 grid grid-cols-4;
+    @apply bg-white p-6 rounded-xl m-6 grid lg:grid-cols-3 xl:grid-cols-4 lg:mb-0;
 }
 
 .left {
@@ -28,27 +28,24 @@
 
 
 .skills {
-    @apply bg-white p-6 rounded-xl m-6;
+    @apply bg-white p-6 rounded-xl m-6 lg:mr-3;
 }
 
-.blog {
-    @apply bg-white p-6 rounded-xl m-6;
-}
 
 .hobbies {
-    @apply bg-white p-6 rounded-xl m-6;
+    @apply bg-white p-6 rounded-xl m-6 lg:mr-3;
 }
 
 .experiences {
-    @apply bg-white p-6 rounded-xl m-6;
+    @apply bg-white p-6 rounded-xl m-6 lg:ml-3;
 }
 
 .projectsToggle {
-    @apply bg-white p-6 rounded-xl m-6;
+    @apply bg-white p-6 rounded-xl m-6 lg:ml-3;
 }
 
 .project {
-    @apply bg-white p-6 rounded-xl m-6 flex;
+    @apply bg-white p-6 rounded-xl m-6 flex lg:ml-3;
 }
 
 .bar {
@@ -60,11 +57,11 @@
 }
 
 .experience {
-    @apply flex flex-1 pt-2;
+    @apply flex flex-1 md:pt-2 pt-8;
 }
 
 .e-logo {
-    @apply flex-1 pr-3;
+    @apply flex-1 md:pr-0 pr-3;
 }
 
 .e-details {
