@@ -20,5 +20,5 @@
 
 [Certificate](https://devchallenges.io/certificates/hA3n9Qza0g5M8XEhSyxw)
 
-![certificate](/certificate.png)
+![certificate](./certificate.png)
 
