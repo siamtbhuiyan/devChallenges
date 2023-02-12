@@ -15,7 +15,7 @@
 }
 
 .profile {
-    @apply bg-white p-6 rounded-xl m-6 grid lg:grid-cols-3 xl:grid-cols-4 lg:mb-0;
+    @apply bg-white p-6 rounded-xl mx-1 sm:mx-6 my-6 grid lg:grid-cols-3 xl:grid-cols-4 lg:mb-0;
 }
 
 .left {
@@ -28,24 +28,24 @@
 
 
 .skills {
-    @apply bg-white p-6 rounded-xl m-6 lg:mr-3;
+    @apply bg-white p-6 rounded-xl mx-1 sm:mx-6 m-6 lg:mr-3;
 }
 
 
 .hobbies {
-    @apply bg-white p-6 rounded-xl m-6 lg:mr-3;
+    @apply bg-white p-6 rounded-xl mx-1 sm:mx-6 m-6 lg:mr-3;
 }
 
 .experiences {
-    @apply bg-white p-6 rounded-xl m-6 lg:ml-3;
+    @apply bg-white p-6 rounded-xl mx-1 sm:mx-6 m-6 lg:ml-3;
 }
 
 .projectsToggle {
-    @apply bg-white p-6 rounded-xl m-6 lg:ml-3;
+    @apply bg-white p-6 rounded-xl mx-1 sm:mx-6 m-6 lg:ml-3;
 }
 
 .project {
-    @apply bg-white p-6 rounded-xl m-6 flex lg:ml-3;
+    @apply bg-white p-6 rounded-xl mx-1 sm:mx-6 m-6 flex flex-col xs:flex-row lg:ml-3;
 }
 
 .bar {
@@ -61,7 +61,7 @@
 }
 
 .e-logo {
-    @apply flex-1 md:pr-0 pr-3;
+    @apply flex-1 md:pr-0 pr-3 hidden sm:block;
 }
 
 .e-details {
@@ -69,7 +69,7 @@
 }
 
 .btn {
-    @apply transition mr-4 text-sm font-medium text-gray-800 py-2 px-5 rounded-xl border border-gray-800 border-solid hover:bg-blue-600 hover:text-white hover:border-blue-600;
+    @apply transition sm:my-0 mr-4 my-2 text-sm font-medium text-gray-800 py-2 px-5 rounded-xl border border-gray-800 border-solid hover:bg-blue-600 hover:text-white hover:border-blue-600;
 }
 
 .active {
@@ -77,17 +77,21 @@
 }
 
 .p-thumbnail {
-    @apply flex-1 max-h-48 max-w-[300px] mr-12;
+    @apply flex-1 sm:max-h-48 sm:max-w-[300px] xs:mr-4 sm:mr-12;
 }
 
 .p-details {
-    @apply flex-[1.5];
+    @apply flex-1;
 }
 
 .btn-demo {
-    @apply transition mr-3 rounded-xl font-medium text-lg text-white bg-blue-600 border border-blue-600 border-solid py-3 px-11 hover:bg-blue-700;
+    @apply transition mr-3 rounded-xl font-medium text-lg text-white bg-blue-600 border border-blue-600 border-solid py-2 sm:py-3 px-5 sm:px-11 hover:bg-blue-700;
 }
 
 .btn-code {
-    @apply transition rounded-xl font-medium text-lg text-blue-600 border border-blue-600 border-solid py-3 px-11 hover:bg-slate-100;
+    @apply transition rounded-xl font-medium text-lg text-blue-600 border border-blue-600 border-solid py-2 sm:py-3 px-5 sm:px-11 hover:bg-slate-100;
+}
+
+.buttons {
+    @apply flex flex-col sm:flex-row;
 }

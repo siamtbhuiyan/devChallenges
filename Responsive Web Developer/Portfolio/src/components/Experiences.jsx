@@ -10,7 +10,7 @@ const Experiences = () => {
         <div className="e-details">
           <div className='font-medium text-gray-500 text-sm pb-2'>Feb 2018 - Current</div>
           <div className='font-semibold text-gray-800'>Front-end developer</div>
-          <div className='font-medium text-gray-500 md:pt-6 pt-3'>Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada</div>
+          <div className='font-medium text-gray-500 md:pt-6 pt-3 text-xs sm:text-base'>Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada</div>
         </div>
       </div>
       <div className="experience">
@@ -18,7 +18,7 @@ const Experiences = () => {
         <div className="e-details">
           <div className='font-medium text-gray-500 text-sm pb-2'>August 2016 - Feb 2018</div>
           <div className='font-semibold text-gray-800'>Full-stack developer</div>
-          <div className='font-medium text-gray-500 md:pt-6 pt-3'>Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada</div>
+          <div className='font-medium text-gray-500 md:pt-6 pt-3 text-xs sm:text-base'>Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada</div>
         </div>
       </div>
       <div className="experience">
@@ -26,7 +26,7 @@ const Experiences = () => {
         <div className="e-details">
           <div className='font-medium text-gray-500 text-sm pb-2'>June 2015 - August 2016</div>
           <div className='font-semibold text-gray-800'>Junior Front-end developer</div>
-          <div className='font-medium text-gray-500 md:pt-6 pt-3'>Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada</div>
+          <div className='font-medium text-gray-500 md:pt-6 pt-3 text-xs sm:text-base'>Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada</div>
         </div>
       </div>
       </div>

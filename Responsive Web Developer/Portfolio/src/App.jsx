@@ -14,7 +14,7 @@ const App = () => {
   };
 
   return (
-    <div className="w-screen background p-6 font-montserrat">
+    <div className="background p-6 font-montserrat">
       <div className='container mx-auto'>
           <Profile />
           <div className="lg:grid lg:grid-cols-3">
