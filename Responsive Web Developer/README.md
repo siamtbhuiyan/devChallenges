@@ -20,5 +20,5 @@
 
 [Certificate](https://devchallenges.io/certificates/hA3n9Qza0g5M8XEhSyxw)
 
-![certificate](/Certificate%20-%20Siam%20T.%20Bhuiyan.png)
+![certificate](/Certificate - Siam T. Bhuiyan.png)
 
