@@ -3,7 +3,7 @@ const Projects = ({ project }) => {
     return (
       <div>
           <div className="project">
-              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="images/checkout.png" alt="" /></div>
+              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="/images/checkout.png" alt="" /></div>
               <div className="p-details">
                   <div className="font-medium text-lg sm:text-2xl text-gray-800">Checkout</div>
                   <div className="font-medium text-gray-500 py-4 text-xs sm:text-base">In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. </div>
@@ -14,7 +14,7 @@ const Projects = ({ project }) => {
               </div>
           </div>
           <div className="project">
-              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="images/edie.png" alt="" /></div>
+              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="/images/edie.png" alt="" /></div>
               <div className="p-details">
                   <div className="font-medium text-lg sm:text-2xl text-gray-800">Agency Homepage</div>
                   <div className="font-medium text-gray-500 py-4 text-xs sm:text-base">In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. </div>
@@ -25,7 +25,7 @@ const Projects = ({ project }) => {
               </div>
           </div>
           <div className="project">
-              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="images/gallery.png" alt="" /></div>
+              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="/images/gallery.png" alt="" /></div>
               <div className="p-details">
                   <div className="font-medium text-lg sm:text-2xl text-gray-800">My Gallery</div>
                   <div className="font-medium text-gray-500 py-4 text-xs sm:text-base">In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. </div>
@@ -42,7 +42,7 @@ const Projects = ({ project }) => {
     return (
       <div>
           <div className="project">
-              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="images/button.png" alt="" /></div>
+              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="/images/button.png" alt="" /></div>
               <div className="p-details">
                   <div className="font-medium text-lg sm:text-2xl text-gray-800">Button Components</div>
                   <div className="font-medium text-gray-500 py-4 text-xs sm:text-base">In this project, I work with React a web app. The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. Lorem ipsum dolor sit, amet consectetur</div>
@@ -53,7 +53,7 @@ const Projects = ({ project }) => {
               </div>
           </div>
           <div className="project">
-              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="images/quote.png" alt="" /></div>
+              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="/images/quote.png" alt="" /></div>
               <div className="p-details">
                   <div className="font-medium text-lg sm:text-2xl text-gray-800">Quote Generator</div>
                   <div className="font-medium text-gray-500 py-4 text-xs sm:text-base">In this project, I work with React a web app. The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. Lorem ipsum dolor sit, amet consectetur</div>
@@ -64,7 +64,7 @@ const Projects = ({ project }) => {
               </div>
           </div>
           <div className="project">
-              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="images/todo.png" alt="" /></div>
+              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="/images/todo.png" alt="" /></div>
               <div className="p-details">
                   <div className="font-medium text-lg sm:text-2xl text-gray-800">Todo App</div>
                   <div className="font-medium text-gray-500 py-4 text-xs sm:text-base">In this project, I work with React a web app. The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. Lorem ipsum dolor sit, amet consectetur</div>
@@ -81,7 +81,7 @@ const Projects = ({ project }) => {
     return (
       <div>
         <div className="project">
-              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="images/input.png" alt="" /></div>
+              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="/images/input.png" alt="" /></div>
               <div className="p-details">
                   <div className="font-medium text-lg sm:text-2xl text-gray-800">Input Components</div>
                   <div className="font-medium text-gray-500 py-4 text-xs sm:text-base">In this project, I work with React a web app. The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. Lorem ipsum dolor sit, amet consectetur</div>
@@ -92,7 +92,7 @@ const Projects = ({ project }) => {
               </div>
           </div>
           <div className="project">
-              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="images/windbnb.png" alt="" /></div>
+              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="/images/windbnb.png" alt="" /></div>
               <div className="p-details">
                   <div className="font-medium text-lg sm:text-2xl text-gray-800">Windbnb</div>
                   <div className="font-medium text-gray-500 py-4 text-xs sm:text-base">In this project, I work with Vue a web app. The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. Lorem ipsum dolor sit, amet consectetur</div>
@@ -103,7 +103,7 @@ const Projects = ({ project }) => {
               </div>
           </div>
           <div className="project">
-              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="images/country.png" alt="" /></div>
+              <div className="p-thumbnail"><img className="h-full w-full object-cover rounded-xl" src="/images/country.png" alt="" /></div>
               <div className="p-details">
                   <div className="font-medium text-lg sm:text-2xl text-gray-800">Country Quiz</div>
                   <div className="font-medium text-gray-500 py-4 text-xs sm:text-base">In this project, I work with Vue a web app. The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. Lorem ipsum dolor sit, amet consectetur</div>

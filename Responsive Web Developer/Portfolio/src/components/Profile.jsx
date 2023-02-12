@@ -8,7 +8,7 @@ const Profile = () => {
     <div className="profile">
 
         <div className='lg:col-span-1 lg:pr-4'>
-            <img src="images/pic.jpg" alt="" className='h-full rounded-xl m-auto'/>
+            <img src='/images/pic.jpg' alt="" className='h-full rounded-xl m-auto'/>
         </div>
         <div className="lg:col-span-2 xl:col-span-3">
             <div className="flex flex-col">

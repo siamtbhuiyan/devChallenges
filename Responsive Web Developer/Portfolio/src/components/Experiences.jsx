@@ -6,7 +6,7 @@ const Experiences = () => {
       <div className='font-medium text-2xl text-gray-800 md:pb-5 pb-1'>Experiences</div>
       <div className='flex flex-col md:flex-row'>
       <div className="experience">
-        <div className="e-logo pt-2"><img className='w-4/5 mx-auto' src="images/adidas.png" alt="" /></div>
+        <div className="e-logo pt-2"><img className='w-4/5 mx-auto' src="/images/adidas.png" alt="" /></div>
         <div className="e-details">
           <div className='font-medium text-gray-500 text-sm pb-2'>Feb 2018 - Current</div>
           <div className='font-semibold text-gray-800'>Front-end developer</div>
@@ -14,7 +14,7 @@ const Experiences = () => {
         </div>
       </div>
       <div className="experience">
-        <div className="e-logo pt-4"><img className='w-3/5 mx-auto' src="images/hm.png" alt="" /></div>
+        <div className="e-logo pt-4"><img className='w-3/5 mx-auto' src="/images/hm.png" alt="" /></div>
         <div className="e-details">
           <div className='font-medium text-gray-500 text-sm pb-2'>August 2016 - Feb 2018</div>
           <div className='font-semibold text-gray-800'>Full-stack developer</div>
@@ -22,7 +22,7 @@ const Experiences = () => {
         </div>
       </div>
       <div className="experience">
-        <div className="e-logo pt-4"><img className='w-4/6 mx-auto' src="images/nivea.png" alt="" /></div>
+        <div className="e-logo pt-4"><img className='w-4/6 mx-auto' src="/images/nivea.png" alt="" /></div>
         <div className="e-details">
           <div className='font-medium text-gray-500 text-sm pb-2'>June 2015 - August 2016</div>
           <div className='font-semibold text-gray-800'>Junior Front-end developer</div>
