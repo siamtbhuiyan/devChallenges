@@ -13,7 +13,6 @@ const App = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold">Hello World!</h1>
-      <h2>{import.meta.env.VITE_API_KEY}</h2>
     </div>
   );
 };
