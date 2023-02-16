@@ -1,8 +1,10 @@
 import axios from "axios";
-const baseUrl = "https://api.open-meteo.com/v1/forecast?latitude=23.71&longitude=90.41&current_weather=true&timezone=auto"
-const info = async () => {
+const baseUrl = `https://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_API_KEY}&q=Dhaka&days=3&aqi=no&alerts=no`
+const getAll = async () => {
     const response = await axios.get(baseUrl)
-    print(response)
+    return response.data
 }
 
-info()
+const weatherService = { getAll }
+
+export default weatherService
