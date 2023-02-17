@@ -35,5 +35,9 @@
 }
 
 .current {
-    @apply flex flex-col items-center;
+    @apply flex flex-col items-center my-14;
+}
+
+.icon {
+    @apply h-64 w-64;
 }
