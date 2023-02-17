@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Font import */
+@font-face {
+    font-family: "Raleway";
+    src: url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+}
+
+/* Custom Classes */
+
+.screen {
+    @apply bg-[#100E1D] min-h-screen flex text-white font-raleway; 
+}
+
+.left {
+    @apply flex-1 bg-[#1E213A];
+}
+
+.right {
+    @apply flex-[2];
+}
+
+.navbar {
+    @apply flex justify-between px-11 py-10;
+}
+
+.btn {
+    @apply py-2 px-4 bg-gray-500;
+}
+
+.location {
+    @apply p-2 bg-gray-500 rounded-full;
+}
+
+.current {
+    @apply flex flex-col items-center;
+}
