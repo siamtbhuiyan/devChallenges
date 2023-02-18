@@ -57,3 +57,15 @@
 .suggest-btn {
     @apply block px-3 py-6 border border-gray-500 w-full text-left my-3 hover:border-white;
 }
+
+.degree-btn {
+    @apply font-bold py-2 rounded-full bg-gray-500 mr-3 px-[11px];
+}
+
+.forecasts {
+    @apply mx-24 flex font-medium;
+}
+
+.forecast {
+    @apply p-5 bg-[#1E213A] flex-1 mx-3;
+}

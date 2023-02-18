@@ -2,6 +2,7 @@ import { useState, useEffect, useRef }from "react";
 import weatherService from "./services/weather";
 import CurrentWeather from "./components/CurrentWeather";
 import SearchSection from "./components/SearchSection";
+import WeatherForecast from "./components/WeatherForecast";
 
 const App = () => {
 
@@ -11,6 +12,7 @@ const App = () => {
   const [lon, setLon] =  useState(90.389015)
   const [locations, setLocations] = useState(null)
   const [searchToggle, setSearchToggle] = useState(false)
+  const [forecast, setForecast] = useState(null)
 
   const inputRef = useRef(null)
   const getWeather = async () => {
@@ -18,10 +20,27 @@ const App = () => {
       setWeather(weather)
     )
   }
+  
+  const getForecast = async () => {
+    await weatherService.getForcast(lat, lon).then((f) => { 
+      f = f.list.map((f) => {
+        return {...f, dt: new Date(f.dt*1000).toUTCString()}
+      })
+      f = f.filter((f) => {
+        return f.dt[18] === "6"
+      }
+        ),
+        setForecast(f)
+      }
+    )
+  }
+
   useEffect(() => {
     getWeather()
+    getForecast()
   }, [])
-  if (weather !== null) {
+
+  if (weather !== null && forecast !== null) {
     const getLocation = async (currentLocation) => {
       weatherService.getLatLon(currentLocation).then((latlon) => {
         latlon = latlon.filter((value, index, self) =>
@@ -45,15 +64,23 @@ const App = () => {
       await weatherService.getCurrent(lat, lon).then(weather =>
         setWeather(weather)
       )
+      await weatherService.getForcast(lat, lon).then((f) => { 
+        f = f.list.map((f) => {
+          return {...f, dt: new Date(f.dt*1000).toUTCString()}
+        })
+        f = f.filter((f) => {
+          return f.dt[18] === "6"
+        }
+          ),
+          setForecast(f)
+        }
+      )
       setCurrentLocation(selectedLocation)
       handleToggle()
     }
-
-    console.log(weather)
     
     let date = new Date(weather.dt * 1000);
-    date = date.toDateString().slice(0, -5)
-    date = date.slice(0, 3) + "," + date.slice(3)
+    date = date.toUTCString().slice(0, -18)
     const currentData = {
       cel: Math.round(weather.main.temp - 273.15),
       date: date,
@@ -62,11 +89,24 @@ const App = () => {
       city: currentLocation,
       id: weather.id
     }
+
+    const currentForecast = forecast.map((f) => {
+      return {
+        icon: f.weather[0].icon,
+        dt: f.dt.slice(0, -18),
+        minC: Math.round(f.main.temp_min - 273.15),
+        minF: Math.round((f.main.temp_min - 273.15)* 9/5 + 32),
+        maxC: Math.round(f.main.temp_max - 273.15),
+        maxF: Math.round((f.main.temp_max - 273.15)* 9/5 + 32),
+      }
+    })
     
     return (
       <div className="screen">
         {searchToggle ? <SearchSection getLocation={getLocation} inputRef={inputRef} locations={locations} handleLocationChange={handleLocationChange} handleToggle={handleToggle}/> : <CurrentWeather currentData={currentData} handleToggle={handleToggle}/>}
-        <div className="right"></div>
+        <div className="right">
+          <WeatherForecast currentForecast={currentForecast}/>
+        </div>
       </div>
       
     );

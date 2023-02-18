@@ -2,7 +2,6 @@ import useIcon from "../hooks"
 
 const SearchSection = ({ getLocation, inputRef, locations, handleLocationChange, handleToggle }) => {
     const CloseIcon = useIcon("Close")
-    console.log(locations)
   return (
     <div className="left">
         <div className="flex justify-end">
