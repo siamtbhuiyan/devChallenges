@@ -41,3 +41,19 @@
 .icon {
     @apply h-64 w-64;
 }
+
+.search-bar {
+    @apply px-11 flex;
+}
+
+.search-input {
+    @apply p-4 bg-[#1E213A] border-2 border-solid border-gray-500 mr-3 flex-[4];
+}
+
+.search-btn {
+    @apply p-4 bg-blue-700 hover:bg-blue-600 flex-1;
+}
+
+.suggest-btn {
+    @apply block px-3 py-6 border border-gray-500 w-full text-left my-3 hover:border-white;
+}
