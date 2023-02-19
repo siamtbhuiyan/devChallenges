@@ -1,8 +1,8 @@
-import { MyLocation, Close, LocationOn, Search } from '@mui/icons-material'
+import { MyLocation, Close, LocationOn, Search, NearMe } from '@mui/icons-material'
 import stringSimilarity from 'string-similarity'
 
 function useIcon(word) {
-    const icons = {MyLocation, Close, LocationOn, Search}
+    const icons = {MyLocation, Close, LocationOn, Search, NearMe}
     let available = false;
     Object.keys(icons).map(i => {
         if (i === word) {

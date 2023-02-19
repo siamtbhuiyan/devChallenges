@@ -1,6 +1,6 @@
 const WeatherForecast = ({ currentForecast }) => {
   return (
-    <div>
+    <div className="pb-20">
         <div className="flex justify-end mx-24 my-10">
             <button className="degree-btn mr-3">{`\u00B0C`}</button>
             <button className="degree-btn">{`\u00B0F`}</button>

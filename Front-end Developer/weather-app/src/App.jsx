@@ -3,6 +3,7 @@ import weatherService from "./services/weather";
 import CurrentWeather from "./components/CurrentWeather";
 import SearchSection from "./components/SearchSection";
 import WeatherForecast from "./components/WeatherForecast";
+import Highlights from "./components/Highlights";
 
 const App = () => {
 
@@ -100,12 +101,20 @@ const App = () => {
         maxF: Math.round((f.main.temp_max - 273.15)* 9/5 + 32),
       }
     })
+
+    const highlightsData = {
+      wind: Math.round(weather.wind.speed / 0.44704),
+      humidity: weather.main.humidity,
+      visibility: Math.round(weather.visibility / 1609.344),
+      air: weather.main.pressure
+    }
     
     return (
       <div className="screen">
         {searchToggle ? <SearchSection getLocation={getLocation} inputRef={inputRef} locations={locations} handleLocationChange={handleLocationChange} handleToggle={handleToggle}/> : <CurrentWeather currentData={currentData} handleToggle={handleToggle}/>}
         <div className="right">
           <WeatherForecast currentForecast={currentForecast}/>
+          <Highlights highlightsData={highlightsData} />
         </div>
       </div>
       
