@@ -67,7 +67,7 @@
 }
 
 .forecast {
-    @apply p-5 bg-[#1E213A] flex-1 mr-6;
+    @apply p-5 bg-[#1E213A] flex-1;
 }
 
 .highlights {
@@ -80,4 +80,8 @@
 
 .d-p {
     @apply pb-[14px];
+}
+
+.active {
+    @apply bg-white text-black;
 }

@@ -14,6 +14,7 @@ const App = () => {
   const [locations, setLocations] = useState(null)
   const [searchToggle, setSearchToggle] = useState(false)
   const [forecast, setForecast] = useState(null)
+  const [isFahrenheit, setIsFahrenheit] = useState(false)
 
   const inputRef = useRef(null)
   const getWeather = async () => {
@@ -79,11 +80,20 @@ const App = () => {
       setCurrentLocation(selectedLocation)
       handleToggle()
     }
+
+    const handleCelChange = () => {
+      setIsFahrenheit(false)
+    }
     
+    const handleFarChange = () => {
+      setIsFahrenheit(true)
+    }
+
     let date = new Date(weather.dt * 1000);
     date = date.toUTCString().slice(0, -18)
     const currentData = {
       cel: Math.round(weather.main.temp - 273.15),
+      far: Math.round((weather.main.temp - 273.15)* 9/5 + 32),
       date: date,
       icon: weather.weather[0].icon,
       condition: weather.weather[0].main,
@@ -111,9 +121,9 @@ const App = () => {
     
     return (
       <div className="screen">
-        {searchToggle ? <SearchSection getLocation={getLocation} inputRef={inputRef} locations={locations} handleLocationChange={handleLocationChange} handleToggle={handleToggle}/> : <CurrentWeather currentData={currentData} handleToggle={handleToggle}/>}
+        {searchToggle ? <SearchSection getLocation={getLocation} inputRef={inputRef} locations={locations} handleLocationChange={handleLocationChange} handleToggle={handleToggle}/> : <CurrentWeather currentData={currentData} handleToggle={handleToggle} isFahrenheit={isFahrenheit}/>}
         <div className="right">
-          <WeatherForecast currentForecast={currentForecast}/>
+          <WeatherForecast currentForecast={currentForecast} isFahrenheit={isFahrenheit} handleCelChange={handleCelChange} handleFarChange={handleFarChange} />
           <Highlights highlightsData={highlightsData} />
         </div>
       </div>

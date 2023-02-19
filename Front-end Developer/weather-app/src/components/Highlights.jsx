@@ -14,8 +14,8 @@ const Highlights = ({ highlightsData }) => {
                 <div className="box">
                     <div className="font-medium pb-3">Humidity</div>
                     <div className="font-medium text-3xl pb-7"><span className="font-bold text-6xl"> {highlightsData.humidity}</span>%</div>
-                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                        <div class="bg-blue-600 h-2.5 rounded-full" style={{width: `${highlightsData.humidity}%`}}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div className="bg-blue-600 h-2.5 rounded-full" style={{width: `${highlightsData.humidity}%`}}></div>
                     </div>
                 </div>
             </div>
