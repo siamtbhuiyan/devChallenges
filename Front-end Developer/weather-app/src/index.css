@@ -11,19 +11,19 @@
 /* Custom Classes */
 
 .screen {
-    @apply bg-[#100E1D] min-h-screen flex text-white font-raleway; 
+    @apply bg-[#100E1D] min-h-screen flex flex-col md:flex-row text-white font-raleway; 
 }
 
 .left {
-    @apply flex-1 bg-[#1E213A];
+    @apply md:flex-1 bg-[#1E213A] min-h-screen;
 }
 
 .right {
-    @apply flex-[2];
+    @apply md:flex-[2];
 }
 
 .navbar {
-    @apply flex justify-between px-11 py-10;
+    @apply flex justify-between px-6 xl:px-11 py-10;
 }
 
 .btn {
@@ -43,15 +43,15 @@
 }
 
 .search-bar {
-    @apply px-11 flex;
+    @apply px-6 xl:px-11 flex text-sm xs:text-base;
 }
 
 .search-input {
-    @apply p-4 bg-[#1E213A] border-2 border-solid border-gray-500 mr-3 flex-[4];
+    @apply p-2 xs:p-3 xl:p-4 bg-[#1E213A] border-2 border-solid border-gray-500 mr-3 flex-[3];
 }
 
 .search-btn {
-    @apply p-4 bg-blue-700 hover:bg-blue-600 flex-1;
+    @apply p-2 xs:p-3 xl:p-4 bg-blue-700 hover:bg-blue-600 flex-1;
 }
 
 .suggest-btn {
@@ -63,15 +63,15 @@
 }
 
 .forecasts {
-    @apply mx-24 flex font-medium;
+    @apply mx-3 xs:mx-12 xl:mx-24 grid grid-cols-2 md:flex font-medium;
 }
 
 .forecast {
-    @apply p-5 bg-[#1E213A] flex-1;
+    @apply 2xl:p-5 p-3 xs:p-5 md:p-3 text-xs xs:text-base 2xl:text-base md:text-xs lg:text-sm bg-[#1E213A] flex-1 my-3;
 }
 
 .highlights {
-    @apply mx-24;
+    @apply mx-5 xs:mx-12 xl:mx-24 pb-12 md:pb-0;
 }
 
 .box {
