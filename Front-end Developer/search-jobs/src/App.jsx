@@ -11,23 +11,28 @@ const App = () => {
   const [jobs, setJobs] = useState(null)
 
 
-  const getJobs = async () => {
-    await jobService.getJobs().then(jobs => 
+  const getAll = async () => {
+    await jobService.getAll().then(jobs => 
       setJobs(jobs)  
     )
   }
 
   useEffect(() => {
-    getJobs()
+    getAll()
   }, [])
 
+  console.log(jobs)
+
   return (
-    <Router>
+    <div className="">
+      <Router>
       <Routes>
-        <Route path="/" element={<Home />}/>
+        <Route path="/" element={<Home jobs={jobs} />}/>
         <Route path="/jobs" element={<Jobs />}/>
       </Routes>
     </Router>
+    </div>
+    
     
   )
 }
