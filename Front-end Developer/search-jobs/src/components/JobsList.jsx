@@ -1,10 +1,10 @@
 import Job from "./Job"
 
-const JobsList = ({ jobs }) => {
+const JobsList = ({ jobs, page }) => {
   return (
     <div className="flex-[7] py-2 pl-8">
-        {jobs.map((j) => 
-            <Job job={j} />
+        {jobs.map((j) => j.page === page ?
+            <Job job={j} /> : <></>
         )}
     </div>
   )

@@ -10,11 +10,19 @@ import Jobs from "./components/Jobs";
 const App = () => {
   const [jobs, setJobs] = useState(null)
   const [cities, setCities] = useState(null)
+  const [currentPage, setCurrentPage] = useState(1)
 
 
   const getAll = async () => {
-    await jobService.getAll().then(jobs => 
-      setJobs(jobs)  
+    await jobService.getAll().then((jobs) => {
+      const currentJobs = jobs.map((j, index) => {
+        return {
+          ...j,
+          page: Math.ceil((index + 1)/5)
+        }
+      })
+      setJobs(currentJobs)  
+    }
     )
   }
 
@@ -31,13 +39,11 @@ const App = () => {
 
   if (jobs !== null || cities !== null) {
     console.log(jobs)
-  console.log(cities)
-
   return (
       <div className="">
         <Router>
         <Routes>
-          <Route path="/" element={<Home jobs={jobs} />}/>
+          <Route path="/" element={<Home jobs={jobs} page={currentPage} />}/>
           <Route path="/jobs" element={<Jobs />}/>
         </Routes>
       </Router>
