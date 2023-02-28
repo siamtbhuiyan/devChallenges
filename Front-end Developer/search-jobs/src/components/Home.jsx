@@ -1,5 +1,6 @@
 import Search from "./Search"
 import Filter from "./Filter"
+import JobsList from "./JobsList"
 
 const Home = ({ jobs }) => {
     
@@ -9,7 +10,7 @@ const Home = ({ jobs }) => {
         <Search />
         <div className="flex">
             <Filter />
-            <div className="flex-[7]"></div>
+            <JobsList jobs={jobs} />
         </div>
     </div>
   )

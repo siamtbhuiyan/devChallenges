@@ -29,21 +29,21 @@ const App = () => {
     getCities()
   }, [])
 
-  console.log(jobs)
+  if (jobs !== null || cities !== null) {
+    console.log(jobs)
   console.log(cities)
 
   return (
-    <div className="">
-      <Router>
-      <Routes>
-        <Route path="/" element={<Home jobs={jobs} />}/>
-        <Route path="/jobs" element={<Jobs />}/>
-      </Routes>
-    </Router>
-    </div>
-    
-    
-  )
+      <div className="">
+        <Router>
+        <Routes>
+          <Route path="/" element={<Home jobs={jobs} />}/>
+          <Route path="/jobs" element={<Jobs />}/>
+        </Routes>
+      </Router>
+      </div>
+    )
+  }
 }
 
 export default App
