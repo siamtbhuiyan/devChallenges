@@ -9,6 +9,7 @@ import Jobs from "./components/Jobs";
 
 const App = () => {
   const [jobs, setJobs] = useState(null)
+  const [cities, setCities] = useState(null)
 
 
   const getAll = async () => {
@@ -17,11 +18,19 @@ const App = () => {
     )
   }
 
+  const getCities = async () => {
+    await jobService.getCities().then(city => 
+      setCities(city)  
+    )
+  }
+
   useEffect(() => {
     getAll()
+    getCities()
   }, [])
 
   console.log(jobs)
+  console.log(cities)
 
   return (
     <div className="">

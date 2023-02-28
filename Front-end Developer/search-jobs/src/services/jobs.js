@@ -7,6 +7,14 @@ const getAll = async () => {
     return response.data
 }
 
-const jobService = { getAll }
+const getCities = async () => {
+    const response = await axios.get(baseUrl)
+    let temp = response.data
+    temp = temp.map(t => t.city)
+    temp = [...new Set(temp)]
+    return temp
+}
+
+const jobService = { getAll, getCities }
 
 export default jobService
