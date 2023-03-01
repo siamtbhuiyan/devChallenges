@@ -2,7 +2,7 @@ import Search from "./Search"
 import Filter from "./Filter"
 import JobsList from "./JobsList"
 
-const Home = ({ jobs, page, totalPages }) => {
+const Home = ({ jobs, page, totalPages, changePage }) => {
     
   return (
     <div className="container mx-auto font-poppins">
@@ -10,7 +10,7 @@ const Home = ({ jobs, page, totalPages }) => {
         <Search />
         <div className="flex">
             <Filter />
-            <JobsList jobs={jobs} page={page} totalPages={totalPages} />
+            <JobsList jobs={jobs} page={page} totalPages={totalPages} changePage={changePage} />
         </div>
     </div>
   )

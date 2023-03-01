@@ -40,13 +40,17 @@ const App = () => {
   }, [])
 
   if (jobs !== null || cities !== null) {
-    console.log(jobs)
-    console.log(totalPages)
+    const changePage = (page) => {
+      console.log(page)
+      setCurrentPage(page)
+    }
+
+
   return (
       <div className="">
         <Router>
         <Routes>
-          <Route path="/" element={<Home jobs={jobs} page={currentPage} totalPages={totalPages} />}/>
+          <Route path="/" element={<Home jobs={jobs} page={currentPage} totalPages={totalPages} changePage={changePage} />}/>
           <Route path="/jobs" element={<Jobs />}/>
         </Routes>
       </Router>
