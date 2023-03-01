@@ -1,11 +1,11 @@
 import useIcon from "../hooks"
 
-const Filter = () => {
+const Filter = ({ toggleFullTime }) => {
   const PublicIcon = useIcon("Public")
   return (
     <div className="flex-[3]">
         <div className="text-sm pt-11 pb-8 px-4">
-            <input type="checkbox" name="full-time" id="full-time" className="h-5 w-5" />
+            <input type="checkbox" name="full-time" id="full-time" className="h-5 w-5" onClick={() => toggleFullTime()} />
             <label htmlFor="full-time" className="pl-3 align-top font-medium">Full Time</label>
         </div>
         <div className="">

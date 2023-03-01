@@ -7,6 +7,11 @@ const getAll = async () => {
     return response.data
 }
 
+const getFullTime = async () => {
+    const response = await axios.get(`${baseUrl}?fulltime=true`)
+    return response.data
+}
+
 const getCities = async () => {
     const response = await axios.get(baseUrl)
     let temp = response.data
@@ -15,6 +20,6 @@ const getCities = async () => {
     return temp
 }
 
-const jobService = { getAll, getCities }
+const jobService = { getAll, getCities, getFullTime }
 
 export default jobService
