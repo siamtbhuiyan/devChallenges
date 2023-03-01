@@ -17,7 +17,6 @@ const App = () => {
 
   const inputRef = useRef(null)
 
-
   const getAll = async () => {
     await jobService.getAll().then((jobs) => {
       const currentJobs = jobs.map((j, index) => {
@@ -44,7 +43,8 @@ const App = () => {
     getCities()
   }, [])
 
-  if (jobs !== null || cities !== null) {
+
+  if (jobs !== null && cities !== null) {
     const changePage = (page) => {
       setCurrentPage(page)
     }
@@ -93,21 +93,42 @@ const App = () => {
         }
       })
       setJobs(currentJobs)
-      console.log(2, jobs)
       setTotalPages(Math.ceil(currentJobs.length/5))
-      console.log(totalPages)
     }
 
+    const filterCity = (currentCity) => {
+      setCurrentPage(1)
+      const filteredJobs = allJobs.filter(
+        job => {
+          return (
+            job
+            .city
+            .toLowerCase() === currentCity.toLowerCase()
+          );
+        }
+      );
+      const currentJobs = filteredJobs.map((j, index) => {
+        return {
+          ...j,
+          page: Math.ceil((index + 1)/5)
+        }
+      })
+      setJobs(currentJobs)
+      setTotalPages(Math.ceil(currentJobs.length/5))
+    }
 
+    const clearRadio = () => {
+      setJobs(jobs)
+    }
 
   return (
       <div className="">
         <Router>
-        <Routes>
-          <Route path="/" element={<Home jobs={jobs} page={currentPage} totalPages={totalPages} changePage={changePage} toggleFullTime={toggleFullTime} searchJobs={searchJobs} inputRef={inputRef} />}/>
-          <Route path="/jobs" element={<Jobs />}/>
-        </Routes>
-      </Router>
+          <Routes>
+            <Route path="/" element={<Home jobs={jobs} page={currentPage} totalPages={totalPages} changePage={changePage} toggleFullTime={toggleFullTime} searchJobs={searchJobs} inputRef={inputRef} cities={cities} filterCity={filterCity} clearRadio={clearRadio} />}/>
+            <Route path="/jobs" element={<Jobs />}/>
+          </Routes>
+        </Router>
       </div>
     )
   }
