@@ -1,8 +1,8 @@
 import useIcon from "../hooks"
 
-const Filter = ({ toggleFullTime, cities, filterCity, clearRadio }) => {
+const Filter = ({ toggleFullTime, filterCity, cityRef, searchCity, topCities, currentCity }) => {
   const PublicIcon = useIcon("Public")
-  const topCities = cities.slice(1, 5)
+
   return (
     <div className="flex-[3]">
         <div className="text-sm pt-11 pb-8 px-4">
@@ -13,18 +13,17 @@ const Filter = ({ toggleFullTime, cities, filterCity, clearRadio }) => {
             <div className="uppercase text-sm font-bold text-gray-400 pb-4">Location</div>
             <div className="bg-white text-sm rounded shadow">
                 <PublicIcon className="text-gray-400 ml-4" />
-                <input className="p-4 focus:outline-none" type="text" placeholder="City, Country" />
+                <input onChange={() => searchCity(cityRef.current.value)} ref={cityRef} className="p-4 focus:outline-none" type="text" placeholder="City, Country" />
             </div>
             <form className="px-3 py-5">
               {
                 topCities.map(city => 
                   <div className="pb-2">
-                    <input onClick={() => filterCity(city)} className="h-4 w-4 cursor-pointer" type="radio" id={city} name="city" value={city} />
+                    <input onClick={() => filterCity(city)} checked={currentCity.toLowerCase() === city.toLowerCase()} className="h-4 w-4 cursor-pointer" type="radio" id={city} name="city" value={city} />
                     <label className="text-sm pl-3 align-top cursor-pointer" for={city}>{city[0].toUpperCase() + city.slice(1)}</label>
                   </div>
                   )
               }
-              <button className="mt-5 text-xs p-2 bg-blue-500 text-white hover:bg-blue-600 rounded" onClick={() => clearRadio()}>Clear Filter</button>
             </form>
         </div>
     </div>

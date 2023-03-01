@@ -14,8 +14,11 @@ const App = () => {
   const [totalPages, setTotalPages] = useState(1)
   const [isFullTime, setIsFullTime] = useState(false)
   const [allJobs, setAllJobs] = useState(null)
+  const [displayCity, setDisplayCity] = useState([])
+  const [currentCity, setCurrentCity] = useState("")
 
   const inputRef = useRef(null)
+  const cityRef = useRef(null)
 
   const getAll = async () => {
     await jobService.getAll().then((jobs) => {
@@ -33,8 +36,10 @@ const App = () => {
   }
 
   const getCities = async () => {
-    await jobService.getCities().then(city => 
-      setCities(city)  
+    await jobService.getCities().then(city => {
+      setCities(city)
+      setDisplayCity(city.slice(1, 5))  
+    }
     )
   }
 
@@ -44,12 +49,16 @@ const App = () => {
   }, [])
 
 
+
   if (jobs !== null && cities !== null) {
+
     const changePage = (page) => {
+      setCurrentCity("")
       setCurrentPage(page)
     }
 
     const toggleFullTime = async () => {
+      setCurrentCity("")
       setCurrentPage(1)
       setIsFullTime(!isFullTime)
       if (isFullTime) {
@@ -71,6 +80,7 @@ const App = () => {
     }
 
     const searchJobs = async (searchField) => {
+      setCurrentCity("")
       setCurrentPage(1)
       const filteredJobs = allJobs.filter(
         job => {
@@ -97,6 +107,7 @@ const App = () => {
     }
 
     const filterCity = (currentCity) => {
+      setCurrentCity(currentCity)
       setCurrentPage(1)
       const filteredJobs = allJobs.filter(
         job => {
@@ -117,15 +128,29 @@ const App = () => {
       setTotalPages(Math.ceil(currentJobs.length/5))
     }
 
-    const clearRadio = () => {
-      setJobs(jobs)
+    const searchCity = (search) => {
+      setCurrentCity("")
+      if (search === "") {
+        setJobs(allJobs)
+        setDisplayCity(cities.slice(1, 5))
+        setTotalPages(Math.ceil(allJobs.length/5))
+      } else {
+        const topCities = cities.filter(
+          city => {
+            return (
+              city.toLowerCase().includes(search.toLowerCase())
+            )
+        })
+        setDisplayCity(topCities)
+        setTotalPages(Math.ceil(allJobs.length/5))
+      }
     }
 
   return (
       <div className="">
         <Router>
           <Routes>
-            <Route path="/" element={<Home jobs={jobs} page={currentPage} totalPages={totalPages} changePage={changePage} toggleFullTime={toggleFullTime} searchJobs={searchJobs} inputRef={inputRef} cities={cities} filterCity={filterCity} clearRadio={clearRadio} />}/>
+            <Route path="/" element={<Home jobs={jobs} page={currentPage} totalPages={totalPages} changePage={changePage} toggleFullTime={toggleFullTime} searchJobs={searchJobs} inputRef={inputRef} filterCity={filterCity} cityRef={cityRef} searchCity={searchCity} topCities={displayCity} currentCity={currentCity} />}/>
             <Route path="/jobs" element={<Jobs />}/>
           </Routes>
         </Router>
