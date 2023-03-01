@@ -11,6 +11,7 @@ const App = () => {
   const [jobs, setJobs] = useState(null)
   const [cities, setCities] = useState(null)
   const [currentPage, setCurrentPage] = useState(1)
+  const [totalPages, setTotalPages] = useState(1)
 
 
   const getAll = async () => {
@@ -22,6 +23,7 @@ const App = () => {
         }
       })
       setJobs(currentJobs)  
+      setTotalPages(Math.ceil(jobs.length/5))
     }
     )
   }
@@ -39,11 +41,12 @@ const App = () => {
 
   if (jobs !== null || cities !== null) {
     console.log(jobs)
+    console.log(totalPages)
   return (
       <div className="">
         <Router>
         <Routes>
-          <Route path="/" element={<Home jobs={jobs} page={currentPage} />}/>
+          <Route path="/" element={<Home jobs={jobs} page={currentPage} totalPages={totalPages} />}/>
           <Route path="/jobs" element={<Jobs />}/>
         </Routes>
       </Router>
