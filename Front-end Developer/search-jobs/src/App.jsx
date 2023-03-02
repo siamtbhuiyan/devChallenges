@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import Home from "./components/Home";
 import JobPage from "./components/JobPage";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [jobs, setJobs] = useState(null)
@@ -156,6 +157,7 @@ const App = () => {
             <Route path="/jobs/:id" element={<JobPage jobs={jobs} />}/>
           </Routes>
         </Router>
+        <Footer />
       </div>
     )
   }
