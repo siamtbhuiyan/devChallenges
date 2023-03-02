@@ -2,10 +2,10 @@ import jobService from "./services/jobs";
 import { useState, useEffect, useRef } from "react";
 import {
   BrowserRouter as Router,
-  Routes, Route, Link
+  Routes, Route, useMatch
 } from 'react-router-dom'
 import Home from "./components/Home";
-import Jobs from "./components/Jobs";
+import JobPage from "./components/JobPage";
 
 const App = () => {
   const [jobs, setJobs] = useState(null)
@@ -151,7 +151,7 @@ const App = () => {
         <Router>
           <Routes>
             <Route path="/" element={<Home jobs={jobs} page={currentPage} totalPages={totalPages} changePage={changePage} toggleFullTime={toggleFullTime} searchJobs={searchJobs} inputRef={inputRef} filterCity={filterCity} cityRef={cityRef} searchCity={searchCity} topCities={displayCity} currentCity={currentCity} />}/>
-            <Route path="/jobs" element={<Jobs />}/>
+            <Route path="/jobs/:id" element={<JobPage jobs={jobs} />}/>
           </Routes>
         </Router>
       </div>
