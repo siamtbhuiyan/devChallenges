@@ -146,6 +146,8 @@ const App = () => {
       }
     }
 
+    console.log(jobs)
+
   return (
       <div className="">
         <Router>

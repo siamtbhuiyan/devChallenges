@@ -28,7 +28,7 @@ const Job = ({ job }) => {
                   </div>
                   <div className="text-xs text-gray-400 pl-5">
                     <AccessTimeIcon />
-                    <span>{jobDate} days ago</span>
+                    <span className="pl-2">{jobDate} days ago</span>
                   </div>
                 </div>
               </div>
