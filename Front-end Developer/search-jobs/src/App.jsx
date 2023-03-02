@@ -150,7 +150,7 @@ const App = () => {
     console.log(jobs)
 
   return (
-      <div className="">
+      <div>
         <Router>
           <Routes>
             <Route path="/" element={<Home jobs={jobs} page={currentPage} totalPages={totalPages} changePage={changePage} toggleFullTime={toggleFullTime} searchJobs={searchJobs} inputRef={inputRef} filterCity={filterCity} cityRef={cityRef} searchCity={searchCity} topCities={displayCity} currentCity={currentCity} />}/>

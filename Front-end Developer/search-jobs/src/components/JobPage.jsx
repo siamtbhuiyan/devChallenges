@@ -12,7 +12,7 @@ const JobPage = ({ jobs }) => {
   jobDate = Math.abs(today - jobDate);
   jobDate = Math.ceil(jobDate / (1000 * 60 * 60 * 24)); 
   return (
-    <div className="container mx-auto px-4 sm:px-0 my-8 font-poppins">
+    <div className="main">
         <div className="font-bold text-2xl my-8">Search Jobs</div>
         <div className="flex sm:flex-row flex-col">
           <div className="flex-1">
@@ -49,7 +49,7 @@ const JobPage = ({ jobs }) => {
               </div>
             </div>
             <div className="pb-5 text-sm sm:text-base">Salary: {job.salary}</div>
-            <div className="text-sm sm:text-base">{job.content}</div>
+            <div className="text-sm sm:text-base pb-6">{job.content}</div>
           </div>
         </div>
     </div>

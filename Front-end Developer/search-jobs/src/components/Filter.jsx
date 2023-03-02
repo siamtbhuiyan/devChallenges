@@ -11,8 +11,8 @@ const Filter = ({ toggleFullTime, filterCity, cityRef, searchCity, topCities, cu
         </div>
         <div className="">
             <div className="uppercase text-sm font-bold text-gray-400 pb-4">Location</div>
-            <div className="bg-white md:text-sm text-xs rounded shadow">
-                <PublicIcon className="text-gray-400 ml-2 md:ml-4" />
+            <div className="bg-white lg:text-sm text-xs rounded shadow">
+                <PublicIcon className="text-gray-400 ml-2 lg:ml-4" />
                 <input onChange={() => searchCity(cityRef.current.value)} ref={cityRef} className="py-4 lg:px-4 px-2 focus:outline-none" type="text" placeholder="City, Country" />
             </div>
             <form className="px-3 py-5">

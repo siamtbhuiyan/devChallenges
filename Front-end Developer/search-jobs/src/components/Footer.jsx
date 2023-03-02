@@ -5,6 +5,7 @@ const Footer = () => {
           created by{" "}
           <a
             href="https://github.com/siamtbhuiyan"
+            target="_blank"
             className="font-bold"
           >
             @siamtbhuiyan
