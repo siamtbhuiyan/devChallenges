@@ -12,9 +12,9 @@ const JobPage = ({ jobs }) => {
   jobDate = Math.abs(today - jobDate);
   jobDate = Math.ceil(jobDate / (1000 * 60 * 60 * 24)); 
   return (
-    <div className="container mx-auto my-8 font-poppins">
+    <div className="container mx-auto px-4 sm:px-0 my-8 font-poppins">
         <div className="font-bold text-2xl my-8">Search Jobs</div>
-        <div className="flex">
+        <div className="flex sm:flex-row flex-col">
           <div className="flex-1">
             <div className="text-blue-500 text-sm pb-9">
               <Link to="/"><span className="text-xl pr-2">&#8592;</span> Back to search</Link>
@@ -26,8 +26,8 @@ const JobPage = ({ jobs }) => {
             Please email a copy of your resume and online portfolio to <span className="text-blue-500 cursor-pointer">{job.author}</span>
             </div>
           </div>
-          <div className="flex-[4]">
-            <div className="text-2xl font-bold">
+          <div className="flex-[4] sm:pt-0 pt-12">
+            <div className="text-lg sm:text-2xl font-bold">
               <span className="pr-6">
                 {job.title}
               </span>
@@ -48,8 +48,8 @@ const JobPage = ({ jobs }) => {
                 <PublicIcon fontSize="small" /><span className="pl-2 align-middle">{job.city}</span></div>
               </div>
             </div>
-            <div className="pb-5">Salary: {job.salary}</div>
-            <div>{job.content}</div>
+            <div className="pb-5 text-sm sm:text-base">Salary: {job.salary}</div>
+            <div className="text-sm sm:text-base">{job.content}</div>
           </div>
         </div>
     </div>

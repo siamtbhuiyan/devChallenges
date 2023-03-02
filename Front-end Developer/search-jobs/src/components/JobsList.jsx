@@ -7,11 +7,11 @@ const JobsList = ({ jobs, page, totalPages, changePage }) => {
   }
 
   return (
-    <div className="flex-[7] py-2 pl-8">
+    <div className="flex-[7] py-2 md:pl-8">
         {jobs.map((j) => j.page === page ?
             <Job job={j} /> : <></>
         )}
-        <div className="float-right pb-8">
+        <div className="text-center sm:float-right pb-8">
           <button disabled={page === 1 ? true : false} onClick={() => changePage(page - 1)} className="pageBtn">{"<"}</button>
           {pages.map((i) => <button onClick={() => changePage(i)} className={page === i ? "pageBtn activeBtn" : "pageBtn"}>{i}</button>)}
           <button disabled={page === totalPages ? true : false} onClick={() => changePage(page + 1)} className="pageBtn">{">"}</button>
